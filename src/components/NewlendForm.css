@@ -1,0 +1,20 @@
+.newlend-form {
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+.newlend-form .input{
+    height: 7%;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+}
+.newlend-form h5 {
+    font-size: 1rem;
+}
+.newlend-form .btn-submit {
+    margin-top: 0.5rem;
+    width: 100%
+}
