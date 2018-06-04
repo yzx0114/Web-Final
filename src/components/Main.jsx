@@ -24,6 +24,8 @@ import {connect} from 'react-redux';
 
 import {toggleNavbar} from 'states/main-actions.js';
 import {NewlendForm} from './NewlendForm.jsx';
+import {BorrowForm} from './BorrowForm.jsx';
+import {ArrearForm} from './ArrearForm.jsx';
 import './Main.css';
 
 class Main extends React.Component {
@@ -55,7 +57,7 @@ class Main extends React.Component {
                                             <NavLink tag={Link} to='/'>借款紀錄</NavLink>
                                         </NavItem>
                                         <NavItem>
-                                            <NavLink tag={Link} to='/BorrowForm'>欠款紀錄</NavLink>
+                                            <NavLink tag={Link} to='/ArrearForm'>欠款紀錄</NavLink>
                                         </NavItem>
                                     </Nav>
                                     <div className='ml-auto'>
@@ -65,6 +67,12 @@ class Main extends React.Component {
                             </Navbar>
                         </div>
                     </div>
+                    <Route exact path="/" render={() => (
+                        <BorrowForm recordType={'borrow'}/>
+                    )}/>
+                    <Route exact path="/ArrearForm" render={() => (
+                        <ArrearForm recordType={'arrear'}/>
+                     )}/>
                     <Route exact path="/NewlendForm" render={() => (
                         <NewlendForm />
                      )}/>
