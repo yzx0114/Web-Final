@@ -1,0 +1,16 @@
+.main
+{
+	height: 100%;
+}
+.main .register
+{
+	display: fixed;
+	top:0px;
+}
+.main .message
+{
+	min-height: 100%;
+	top:5rem;
+  display: flex;
+  align-items: center;
+}

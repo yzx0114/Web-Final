@@ -6,6 +6,8 @@ import thunkMiddleware from 'redux-thunk';
 import {Provider} from 'react-redux';
 
 import Main from 'components/Main.jsx';
+import Login from 'components/Login.jsx';
+import LoginMain from 'components/LoginMain.jsx';
 import {main} from 'states/main-reducers.js';
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -18,7 +20,7 @@ window.onload = function() {
 
     ReactDOM.render(
         <Provider store={store}>
-            <Main />
+            <LoginMain />
         </Provider>,
         document.getElementById('root')
     );
