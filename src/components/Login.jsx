@@ -58,8 +58,8 @@ class Login extends React.Component {
         return (
             <Router>
                 <div className='main'>
-                    <div className='bg-faded'>
-                        <div className='container'>
+                    
+                        <div className='content'>
                          <Container>
 						 <Row>
 						 <Col>
@@ -98,7 +98,7 @@ class Login extends React.Component {
 						 </Row>
 						 </Container>
 						 
-                        </div>
+                        
                     </div>
        
                 </div>

@@ -24,6 +24,7 @@ import {
 } from 'reactstrap';
 import {connect} from 'react-redux';
 import Login from 'components/Login.jsx';
+import './Register.css';
 class Register extends React.Component {
     static propTypes = {
     };
@@ -40,8 +41,7 @@ class Register extends React.Component {
         return (
             <Router>
                 <div className='main'>
-                    <div className='bg-faded'>
-                        <div className='container'>
+					<div className='content'>
 							<Container>
 							<Row>
 								<Col>
@@ -77,10 +77,8 @@ class Register extends React.Component {
 							</Row>
 							</Container>
 						 
-						 
-                        </div>
-                    </div>
-       
+						
+                      </div>
                 </div>
             </Router>
         );

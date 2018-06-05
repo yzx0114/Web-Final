@@ -2,10 +2,12 @@
 {
 	height: 100%;
 }
-.main .register
+.main .content
 {
-	display: fixed;
-	top:0px;
+	min-height: 100%;
+	top:5rem;
+  display: flex;
+  align-items: center;
 }
 .main .message
 {
