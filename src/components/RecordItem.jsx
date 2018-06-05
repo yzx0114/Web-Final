@@ -20,7 +20,7 @@ export class RecordItem extends React.Component {
 
     render() {
         const {name,money,date,recordType} = this.props;
-        const buttonClts = (recordType == 'borrow')? true:false;
+        const buttonClts = (recordType == 'borrow')? 1: (recordType == 'arrear')? 2: 3;
         return (
             <div className='record-item row'>
                 <div className='person-info col-lg-9 row'>
@@ -37,7 +37,7 @@ export class RecordItem extends React.Component {
                         {date}
                     </div>
                 </div>
-                {buttonClts ?
+                {buttonClts == 1 ?
                     <div className='buttons col-lg-3 align-self-center'>
                         <div className='row'>
                             <div className='mx-auto'>
@@ -55,13 +55,17 @@ export class RecordItem extends React.Component {
                             </div>
                         </div>
                     </div>
-                :
+                :buttonClts == 2 ?
                     <div className='buttons col-lg-3 align-self-center'>
                         <div className='row'>
                             <div className='mx-auto'>
                                 <Button type="button" className="btn btn-warning">已還款!<br/>提醒他</Button>
                             </div>
                         </div>
+                    </div>
+                :
+                    <div className='date col-lg-3 align-self-center'>
+                        {date}
                     </div>
                 }
             </div>
