@@ -21,10 +21,11 @@ import {
     ModalFooter
 } from 'reactstrap';
 import {connect} from 'react-redux';
-
+import {createStore, combineReducers, compose, applyMiddleware} from 'redux';
+import thunkMiddleware from 'redux-thunk';
 import {toggleNavbar} from 'states/main-actions.js';
 import {NewlendForm} from './NewlendForm.jsx';
-import {BorrowForm} from './BorrowForm.jsx';
+import BorrowForm from './BorrowForm.jsx';
 import {ArrearForm} from './ArrearForm.jsx';
 import {HistoryForm} from './HistoryForm.jsx';
 import './Main.css';

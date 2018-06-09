@@ -8,12 +8,18 @@ import {connect} from 'react-redux';
 import {BorrowRecordItem} from './BorrowRecordItem.jsx';
 import './RecordList.css';
 
-export class BorrowRecordList extends React.Component {
+class BorrowRecordList extends React.Component {
+    static propTypes = {
+        borrowRecords: PropTypes.array
+    };
+
     constructor(props) {
         super(props);
     }
 
     render() {
+        const {borrowRecords} = this.props;
+
         let records = [
             {   
                 id : 1,
@@ -34,8 +40,8 @@ export class BorrowRecordList extends React.Component {
             </ListGroupItem>
         );
         
-        if (records.length) {
-            children = records.map(p => (
+        if (borrowRecords.length) {
+            children = borrowRecords.map(p => (
                 <ListGroupItem key={p.id} action>
                     <BorrowRecordItem {...p}/>
                 </ListGroupItem>
@@ -51,3 +57,7 @@ export class BorrowRecordList extends React.Component {
         );
     }
 }
+
+export default connect(state =>({
+    borrowRecords:state.borrow.borrowRecords
+}))(BorrowRecordList);
