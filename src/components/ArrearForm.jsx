@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {RecordList} from './RecordList.jsx';
+import {ArrearRecordList} from './ArrearRecordList.jsx';
 import './ArrearForm.css';
 
 export class ArrearForm extends React.Component {
@@ -10,11 +10,10 @@ export class ArrearForm extends React.Component {
     }
 
     render() {
-        const {recordType} = this.props;
         return (
             <div className='arrear-form'>
                 <div className='list'>
-                    <RecordList recordType={recordType}/>
+                    <ArrearRecordList />
                 </div>
             </div>
     )}

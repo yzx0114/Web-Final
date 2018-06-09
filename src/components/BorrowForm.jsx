@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {RecordList} from './RecordList.jsx';
+import {BorrowRecordList} from './BorrowRecordList.jsx';
 import './BorrowForm.css';
 
 export class BorrowForm extends React.Component {
@@ -10,11 +10,10 @@ export class BorrowForm extends React.Component {
     }
 
     render() {
-        const {recordType} = this.props;
         return (
             <div className='borrow-form'>
                 <div className='list'>
-                    <RecordList recordType={recordType}/>
+                    <BorrowRecordList />
                 </div>
             </div>
     )}

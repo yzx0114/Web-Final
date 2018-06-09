@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {RecordList} from './RecordList.jsx';
+import {HistoryRecordList} from './HistoryRecordList.jsx';
 import './HistoryForm.css';
 
 export class HistoryForm extends React.Component {
@@ -10,11 +10,10 @@ export class HistoryForm extends React.Component {
     }
 
     render() {
-        const {recordType} = this.props;
         return (
             <div className='history-form'>
                 <div className='list'>
-                    <RecordList recordType={recordType}/>
+                    <HistoryRecordList />
                 </div>
             </div>
     )}

@@ -72,13 +72,13 @@ class Main extends React.Component {
                         </div>
                     </div>
                     <Route exact path="/" render={() => (
-                        <BorrowForm recordType={'borrow'}/>
+                        <BorrowForm />
                     )}/>
                     <Route exact path="/ArrearForm" render={() => (
-                        <ArrearForm recordType={'arrear'}/>
+                        <ArrearForm />
                      )}/>
                      <Route exact path="/HistoryForm" render={() => (
-                        <ArrearForm recordType={'history'}/>
+                        <HistoryForm />
                      )}/>
                     <Route exact path="/NewlendForm" render={() => (
                         <NewlendForm />
