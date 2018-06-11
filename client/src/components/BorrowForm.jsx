@@ -26,6 +26,7 @@ class BorrowForm extends React.Component {
 
     render() {
         const {recordLoading} = this.props;
+        
         return (
             <div className='borrow-form'>
                 <div className='list'>

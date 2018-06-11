@@ -5,15 +5,21 @@ import {
     ListGroupItem
 } from 'reactstrap';
 import {connect} from 'react-redux';
-import {ArrearRecordItem} from './ArrearRecordItem.jsx';
+import ArrearRecordItem from './ArrearRecordItem.jsx';
 import './RecordList.css';
 
-export class ArrearRecordList extends React.Component {
+class ArrearRecordList extends React.Component {
+    static propTypes = {
+        arrearRecords: PropTypes.array
+    };
+
     constructor(props) {
         super(props);
     }
 
     render() {
+        const {arrearRecords} = this.props;
+
         let records = [
             {   
                 id : 1,
@@ -34,8 +40,8 @@ export class ArrearRecordList extends React.Component {
             </ListGroupItem>
         );
         
-        if (records.length) {
-            children = records.map(p => (
+        if (arrearRecords.length) {
+            children = arrearRecords.map(p => (
                 <ListGroupItem key={p.id} action>
                     <ArrearRecordItem {...p}/>
                 </ListGroupItem>
@@ -51,3 +57,7 @@ export class ArrearRecordList extends React.Component {
         );
     }
 }
+
+export default connect(state =>({
+    arrearRecords:state.arrear.arrearRecords
+}))(ArrearRecordList);

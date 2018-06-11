@@ -6,7 +6,7 @@ import {
 } from 'reactstrap';
 import './RecordItem.css';
 
-export class ArrearRecordItem extends React.Component {
+class ArrearRecordItem extends React.Component {
     static propTypes = {
         id : PropTypes.number,
         name : PropTypes.string,
@@ -46,3 +46,7 @@ export class ArrearRecordItem extends React.Component {
         );
     }
 }
+
+export default connect(state => ({
+
+}))(ArrearRecordItem);
