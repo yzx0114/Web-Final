@@ -12,10 +12,12 @@ class BorrowRecordItem extends React.Component {
         id : PropTypes.number,
         name : PropTypes.string,
         money : PropTypes.number,
-        date : PropTypes.string
+        date : PropTypes.string,
+        dispatch:PropTypes.func
     };
     constructor(props) {
         super(props);
+        this.handleRemind = this.handleRemind.bind(this);
     }
 
     render() {
@@ -62,4 +64,4 @@ class BorrowRecordItem extends React.Component {
 }
 export default connect(state => ({
     alerts:state.main.alerts
-}))(RecordItem);
+}))(BorrowRecordItem);
