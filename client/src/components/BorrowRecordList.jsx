@@ -5,7 +5,7 @@ import {
     ListGroupItem
 } from 'reactstrap';
 import {connect} from 'react-redux';
-import {BorrowRecordItem} from './BorrowRecordItem.jsx';
+import BorrowRecordItem from './BorrowRecordItem.jsx';
 import './RecordList.css';
 
 class BorrowRecordList extends React.Component {

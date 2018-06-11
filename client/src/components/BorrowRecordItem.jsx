@@ -4,9 +4,10 @@ import {connect} from 'react-redux';
 import {
     Button
 } from 'reactstrap';
+import {createAlert} from 'states/main-actions.js';
 import './RecordItem.css';
 
-export class BorrowRecordItem extends React.Component {
+class BorrowRecordItem extends React.Component {
     static propTypes = {
         id : PropTypes.number,
         name : PropTypes.string,
@@ -43,7 +44,7 @@ export class BorrowRecordItem extends React.Component {
                         </div>
                         <div className='row'>
                             <div className='mx-auto'>
-                                <Button type="button" className="btn btn-warning">提醒他</Button>
+                                <Button type="button" className="btn btn-warning" onClick={this.handleRemind}>提醒他</Button>
                             </div>
                         </div>
                         <div className='row'>
@@ -55,4 +56,10 @@ export class BorrowRecordItem extends React.Component {
             </div>
         );
     }
+    handleRemind(){
+        this.props.dispatch(createAlert(this.props.name,this.props.money,this.props.date));
+    }
 }
+export default connect(state => ({
+    alerts:state.main.alerts
+}))(RecordItem);

@@ -4,6 +4,8 @@ import {Alert} from 'reactstrap';
 import {connect} from 'react-redux';
 import BorrowRecordList from 'components/BorrowRecordList.jsx';
 import {listBorrowRecords} from 'states/borrow-actions.js';
+import AlertList from './AlertList.jsx';
+import {listAlerts} from 'states/main-actions.js';
 import './BorrowForm.css';
 
 class BorrowForm extends React.Component {
@@ -19,14 +21,15 @@ class BorrowForm extends React.Component {
 
     componentDidMount() {
         this.props.dispatch(listBorrowRecords());
+        this.props.dispatch(listAlerts());
     }
 
     render() {
         const {recordLoading} = this.props;
         return (
             <div className='borrow-form'>
-                
                 <div className='list'>
+                    <AlertList />
                     <BorrowRecordList />{
                         recordLoading &&
                         <Alert color='warning' className='loading'>Loading...</Alert>
