@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import {Button, Form, FormGroup, Label, Input, FormText, Alert} from 'reactstrap';
 import {connect} from 'react-redux';
 import './NewlendForm.css';
-import {inputAccount, inputValue, inputDate, inputDanger, summit} from 'states/newlendform-actions.js';
+import {inputAccount, inputValue, inputDate, inputDanger, submit} from 'states/newlendform-actions.js';
 
 class NewlendForm extends React.Component {
     static propTypes = {
+        id: PropTypes.string,
         inputAccount: PropTypes.string,
         inputValue: PropTypes.string,
         inputDate: PropTypes.string,
@@ -81,7 +82,8 @@ class NewlendForm extends React.Component {
         if (!this.props.inputDate)
             return;
         
-        //this.props.dispatch(createNewlend();
+        this.props.dispatch(submit(this.props.inputAccount, this.props.inputValue, this.props.inputDate));
+
         this.props.dispatch(inputAccount(''));
         this.props.dispatch(inputValue(''));
         this.props.dispatch(inputDate(''));

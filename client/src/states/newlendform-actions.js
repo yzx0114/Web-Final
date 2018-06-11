@@ -1,3 +1,7 @@
+import {
+    createNewlend as createNewlendFromApi,
+} from 'api/newlendform.js';
+
 export function inputAccount(account) {
     return {
         type: '@NEWLENDFORM/INPUT_ACCOUNT',
@@ -26,8 +30,26 @@ export function inputDanger(danger) {
     };
 }
 
-export function submit() {
+function startLoading() {
     return {
-        type: '@NEWLENDFORM/SUBMIT'
+        type: '@NEWLENDFORM/START_LOADING'
     };
 }
+
+function endLoading() {
+    return {
+        type: '@NEWLENDFORM/END_LOADING'
+    };
+}
+
+export function submit(name, money, date) {
+    return (dispatch, getState) => {
+        dispatch(startLoading());
+
+        return createNewlendFromApi(name, money, date).then(() => {
+        }).catch(err => {
+            console.error('Error creating todos', err);
+            dispatch(endLoading());
+        });
+    };
+};
