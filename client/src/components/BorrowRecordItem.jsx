@@ -62,4 +62,4 @@ class BorrowRecordItem extends React.Component {
 }
 export default connect(state => ({
     alerts:state.main.alerts
-}))(RecordItem);
+}))(BorrowRecordItem);
