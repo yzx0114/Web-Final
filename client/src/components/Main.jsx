@@ -26,7 +26,7 @@ import {toggleNavbar} from 'states/main-actions.js';
 import NewlendForm from './NewlendForm.jsx';
 import BorrowForm from './BorrowForm.jsx';
 import ArrearForm from './ArrearForm.jsx';
-import {HistoryForm} from './HistoryForm.jsx';
+import HistoryForm from './HistoryForm.jsx';
 import './Main.css';
 
 class Main extends React.Component {
