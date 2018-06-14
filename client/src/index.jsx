@@ -9,13 +9,15 @@ import Main from 'components/Main.jsx';
 import {main} from 'states/main-reducers.js';
 import {newlendForm} from 'states/newlendform-reducers.js';
 import {borrow} from 'states/borrow-reducers.js';
+import {arrear} from 'states/arrear-reducers.js';
+import {history} from 'states/history-reducers.js';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
 window.onload = function() {
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
     const store = createStore(combineReducers({
-        main, newlendForm, borrow
+        main, newlendForm, borrow, arrear, history
     }), composeEnhancers(applyMiddleware(thunkMiddleware/*, loggerMiddleware*/)));
 
     ReactDOM.render(

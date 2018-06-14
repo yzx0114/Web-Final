@@ -20,20 +20,6 @@ class BorrowRecordList extends React.Component {
     render() {
         const {borrowRecords} = this.props;
 
-        let records = [
-            {   
-                id : 1,
-                name : 'Turtle',
-                money : 100,
-                date : '2018-04-22'
-            },
-            {   
-                id : 2,
-                name : 'Shan',
-                money : 10,
-                date : '2018-04-23'
-            }
-        ]; 
         let children = (
             <ListGroupItem className='empty d-flex justify-content-center align-items-center'>
                 <div className='empty-text'>No record here.</div>

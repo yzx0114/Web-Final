@@ -5,37 +5,29 @@ import {
     ListGroupItem
 } from 'reactstrap';
 import {connect} from 'react-redux';
-import {ArrearRecordItem} from './ArrearRecordItem.jsx';
+import ArrearRecordItem from './ArrearRecordItem.jsx';
 import './RecordList.css';
 
-export class ArrearRecordList extends React.Component {
+class ArrearRecordList extends React.Component {
+    static propTypes = {
+        arrearRecords: PropTypes.array
+    };
+
     constructor(props) {
         super(props);
     }
 
     render() {
-        let records = [
-            {   
-                id : 1,
-                name : 'Turtle',
-                money : 100,
-                date : '2018-04-22'
-            },
-            {   
-                id : 2,
-                name : 'Shan',
-                money : 10,
-                date : '2018-04-23'
-            }
-        ]; 
+        const {arrearRecords} = this.props;
+
         let children = (
             <ListGroupItem className='empty d-flex justify-content-center align-items-center'>
                 <div className='empty-text'>No record here.</div>
             </ListGroupItem>
         );
         
-        if (records.length) {
-            children = records.map(p => (
+        if (arrearRecords.length) {
+            children = arrearRecords.map(p => (
                 <ListGroupItem key={p.id} action>
                     <ArrearRecordItem {...p}/>
                 </ListGroupItem>
@@ -51,3 +43,7 @@ export class ArrearRecordList extends React.Component {
         );
     }
 }
+
+export default connect(state =>({
+    arrearRecords:state.arrear.arrearRecords
+}))(ArrearRecordList);

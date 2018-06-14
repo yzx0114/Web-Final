@@ -6,19 +6,20 @@ import {
 } from 'reactstrap';
 import './RecordItem.css';
 
-export class HistoryRecordItem extends React.Component {
+class HistoryRecordItem extends React.Component {
     static propTypes = {
         id : PropTypes.number,
         name : PropTypes.string,
         money : PropTypes.number,
-        date : PropTypes.string
+        date : PropTypes.string,
+        repayDate : PropTypes.string
     };
     constructor(props) {
         super(props);
     }
 
     render() {
-        const {name,money,date} = this.props;
+        const {name,money,date,repayDate} = this.props;
         return (
             <div className='record-item row container'>
                 <div className='person-info col-sm-9 col-xl-9 row'>
@@ -36,9 +37,13 @@ export class HistoryRecordItem extends React.Component {
                     </div>
                 </div>
                 <div className='date col-sm-3 col-xs-3 align-self-center'>
-                    {date}
+                    {repayDate}
                 </div>
             </div>
         );
     }
 }
+
+export default connect(state => ({
+
+}))(HistoryRecordItem);

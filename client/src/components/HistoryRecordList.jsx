@@ -5,37 +5,29 @@ import {
     ListGroupItem
 } from 'reactstrap';
 import {connect} from 'react-redux';
-import {HistoryRecordItem} from './HistoryRecordItem.jsx';
+import HistoryRecordItem from './HistoryRecordItem.jsx';
 import './RecordList.css';
 
-export class HistoryRecordList extends React.Component {
+class HistoryRecordList extends React.Component {
+    static propTypes = {
+        historyRecords: PropTypes.array
+    };
+
     constructor(props) {
         super(props);
     }
 
     render() {
-        let records = [
-            {   
-                id : 1,
-                name : 'Turtle',
-                money : 100,
-                date : '2018-04-22'
-            },
-            {   
-                id : 2,
-                name : 'Shan',
-                money : 10,
-                date : '2018-04-23'
-            }
-        ]; 
+        const {historyRecords} = this.props;
+
         let children = (
             <ListGroupItem className='empty d-flex justify-content-center align-items-center'>
                 <div className='empty-text'>No record here.</div>
             </ListGroupItem>
         );
         
-        if (records.length) {
-            children = records.map(p => (
+        if (historyRecords.length) {
+            children = historyRecords.map(p => (
                 <ListGroupItem key={p.id} action>
                     <HistoryRecordItem {...p}/>
                 </ListGroupItem>
@@ -51,3 +43,7 @@ export class HistoryRecordList extends React.Component {
         );
     }
 }
+
+export default connect(state =>({
+    historyRecords:state.history.historyRecords
+}))(HistoryRecordList);
