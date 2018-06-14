@@ -13,11 +13,7 @@ class BorrowRecordItem extends React.Component {
         name : PropTypes.string,
         money : PropTypes.number,
         date : PropTypes.string,
-<<<<<<< HEAD
-        dispatch:PropTypes.func
-=======
-        dispatch: PropTypes.func
->>>>>>> ae056af25ef866c4a144a753d922ade6b7fbd38f
+        dispatch:PropTypes.func,
     };
     constructor(props) {
         super(props);
