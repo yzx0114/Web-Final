@@ -5,6 +5,7 @@ const errorHandler = require('./middleware/error-handler.js');
 const newlendRouter = require('./routers/newlendform.js');
 const borrowRouter = require('./routers/borrowform.js');
 const arrearRouter = require('./routers/arrearform.js');
+const historyRouter = require('./routers/historyform.js');
 const app = express();
 
 // app.use(requestLogger); // debug only
@@ -17,6 +18,7 @@ app.use(express.static('dist', {
 app.use('/api', newlendRouter);
 app.use('/api', borrowRouter);
 app.use('/api', arrearRouter);
+app.use('/api', historyRouter);
 app.get('/*', (req, res) => res.redirect('/'));
 app.use(errorHandler);
 

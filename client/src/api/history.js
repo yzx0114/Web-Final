@@ -1,8 +1,23 @@
 import axios from 'axios';
-import uuid from 'uuid/v4';
-import moment from 'moment';
-import 'babel-polyfill';
 
+const historyBaseUrl = 'http://localhost:8060/api';
+
+export function listHistoryRecords(user_account = '') {
+    
+    let url = `${historyBaseUrl}/history`;
+    if (user_account)x
+        url += `?user_account=${user_account}`;
+
+    console.log(`Making GET request to: ${url}`);
+    return axios.get(url).then(function(res) {
+        if (res.status !== 200)
+            throw new Error(`Unexpected response code: ${res.status}`);
+
+        return res.data;
+    });
+}
+
+/*
 export function listHistoryRecords() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -31,4 +46,4 @@ function _listHistoryRecords() {
         }
     ]; 
     return historyRecords;
-};
+};*/
