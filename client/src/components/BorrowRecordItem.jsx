@@ -9,9 +9,9 @@ import './RecordItem.css';
 
 class BorrowRecordItem extends React.Component {
     static propTypes = {
-        id : PropTypes.number,
+        id : PropTypes.string,
         name : PropTypes.string,
-        money : PropTypes.number,
+        money : PropTypes.string,
         date : PropTypes.string,
         dispatch:PropTypes.func,
     };

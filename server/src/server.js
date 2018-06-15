@@ -3,6 +3,7 @@ const express = require('express');
 const requestLogger = require('./middleware/request-logger.js');
 const errorHandler = require('./middleware/error-handler.js');
 const newlendRouter = require('./routers/newlendform.js');
+const borrowRouter = require('./routers/borrowform.js');
 const app = express();
 
 // app.use(requestLogger); // debug only
@@ -13,6 +14,7 @@ app.use(express.static('dist', {
 }));
 
 app.use('/api', newlendRouter);
+app.use('/api', borrowRouter);
 app.get('/*', (req, res) => res.redirect('/'));
 app.use(errorHandler);
 
