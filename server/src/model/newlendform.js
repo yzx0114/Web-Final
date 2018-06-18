@@ -2,10 +2,10 @@ const fs = require('fs');
 const uuid = require('uuid/v4');
 const moment = require('moment');
 
-if (!global.db) {
+/*if (!global.db) {
     const pgp = require('pg-promise')();
     db = pgp(process.env.DB_URL);
-}
+}*/
 
 function list() {
     return new Promise((resolve, reject) => {
@@ -23,7 +23,7 @@ function list() {
 }
 
 function create(name, money, date) {
-    /*return new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         const newlend = {
             id: uuid(),
             name: name,
@@ -42,14 +42,14 @@ function create(name, money, date) {
                 resolve(newlend);
             });
         });
-    });*/
-    const sql =`
+    });
+    /*const sql =`
     INSERT INTO record (lender, borrower, expect_date, amount)
     VALUES ('shan', $<name>, $<money>, $<date>)
     RETURNING *
   `;
-    return db.one(sql, {name, money, date});
+    return db.one(sql, {name, money, date});*/
 }
 module.exports = {
-    create
+    create, list
 };

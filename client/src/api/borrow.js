@@ -5,7 +5,7 @@ const borrowBaseUrl = 'http://localhost:8060/api';
 export function listBorrowRecords(user_account = '') {
     
     let url = `${borrowBaseUrl}/borrow`;
-    if (user_account)x
+    if (user_account)
         url += `?user_account=${user_account}`;
 
     console.log(`Making GET request to: ${url}`);

@@ -7,7 +7,7 @@ import {
 import {connect} from 'react-redux';
 import BorrowRecordItem from './BorrowRecordItem.jsx';
 import './RecordList.css';
-
+import './RecordItem.css';
 class BorrowRecordList extends React.Component {
     static propTypes = {
         borrowRecords: PropTypes.array

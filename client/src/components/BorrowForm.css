@@ -15,3 +15,24 @@
         margin-top: 10%;
     }
 }
+
+.borrow-form .person-info {
+    position: relative;
+}
+
+.borrow-form .header .name {
+    /* font-size: 1.5rem; */
+    position: relative;
+    left: 12%;
+}
+.borrow-form .header .money {
+    /* font-size: 1.5rem; */
+    position: relative;
+    left: 3.5%;
+}
+.borrow-form .header .date {
+    /* font-size: 1.5rem; */
+    position: relative;
+    left: -2%;
+}
+

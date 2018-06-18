@@ -5,7 +5,7 @@ const arrearBaseUrl = 'http://localhost:8060/api';
 export function listArrearRecords(user_account = '') {
     
     let url = `${arrearBaseUrl}/arrear`;
-    if (user_account)x
+    if (user_account)
         url += `?user_account=${user_account}`;
 
     console.log(`Making GET request to: ${url}`);

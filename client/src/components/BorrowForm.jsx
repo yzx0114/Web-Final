@@ -28,15 +28,33 @@ class BorrowForm extends React.Component {
         const {recordLoading} = this.props;
         
         return (
+
             <div className='borrow-form'>
                 <div className='list'>
                     <AlertList />
-                    <BorrowRecordList />{
+                        <div className='header container'>
+                            <div className='person-info col-sm-12 col-xl-12 row' >
+                                <div  className='name col-sm-3 col-xl-3'>
+                                借款人
+                                </div>
+                                <div className='money col-sm-3 col-xl-3'>
+                                金額
+                                </div>
+                                <div className='date col-sm-3 col-xl-3'>
+                                預計還款日
+                                </div>
+                                <div className='date col-sm-3 col-xl-3'>
+                                
+                                </div>
+                            </div>
+                        </div> 
+                </div>
+                <BorrowRecordList />{
                         recordLoading &&
                         <Alert color='warning' className='loading'>Loading...</Alert>
-                    }
-                </div>
+                }
             </div>
+                    
     )}
 }
 
