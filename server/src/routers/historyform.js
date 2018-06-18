@@ -14,5 +14,14 @@ router.get('/history', function(req, res, next) {
     }).catch(next);
 });
 
+/*DB
+router.get('/history', function(req, res, next) {
+    const {user_account} = req.query;
+    postModel.list(user_account).then(historys => {
+        res.json(historys);
+    }).catch(next);
+});
+*/
+
 
 module.exports = router;
