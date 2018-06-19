@@ -1,0 +1,474 @@
+1528652106 ERROR  Error: error
+    at C:\Users\kron4\Desktop\Web-Final\server\src\routers\newlendform.js:21:21
+    at Layer.handle [as handle_request] (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\kron4\Desktop\Web-Final\server\node_modules\body-parser\lib\read.js:130:5
+    at invokeCallback (C:\Users\kron4\Desktop\Web-Final\server\node_modules\raw-body\index.js:224:16)
+1528652157 ERROR  Error: error
+    at C:\Users\kron4\Desktop\Web-Final\server\src\routers\newlendform.js:21:21
+    at Layer.handle [as handle_request] (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\kron4\Desktop\Web-Final\server\node_modules\body-parser\lib\read.js:130:5
+    at invokeCallback (C:\Users\kron4\Desktop\Web-Final\server\node_modules\raw-body\index.js:224:16)
+1528652451 ERROR  Error: error
+    at C:\Users\kron4\Desktop\Web-Final\server\src\routers\newlendform.js:21:21
+    at Layer.handle [as handle_request] (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\kron4\Desktop\Web-Final\server\node_modules\body-parser\lib\read.js:130:5
+    at invokeCallback (C:\Users\kron4\Desktop\Web-Final\server\node_modules\raw-body\index.js:224:16)
+1528655246 ERROR  TypeError: newlendModel.create is not a function
+    at C:\Users\kron4\Desktop\Web-Final\server\src\routers\newlendform.js:26:18
+    at Layer.handle [as handle_request] (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\kron4\Desktop\Web-Final\server\node_modules\body-parser\lib\read.js:130:5
+    at invokeCallback (C:\Users\kron4\Desktop\Web-Final\server\node_modules\raw-body\index.js:224:16)
+1528655321 ERROR  TypeError: newlendModel.create is not a function
+    at C:\Users\kron4\Desktop\Web-Final\server\src\routers\newlendform.js:26:18
+    at Layer.handle [as handle_request] (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\kron4\Desktop\Web-Final\server\node_modules\body-parser\lib\read.js:130:5
+    at invokeCallback (C:\Users\kron4\Desktop\Web-Final\server\node_modules\raw-body\index.js:224:16)
+1528655424 ERROR  ReferenceError: mmoney is not defined
+    at Promise (C:\Users\kron4\Desktop\Web-Final\server\src\model\newlendform.js:25:20)
+    at new Promise (<anonymous>)
+    at Object.create (C:\Users\kron4\Desktop\Web-Final\server\src\model\newlendform.js:21:12)
+    at C:\Users\kron4\Desktop\Web-Final\server\src\routers\newlendform.js:26:18
+    at Layer.handle [as handle_request] (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\kron4\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+1529321281 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529321384 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529321473 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529321493 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529321521 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529321563 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529321607 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529321913 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529322062 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529322236 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529322472 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529322687 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529322919 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529323077 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529323117 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:16:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529323811 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:16:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529324211 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:16:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529324576 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:16:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529325455 ERROR  TypeError: Cannot read property 'then' of undefined
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:20:40
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529325579 ERROR  TypeError: Cannot read property 'then' of undefined
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:20:40
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529325707 ERROR  error: operator does not exist: text = integer
+    at Connection.parseE (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529326011 ERROR  error: operator does not exist: text = integer
+    at Connection.parseE (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529326140 ERROR  error: operator does not exist: text = integer
+    at Connection.parseE (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529326202 ERROR  error: operator does not exist: text = integer
+    at Connection.parseE (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529326364 ERROR  error: operator does not exist: text = integer
+    at Connection.parseE (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529326529 ERROR  error: operator does not exist: text = integer
+    at Connection.parseE (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529326676 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:16:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529326682 ERROR  error: operator does not exist: text = integer
+    at Connection.parseE (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529326750 ERROR  error: operator does not exist: text = integer
+    at Connection.parseE (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529326813 ERROR  ReferenceError: acount is not defined
+    at Object.login (C:\Users\USER\Desktop\Web-Final\server\src\model\login.js:11:15)
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:18:16
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+1529326841 ERROR  error: operator does not exist: text = integer
+    at Connection.parseE (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529327077 ERROR  error: operator does not exist: text = integer
+    at Connection.parseE (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529336116 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:27:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529336139 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:27:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529336303 ERROR  ReferenceError: registerModel is not defined
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:31:5
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529336402 ERROR  ReferenceError: registerModel is not defined
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:31:5
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529336420 ERROR  TypeError: registerModel.login is not a function
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:32:19
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529336488 ERROR  TypeError: registerModel.login is not a function
+    at C:\Users\USER\Desktop\Web-Final\server\src\routers\login.js:32:19
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)

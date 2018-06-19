@@ -1,0 +1,13 @@
+.record-item{
+    height: 4rem;
+}
+
+.record-item .btn{
+    font-size: 0.8rem;
+    padding: 0.1rem;
+}
+
+.record-item .person-info .name{
+    font-weight: bold;
+}
+
