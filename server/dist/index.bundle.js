@@ -13496,166 +13496,184 @@ import './Main.css';
 
 
 var Login = function (_React$Component) {
-  _inherits(Login, _React$Component);
+    _inherits(Login, _React$Component);
 
-  function Login(props) {
-    _classCallCheck(this, Login);
+    function Login(props) {
+        _classCallCheck(this, Login);
 
-    var _this = _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this, props));
 
-    _this.state = {};
+        _this.state = {};
 
-    _this.handleLogin = _this.handleLogin.bind(_this);
-    _this.handleAccount = _this.handleAccount.bind(_this);
-    _this.handlePassword = _this.handlePassword.bind(_this);
-    _this.handleRegister = _this.handleRegister.bind(_this);
+        _this.handleLogin = _this.handleLogin.bind(_this);
+        _this.handleAccount = _this.handleAccount.bind(_this);
+        _this.handlePassword = _this.handlePassword.bind(_this);
+        _this.handleRegister = _this.handleRegister.bind(_this);
 
-    return _this;
-  }
+        return _this;
+    }
 
-  _createClass(Login, [{
-    key: 'render',
-    value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_3_react_router_dom__["a" /* BrowserRouter */],
-        null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'main' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'content' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_4_reactstrap__["t" /* Container */],
-              null,
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_4_reactstrap__["u" /* Row */],
+    _createClass(Login, [{
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(prevProps) {
+            // Typical usage (don't forget to compare props):
+            if ('Account' in localStorage) {
+                this.props.history.push('/main');
+            }
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            if (localStorage.getItem('Account') !== null) {
+                console.log(localStorage.getItem('Account'), 'from start');
+                this.props.history.push('/main');
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_3_react_router_dom__["a" /* BrowserRouter */],
                 null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
-                  null,
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
-                    { className: 'icon' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(588) })
-                  )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
-                  null,
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'message' },
+                    { className: 'main' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      __WEBPACK_IMPORTED_MODULE_4_reactstrap__["t" /* Container */],
-                      null,
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["u" /* Row */],
-                        null,
+                        'div',
+                        { className: 'content' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
-                          null,
-                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["j" /* Label */],
+                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["t" /* Container */],
                             null,
-                            '\u8ACB\u8F38\u5165\u5E33\u865F'
-                          ),
-                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Input */], { type: 'text', value: this.props.LoginAccount, placeholder: 'Please Enter Your Account', onChange: this.handleAccount })
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                __WEBPACK_IMPORTED_MODULE_4_reactstrap__["u" /* Row */],
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
+                                    null,
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'icon' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(588) })
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
+                                    null,
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'message' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["t" /* Container */],
+                                            null,
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                __WEBPACK_IMPORTED_MODULE_4_reactstrap__["u" /* Row */],
+                                                null,
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
+                                                    null,
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["j" /* Label */],
+                                                        null,
+                                                        '\u8ACB\u8F38\u5165\u5E33\u865F'
+                                                    ),
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Input */], { type: 'text', value: this.props.LoginAccount, placeholder: 'Please Enter Your Account', onChange: this.handleAccount })
+                                                )
+                                            ),
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                __WEBPACK_IMPORTED_MODULE_4_reactstrap__["u" /* Row */],
+                                                null,
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
+                                                    null,
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["j" /* Label */],
+                                                        null,
+                                                        '\u8ACB\u8F38\u5165\u5BC6\u78BC'
+                                                    ),
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Input */], { type: 'password', placeholder: 'Please Enter Your Password', value: this.props.LoginPassword, onChange: this.handlePassword })
+                                                )
+                                            ),
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                __WEBPACK_IMPORTED_MODULE_4_reactstrap__["u" /* Row */],
+                                                null,
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
+                                                    null,
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Button */],
+                                                        { onClick: this.handleLogin },
+                                                        '\u767B\u5165'
+                                                    )
+                                                ),
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
+                                                    null,
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Button */],
+                                                        { onClick: this.handleRegister },
+                                                        '\u8A3B\u518A\u5E33\u865F'
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
                         )
-                      ),
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["u" /* Row */],
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
-                          null,
-                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["j" /* Label */],
-                            null,
-                            '\u8ACB\u8F38\u5165\u5BC6\u78BC'
-                          ),
-                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Input */], { type: 'password', placeholder: 'Please Enter Your Password', value: this.props.LoginPassword, onChange: this.handlePassword })
-                        )
-                      ),
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["u" /* Row */],
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
-                          null,
-                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Button */],
-                            { onClick: this.handleLogin },
-                            '\u767B\u5165'
-                          )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
-                          null,
-                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Button */],
-                            { onClick: this.handleRegister },
-                            '\u8A3B\u518A\u5E33\u865F'
-                          )
-                        )
-                      )
                     )
-                  )
                 )
-              )
-            )
-          )
-        )
-      );
-    }
-  }, {
-    key: 'handleAccount',
-    value: function handleAccount(e) {
-      var text = e.target.value;
+            );
+        }
+    }, {
+        key: 'handleAccount',
+        value: function handleAccount(e) {
+            var text = e.target.value;
 
-      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["f" /* AccountChange */])(text));
-    }
-  }, {
-    key: 'handlePassword',
-    value: function handlePassword(e) {
-      var text = e.target.value;
-      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["g" /* PasswordChange */])(text));
-    }
-  }, {
-    key: 'handleLogin',
-    value: function handleLogin() {
-      console.log(this.props.LoginAccount);
-      console.log(this.props.LoginPassword);
-      console.log(this.props);
-      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["h" /* login */])(this.props.LoginAccount, this.props.LoginPassword));
-      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["f" /* AccountChange */])(''));
-      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["g" /* PasswordChange */])(''));
-      console.log(this.props.Accept);
-      this.props.history.push('/main');
-    }
-  }, {
-    key: 'handleRegister',
-    value: function handleRegister() {
-      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["f" /* AccountChange */])(''));
-      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["g" /* PasswordChange */])(''));
-      this.props.history.push('/register');
-    }
-  }]);
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["g" /* AccountChange */])(text));
+        }
+    }, {
+        key: 'handlePassword',
+        value: function handlePassword(e) {
+            var text = e.target.value;
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["h" /* PasswordChange */])(text));
+        }
+    }, {
+        key: 'handleLogin',
+        value: function handleLogin() {
+            var _this2 = this;
 
-  return Login;
+            localStorage.clear();
+            new Promise(function (resolve, reject) {
+                _this2.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["i" /* login */])(_this2.props.LoginAccount, _this2.props.LoginPassword));
+                return resolve();
+            }).then(function () {
+                _this2.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["g" /* AccountChange */])(''));
+                _this2.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["h" /* PasswordChange */])(''));
+            });
+        }
+    }, {
+        key: 'handleRegister',
+        value: function handleRegister() {
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["g" /* AccountChange */])(''));
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["h" /* PasswordChange */])(''));
+            this.props.history.push('/register');
+        }
+    }]);
+
+    return Login;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 Login.propTypes = {
-  LoginLoading: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
-  LoginAccount: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
-  LoginPassword: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
-  dispatch: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  Accept: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool
+    LoginLoading: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
+    LoginAccount: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+    LoginPassword: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+    dispatch: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
+    Accept: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool
 };
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_react_router_dom__["d" /* withRouter */])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_react_redux__["b" /* connect */])(function (state) {
-  return _extends({}, state.login);
+    return _extends({}, state.login);
 })(Login)));
 
 /***/ }),
@@ -16089,7 +16107,7 @@ var Register = function (_React$Component) {
         return;
       }
       this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["e" /* register */])(this.props.RegisterName, this.props.RegisterAccount, this.props.RegisterPassword));
-      //this.props.dispatch(Clear());
+      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["f" /* Clear */])());
       this.props.history.push('/');
     }
   }, {
@@ -16121,18 +16139,21 @@ Register.propTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["f"] = AccountChange;
-/* harmony export (immutable) */ __webpack_exports__["g"] = PasswordChange;
+/* harmony export (immutable) */ __webpack_exports__["g"] = AccountChange;
+/* harmony export (immutable) */ __webpack_exports__["h"] = PasswordChange;
 /* unused harmony export Accept */
-/* harmony export (immutable) */ __webpack_exports__["h"] = login;
-/* unused harmony export Clear */
+/* harmony export (immutable) */ __webpack_exports__["i"] = login;
+/* harmony export (immutable) */ __webpack_exports__["f"] = Clear;
 /* harmony export (immutable) */ __webpack_exports__["a"] = Change0;
 /* harmony export (immutable) */ __webpack_exports__["b"] = Change1;
 /* harmony export (immutable) */ __webpack_exports__["c"] = Change2;
 /* harmony export (immutable) */ __webpack_exports__["d"] = Change3;
 /* harmony export (immutable) */ __webpack_exports__["e"] = register;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_api_logins_js__ = __webpack_require__(347);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_api_register_js__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_api_register_js__ = __webpack_require__(349);
+
 
 
 
@@ -16176,7 +16197,7 @@ function login(account, password) {
 
         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_api_logins_js__["a" /* login */])(account, password).then(function (success) {
             if (success[0].count == 1) {
-                console.log(success[0].count);
+                localStorage.setItem('Account', account);
                 dispatch(Accept());
             } else dispatch(Deny());
             dispatch(endLoading());
@@ -16233,7 +16254,7 @@ function register(name, account, password) {
 
         dispatch(startRegister());
         console.log('hello?');
-        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_api_register_js__["a" /* register */])(name, account, password).then(function (success) {
+        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_api_register_js__["a" /* register */])(name, account, password).then(function (success) {
 
             dispatch(endRegister());
         }).catch(function (err) {
@@ -31911,7 +31932,7 @@ function register(name, account, password) {
     var url = loginBaseUrl + '/register';
 
     console.log('Login to: ' + url);
-
+    console.log(name, account, password);
     return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(url, {
         name: name,
         account: account,

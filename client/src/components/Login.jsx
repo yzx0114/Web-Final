@@ -60,7 +60,21 @@ class Login extends React.Component {
 
 
     }
-
+    componentDidUpdate(prevProps) {
+      // Typical usage (don't forget to compare props):
+      if('Account' in localStorage)
+      {
+          this.props.history.push('/main');
+      }
+    }
+    componentDidMount()
+    {
+      if(localStorage.getItem('Account') !== null)
+      {
+        console.log(localStorage.getItem('Account'),'from start');
+          this.props.history.push('/main');
+      }
+    }
     render() {
         return (
             <Router>
@@ -125,14 +139,14 @@ class Login extends React.Component {
   }
 	handleLogin()
 	{
-    console.log(this.props.LoginAccount);
-    console.log(this.props.LoginPassword);
-    console.log(this.props);
-    this.props.dispatch(login(this.props.LoginAccount,this.props.LoginPassword));
-    this.props.dispatch(AccountChange(''));
-    this.props.dispatch(PasswordChange(''));
-    console.log(this.props.Accept);
-    this.props.history.push('/main');
+    localStorage.clear();
+    new Promise((resolve, reject) => {
+        this.props.dispatch(login(this.props.LoginAccount,this.props.LoginPassword));
+        return resolve();
+      }).then(() => {
+        this.props.dispatch(AccountChange(''));
+        this.props.dispatch(PasswordChange(''));
+      });
 	}
 	handleRegister()
 	{

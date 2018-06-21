@@ -123,7 +123,7 @@ class Register extends React.Component {
         return;
     }
     this.props.dispatch(register(this.props.RegisterName, this.props.RegisterAccount,this.props.RegisterPassword));
-    //this.props.dispatch(Clear());
+    this.props.dispatch(Clear());
 		this.props.history.push('/');
 	}
 	handleCancel()

@@ -12,7 +12,7 @@ export function register(name, account, password) {
     let url = `${loginBaseUrl}/register`;
 
     console.log(`Login to: ${url}`);
-
+    console.log(name, account, password);
     return axios.post(url, {
         name,
         account,

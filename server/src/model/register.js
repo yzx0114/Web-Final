@@ -8,8 +8,17 @@ if (!global.db) {
 
 function register(name, account, password)
 {
+  /*
+  const sql0 =`
+    select COUNT(account) from users where account = '${account}'
+  `;
+  countOBJ = db.one(sql0);
+  countOBJ.then(count=>{
+    if(count > 0)
+    return countOBJ;
+  });*/
 	const sql =`
-    INSERT INTO users values('${name}','${account}','${password}')
+    INSERT INTO users values('${account}','${password}','${name}')
 	`;
 	toprint = db.none(sql); //to see what db any get
   return toprint;

@@ -1,6 +1,7 @@
 import {
     login as loginFromApi
 } from 'api/logins.js';
+import React from 'react';
 import{register as registerFromApi} from 'api/register.js';
 
 function startLoading() {
@@ -49,12 +50,11 @@ export function login(account, password) {
         return loginFromApi(account, password).then(success => {
           if(success[0].count == 1)
           {
-            console.log(success[0].count);
+            localStorage.setItem('Account',account);
             dispatch(Accept());
-
-            }
+          }
           else dispatch(Deny());
-           dispatch(endLoading());
+          dispatch(endLoading());
         }).catch(err => {
             console.error('Error login', err);
             dispatch(endLoading());
@@ -115,7 +115,7 @@ export function register(name ,account, password) {
 		dispatch(startRegister());
       console.log('hello?');
         return registerFromApi(name,account, password).then(success => {
-
+           
            dispatch(endRegister());
         }).catch(err => {
             console.error('Error login', err);

@@ -472,3 +472,18 @@
     at next (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
     at jsonParser (C:\Users\USER\Desktop\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
     at Layer.handle [as handle_request] (C:\Users\USER\Desktop\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529490690 ERROR  Error: getaddrinfo ENOTFOUND undefined undefined:5432
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+1529490791 ERROR  Error: getaddrinfo ENOTFOUND undefined undefined:5432
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+1529491275 ERROR  Error: getaddrinfo ENOTFOUND undefined undefined:5432
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+1529491396 ERROR  Error: getaddrinfo ENOTFOUND undefined undefined:5432
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+1529497237 ERROR  Error: getaddrinfo ENOTFOUND undefined undefined:5432
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
