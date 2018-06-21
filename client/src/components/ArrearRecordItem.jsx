@@ -8,17 +8,17 @@ import './RecordItem.css';
 
 class ArrearRecordItem extends React.Component {
     static propTypes = {
-        id : PropTypes.string,
+        record_id : PropTypes.number,
         name : PropTypes.string,
-        money : PropTypes.string,
-        date : PropTypes.string
+        amount : PropTypes.number,
+        expect_date : PropTypes.string
     };
     constructor(props) {
         super(props);
     }
 
     render() {
-        const {name,money,date} = this.props;
+        const {name,amount,expect_date} = this.props;
         return (
             <div className='record-item row container'>
                 <div className='person-info col-sm-9 col-xl-9 row'>
@@ -29,10 +29,10 @@ class ArrearRecordItem extends React.Component {
                         {name}
                     </div>
                     <div className='money col-sm-3 col-xl-3 align-self-center'>
-                        ${money}
+                        ${amount}
                     </div>
                     <div className='date col-sm-4 col-xl-4 align-self-center'>
-                        {date}
+                        {expect_date}
                     </div>
                 </div>
                 <div className='buttons col-sm-3 col-xs-3 align-self-center'>
