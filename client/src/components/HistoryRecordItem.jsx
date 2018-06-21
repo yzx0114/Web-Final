@@ -8,18 +8,18 @@ import './RecordItem.css';
 
 class HistoryRecordItem extends React.Component {
     static propTypes = {
-        id : PropTypes.string,
+        record_id : PropTypes.number,
         name : PropTypes.string,
-        money : PropTypes.string,
-        date : PropTypes.string,
-        repayDate : PropTypes.string
+        amount : PropTypes.number,
+        expect_date : PropTypes.string,
+        repay_Date : PropTypes.string
     };
     constructor(props) {
         super(props);
     }
 
     render() {
-        const {name,money,date,repayDate} = this.props;
+        const {name,amount,expect_date,repayDate} = this.props;
         return (
             <div className='record-item row container'>
                 <div className='person-info col-sm-9 col-xl-9 row'>
@@ -30,14 +30,14 @@ class HistoryRecordItem extends React.Component {
                         {name}
                     </div>
                     <div className='money col-sm-3 col-xl-3 align-self-center'>
-                        ${money}
+                        ${amount}
                     </div>
                     <div className='date col-sm-4 col-xl-4 align-self-center'>
-                        {date}
+                        {expect_date}
                     </div>
                 </div>
                 <div className='date col-sm-3 col-xs-3 align-self-center'>
-                    {repayDate}
+                    {repay_Date}
                 </div>
             </div>
         );
