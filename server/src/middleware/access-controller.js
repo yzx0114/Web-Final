@@ -1,6 +1,5 @@
 const fs = require('fs');
 
-
 /*
  * Grants access for cross-origin HTTP requests.
  * See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS

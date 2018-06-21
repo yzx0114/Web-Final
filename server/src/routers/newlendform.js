@@ -15,6 +15,17 @@ router.get('/newlend', function(req, res, next) {
     }).catch(next);
 });
 
+const router = express.Router();
+
+router.use(bodyParser.json());
+
+// List
+// router.get('/newlend', function(req, res, next) {
+//     newlendModel.list().then(newlends => {
+//         res.json(newlends);
+//     }).catch(next);
+// });
+
 //Create
 router.post('/newlend', function(req, res, next) {
     const {name, money, date} = req.body;

@@ -27,6 +27,7 @@ function list() {
 function create(name, money, date) {
     console.log("hiihihihi");
     /*return new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         const newlend = {
             id: uuid(),
             name: name,
@@ -57,3 +58,4 @@ function create(name, money, date) {
 module.exports = {
     create, list
 };
+

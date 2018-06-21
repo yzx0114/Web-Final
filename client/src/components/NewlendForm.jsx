@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Button, Form, FormGroup, Label, Input, FormText, Alert} from 'reactstrap';
+import {Button, Form, FormGroup, Label, Input, Alert} from 'reactstrap';
 import {connect} from 'react-redux';
 import './NewlendForm.css';
 import {inputAccount, inputValue, inputDate, inputDanger, submit} from 'states/newlendform-actions.js';
@@ -40,7 +40,7 @@ class NewlendForm extends React.Component {
                     <Input type="textarea" name="text" id="exampleText" value={inputValue} onChange={this.handleValueChange} placeholder='請輸入金額'/>
                 </FormGroup>
                 <FormGroup>
-                    <Label for="exampleDate">預計還錢日期</Label>
+                    <Label for="exampleDate">預計還款日</Label>
                     <Input type="date" name="date" id="exampleDate" value={inputDate} onChange={this.handleDateChange} placeholder="date placeholder" />
                 </FormGroup>
                 <Button className='btn-submit align-self-end' color="info" onClick={this.handleSummit}>Submit</Button>
@@ -82,6 +82,7 @@ class NewlendForm extends React.Component {
         if (!this.props.inputDate)
             return;
         
+        alert('已創建一筆新借款');
         this.props.dispatch(submit(this.props.inputAccount, this.props.inputValue, this.props.inputDate));
 
         this.props.dispatch(inputAccount(''));
