@@ -17,7 +17,7 @@ function list() {
 
         fs.readFile('data-newlend.json', 'utf8', (err, data) => {
             if (err) reject(err);
-            
+
             let newlend = data ? JSON.parse(data) : [];
             resolve(newlend);
         });
@@ -48,7 +48,7 @@ function create(name, money, date) {
     });*/
     const sql =`
     INSERT INTO record (lender, borrower, expect_date, amount)
-    VALUES ('admin1', $<name>, $<date>, $<money>)
+    VALUES ('shan', $<name>, $<date>,$<money>)
     RETURNING *
   `;
     console.log(name, money, date);
@@ -57,4 +57,3 @@ function create(name, money, date) {
 module.exports = {
     create, list
 };
-

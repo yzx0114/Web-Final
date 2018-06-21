@@ -24,7 +24,7 @@ import {
 } from 'reactstrap';
 import {connect} from 'react-redux';
 import './AlertList.css';
-import {toggleModal,toggleTabId,clickIKnow,RemindNextTime} from 'states/main-actions.js';
+import {toggleModal,toggleTabId,clickIKnow,RemindNextTime,listAlerts} from 'states/main-actions.js';
 import classnames from 'classnames';
 import AlertNav from './AlertNav.jsx';
 import AlertItem from './AlertItem.jsx';
@@ -40,6 +40,10 @@ class AlertList extends React.Component {
         this.handleNavClick=this.handleNavClick.bind(this);
      
     }
+    // componentDidMount(){
+    //     this.props.dispatch(listAlerts());
+        
+    // }
     render() {
         const{modalToggle,alerts,activeTab}=this.props;
         let navChildren;
@@ -55,7 +59,7 @@ class AlertList extends React.Component {
             navChildren =alerts.map(p=>(
                 <NavItem key={p.id}>
                     <NavLink className={classnames({ active: activeTab === p.id})} onClick={() => { this.handleNavClick(p.id); }}>
-                         <AlertNav name={p.name}/>
+                         <AlertNav name={p.lender}/>
                     </NavLink>
                 </NavItem>
             ));

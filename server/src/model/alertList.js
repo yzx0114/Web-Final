@@ -10,25 +10,34 @@ if (!global.db) {
 //     ;
 //     return db.none(sql,{name,money,date});
 // }
-function create(lender,borrower,expect_date,money){
+function create(newAlert){
    const sql=
-    `INSERT INTO alerts(lender,borrower,expect_date,money)
-    VALUES ($<lender>,$<borrower>,$<expect_date>,$<money>)
-    RETURNING *`
+    `INSERT INTO alerts(id,lender,borrower,expect_date,money)
+    VALUES ('${newAlert.id}','${newAlert.lender}','${newAlert.borrower}','${newAlert.expect_date}','${newAlert.money}')
+    `
     ;
-    console.log("in model");
-    return db.one(sql,{lender,borrower,expect_date,money});
+    return db.none(sql,newAlert);
     
 }
-function list(){
+function list(myUserName){
     const sql=
     `SELECT * 
     FROM alerts
-    ORDER BY expect_date DESC
+    WHERE borrower= '${myUserName}'
+    ORDER BY money DESC
     `;
     return db.any(sql);
 }
+function cancel(id){
+    const sql=
+    `DELETE FROM alerts 
+     WHERE id='${id}';
+    `;
+    return db.none(sql,id);
+}
+
 module.exports = {
     list,
-    create
+    create,
+    cancel
 };

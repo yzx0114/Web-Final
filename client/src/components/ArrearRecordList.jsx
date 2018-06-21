@@ -28,7 +28,7 @@ class ArrearRecordList extends React.Component {
         
         if (arrearRecords.length) {
             children = arrearRecords.map(p => (
-                <ListGroupItem key={p.id} action>
+                <ListGroupItem key={p.record_id} action>
                     <ArrearRecordItem {...p}/>
                 </ListGroupItem>
             ));

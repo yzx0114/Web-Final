@@ -1,6 +1,7 @@
 import{
     listAlerts as listAlertsFromApi,
-    createAlert as createAlertsFromApi
+    createAlert as createAlertsFromApi,
+    cancelAlert as cancelAlertsFromApi
 }from 'api/Alerts.js'
 
 export function toggleNavbar() {
@@ -20,6 +21,7 @@ export function toggleTabId(tabId){
     };
 }
 export function clickIKnow(tabId){
+    cancelAlertsFromApi(tabId);
     return {
         type: '@MAIN/I_KNOW_BUTTON',
         tabId
@@ -33,7 +35,7 @@ export function RemindNextTime(tabId){
 }
 function endlistAlert(alerts){
     return {
-        type:'@MAIN/END_LIST_ALERT',
+        type:'@MAIN/END_LIST_ALERTS',
         alerts
     };
 }

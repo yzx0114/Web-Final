@@ -7,7 +7,6 @@ const initMainState = {
 };
 
 export function main(state = initMainState, action) {  
-    
     switch (action.type) {
         case '@MAIN/TOGGLE_NAVBAR':
             return {

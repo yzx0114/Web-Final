@@ -1,0 +1,63 @@
+1529610868 ERROR  Error: Account and Password are required
+    at C:\Users\user\Desktop\Web\Web-Final-master\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\layer.js:95:5)
+1529610874 ERROR  Error: Account and Password are required
+    at C:\Users\user\Desktop\Web\Web-Final-master\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\layer.js:95:5)
+1529610878 ERROR  Error: Account and Password are required
+    at C:\Users\user\Desktop\Web\Web-Final-master\server\src\routers\login.js:28:21
+    at Layer.handle [as handle_request] (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\express\lib\router\layer.js:95:5)
+1529611396 ERROR  error: invalid input syntax for integer: "undefined"
+    at Connection.parseE (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529611679 ERROR  error: invalid input syntax for integer: "undefined"
+    at Connection.parseE (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529611787 ERROR  error: invalid input syntax for integer: "undefined"
+    at Connection.parseE (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\user\Desktop\Web\Web-Final-master\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
