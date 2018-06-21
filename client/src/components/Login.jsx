@@ -57,7 +57,7 @@ class Login extends React.Component {
     this.handleAccount = this.handleAccount.bind(this);
     this.handlePassword = this.handlePassword.bind(this);
 		this.handleRegister = this.handleRegister.bind(this);
-
+    this.handleKeypress = this.handleKeypress.bind(this);
 
     }
     componentDidUpdate(prevProps) {
@@ -69,9 +69,11 @@ class Login extends React.Component {
     }
     componentDidMount()
     {
+
+      document.addEventListener("keydown", this.handleKeypress, false);
       if(localStorage.getItem('Account') !== null)
       {
-        console.log(localStorage.getItem('Account'),'from start');
+  
           this.props.history.push('/main');
       }
     }
@@ -106,10 +108,10 @@ class Login extends React.Component {
 								</Col>
 							</Row>
 							<Row>
-								<Col>
-									<Button onClick={this.handleLogin}>登入</Button>
+								<Col xs ='6'>
+									<Button onKeyPress={this.handleKeypress} onClick={this.handleLogin}>登入</Button>
 								</Col>
-								<Col>
+								<Col xs='6'>
 									<Button onClick ={this.handleRegister}>註冊帳號</Button>
 								</Col>
 							</Row>
@@ -131,6 +133,10 @@ class Login extends React.Component {
     const text = e.target.value;
 
     this.props.dispatch(AccountChange(text));
+  }
+  handleKeypress(e)
+  {
+    if(e.keyCode === 13) this.handleLogin();
   }
   handlePassword(e)
   {

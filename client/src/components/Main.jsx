@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import {
     BrowserRouter as Router,
     Route,
-    Link
+    Link,
+    withRouter
 } from 'react-router-dom'
 import {
     Collapse,
@@ -15,9 +16,9 @@ import {
     NavLink,
     Input,
     Button,
-    Modal, 
-    ModalHeader, 
-    ModalBody, 
+    Modal,
+    ModalHeader,
+    ModalBody,
     ModalFooter
 } from 'reactstrap';
 import {connect} from 'react-redux';
@@ -37,11 +38,11 @@ class Main extends React.Component {
 
     constructor(props) {
         super(props);
-        
-        this.handleNavbarToggle = this.handleNavbarToggle.bind(this);  
+
+        this.handleNavbarToggle = this.handleNavbarToggle.bind(this);
     }
-    
-   
+
+
     render() {
         return (
             <Router>
@@ -83,7 +84,7 @@ class Main extends React.Component {
                         <NewlendForm />
                      )}/>
                 </div>
-                
+
             </Router>
         );
     }
@@ -94,6 +95,6 @@ class Main extends React.Component {
 
 }
 
-export default connect(state => ({
+export default withRouter(connect(state => ({
     ...state.main,
-}))(Main);
+}))(Main));

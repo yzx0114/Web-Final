@@ -8,7 +8,6 @@ if (!global.db) {
 
 function login(account, password)
 {
-  console.log(typeof(account), typeof(password));
 	const sql =`
 		SELECT COUNT(*) from users
 		WHERE account = '${account}' AND password = '${password}'
