@@ -14,7 +14,7 @@ function list(user_account = '') {
         SELECT record_id,name,expect_date,repay_date,amount
         FROM record
         INNER JOIN users ON record.lender = users.account
-        WHERE borrower = 'admin1' OR lender = 'admin1' AND paid = true
+        WHERE borrower = '%$1:value%' OR lender = '%$1:value%' AND paid = true
     `;
     
     //console.log(sql);
