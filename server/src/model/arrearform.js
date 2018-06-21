@@ -14,7 +14,7 @@ function list(user_account = '') {
         SELECT record_id,name,expect_date,amount
         FROM record
         INNER JOIN users ON record.borrower = users.account
-        WHERE lender = 'admin1' AND paid = false
+        WHERE lender = '%$1:value%' AND paid = false
     `;
    
     return db.any(sql, [user_account]);

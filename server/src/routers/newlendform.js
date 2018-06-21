@@ -29,7 +29,6 @@ router.use(bodyParser.json());
 //Create
 router.post('/newlend', function(req, res, next) {
     const {name, money, date} = req.body;
-    console.log('123132123123');
     if (!name || !money || !date) {
         const err = new Error('error');
         err.status = 400;

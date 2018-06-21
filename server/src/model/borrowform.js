@@ -9,12 +9,12 @@ if (!global.db) {
 
 function list(user_account = '') {
     user_account = 'admin2'; // 登入此帳號的人(借款人))
-    
+    console.log(user_account);
     const sql = `
         SELECT record_id,name,expect_date,amount
         FROM record
         INNER JOIN users ON record.lender = users.account
-        WHERE borrower = 'admin2' AND paid = false
+        WHERE borrower = '%$1:value%' AND paid = false
     `;
    
     return db.any(sql, [user_account]);
