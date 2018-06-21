@@ -18,7 +18,7 @@ router.get('/arrear', function(req, res, next) {
 /*DB
 router.get('/arrear', function(req, res, next) {
     const {user_account} = req.query;
-    postModel.list(user_account).then(arrears => {
+    arrearModel.list(user_account).then(arrears => {
         res.json(arrears);
     }).catch(next);
 });
