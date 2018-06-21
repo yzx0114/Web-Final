@@ -15,7 +15,7 @@ router.get('/newlend', function(req, res, next) {
     }).catch(next);
 });
 
-const router = express.Router();
+
 
 router.use(bodyParser.json());
 

@@ -24,10 +24,9 @@ app.use('/api', borrowRouter);
 app.use('/api', arrearRouter);
 app.use('/api', historyRouter);
 app.use('/api', alertListRouter);
-app.get('/*', (req, res) => res.redirect('/'));
-app.use(accessController);
 app.use('/api', loginRouter);
 app.get('/*', (req, res) => res.redirect('/'));
+app.use(accessController);
 app.use(errorHandler);
 
 const port = 8060;
