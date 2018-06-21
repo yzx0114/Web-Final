@@ -12,14 +12,14 @@ class HistoryRecordItem extends React.Component {
         name : PropTypes.string,
         amount : PropTypes.number,
         expect_date : PropTypes.string,
-        repay_Date : PropTypes.string
+        repay_date : PropTypes.string
     };
     constructor(props) {
         super(props);
     }
 
     render() {
-        const {name,amount,expect_date,repayDate} = this.props;
+        const {name,amount,expect_date,repay_date} = this.props;
         return (
             <div className='record-item row container'>
                 <div className='person-info col-sm-9 col-xl-9 row'>
@@ -32,12 +32,12 @@ class HistoryRecordItem extends React.Component {
                     <div className='money col-sm-3 col-xl-3 align-self-center'>
                         ${amount}
                     </div>
-                    <div className='date col-sm-4 col-xl-4 align-self-center'>
+                    <div className='date col-sm-3 col-xl-3 align-self-center'>
                         {expect_date}
                     </div>
                 </div>
                 <div className='date col-sm-3 col-xs-3 align-self-center'>
-                    {repay_Date}
+                    {repay_date}
                 </div>
             </div>
         );

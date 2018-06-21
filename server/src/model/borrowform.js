@@ -16,8 +16,6 @@ function list(user_account = '') {
         INNER JOIN users ON record.lender = users.account
         WHERE borrower = 'admin2' AND paid = false
     `;
-    
-    console.log(sql);
    
     return db.any(sql, [user_account]);
 }

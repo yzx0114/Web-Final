@@ -11,7 +11,7 @@ function list(user_account = '') {
     user_account = 'admin1'; // 登入此帳號的人(借款人))
     
     const sql = `
-        SELECT record_id,name,expect_date,amount
+        SELECT record_id,name,expect_date,repay_date,amount
         FROM record
         INNER JOIN users ON record.lender = users.account
         WHERE borrower = 'admin1' OR lender = 'admin1' AND paid = true
