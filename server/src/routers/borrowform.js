@@ -8,21 +8,18 @@ const router = express.Router();
 router.use(accessController);
 router.use(bodyParser.json());
 
+router.get('/borrow', function(req, res, next) {
+    const {user_account} = req.query;
+    borrowModel.list(user_account).then(borrows => {
+        res.json(borrows);
+    }).catch(next);
+});
 
-// List
+/*
 router.get('/borrow', function(req, res, next) {
     borrowModel.list(req.query.user_account).then(borrows => {
         res.json(borrows);
     }).catch(next);
-});
-
-/*DB
-router.get('/borrow', function(req, res, next) {
-    const {user_account} = req.query;
-    postModel.list(user_account).then(borrows => {
-        res.json(borrows);
-    }).catch(next);
-});
-*/
+});*/
 
 module.exports = router;

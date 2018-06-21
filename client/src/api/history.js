@@ -5,19 +5,6 @@ const historyBaseUrl = 'http://localhost:8060/api';
 export function listHistoryRecords(user_account = '') {
     
     let url = `${historyBaseUrl}/history`;
-    if (user_account)
-        url += `?user_account=${user_account}`;
-
-    console.log(`Making GET request to: ${url}`);
-    return axios.get(url).then(function(res) {
-        if (res.status !== 200)
-            throw new Error(`Unexpected response code: ${res.status}`);
-
-        return res.data;
-    });
-
-    /*DB
-    let url = `${historyBaseUrl}/history`;
     let query = [];
     if (user_account)
         query.push(`user_account=${user_account}`);
@@ -32,7 +19,18 @@ export function listHistoryRecords(user_account = '') {
 
         return res.data;
     });
-    */
+    
+    /*let url = `${historyBaseUrl}/history`;
+    if (user_account)
+        url += `?user_account=${user_account}`;
+
+    console.log(`Making GET request to: ${url}`);
+    return axios.get(url).then(function(res) {
+        if (res.status !== 200)
+            throw new Error(`Unexpected response code: ${res.status}`);
+
+        return res.data;
+    });*/
     
 }
 

@@ -2,7 +2,25 @@ const fs = require('fs');
 const uuid = require('uuid/v4');
 const moment = require('moment');
 
+if (!global.db) {
+    const pgp = require('pg-promise')();
+    db = pgp(process.env.DB_URL);
+}
+
 function list(user_account = '') {
+    user_account = 'admin1'; // 登入此帳號的人(借款人))
+    
+    const sql = `
+        SELECT record_id,name,expect_date,amount
+        FROM record
+        INNER JOIN users ON record.borrower = users.account
+        WHERE lender = 'admin1' AND paid = false
+    `;
+   
+    return db.any(sql, [user_account]);
+}
+
+/*function list(user_account = '') {
     return new Promise((resolve, reject) => {
         if (!fs.existsSync('data-borrow.json')) {
             fs.writeFileSync('data-borrow.json', '');
@@ -15,29 +33,7 @@ function list(user_account = '') {
             resolve(arrears);
         });
     });
-}
-
-/*DB
-
-if (!global.db) {
-    const pgp = require('pg-promise')();
-    db = pgp(process.env.DB_URL);
-}
-
-function list(user_account = '') {
-    const where = [];
-    if (user_account)
-        where.push(`borrower = '%$1:value%'`);
-    const sql = `
-        SELECT *
-        FROM record
-        ${where.length ? 'WHERE ' + where.join(' OR ') : ''}
-    `;
-    console.log("here is");
-    console.log(sql);
-    return db.any(sql, [user_account]);
-}
-*/
+}*/
 
 module.exports = {
     list

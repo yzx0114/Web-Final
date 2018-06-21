@@ -28,7 +28,7 @@ class BorrowRecordList extends React.Component {
         
         if (borrowRecords.length) {
             children = borrowRecords.map(p => (
-                <ListGroupItem key={p.id} action>
+                <ListGroupItem key={p.record_id} action>
                     <BorrowRecordItem {...p}/>
                 </ListGroupItem>
             ));

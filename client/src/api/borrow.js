@@ -5,18 +5,6 @@ const borrowBaseUrl = 'http://localhost:8060/api';
 export function listBorrowRecords(user_account = '') {
     
     let url = `${borrowBaseUrl}/borrow`;
-    if (user_account)
-        url += `?user_account=${user_account}`;
-
-    console.log(`Making GET request to: ${url}`);
-    return axios.get(url).then(function(res) {
-        if (res.status !== 200)
-            throw new Error(`Unexpected response code: ${res.status}`);
-        return res.data;
-    });
-
-    /*DB
-    let url = `${borrowBaseUrl}/borrow`;
     let query = [];
     if (user_account)
         query.push(`user_account=${user_account}`);
@@ -28,11 +16,23 @@ export function listBorrowRecords(user_account = '') {
     return axios.get(url).then(function(res) {
         if (res.status !== 200)
             throw new Error(`Unexpected response code: ${res.status}`);
-
         return res.data;
     });
-    */
+    
+        
+    /*let url = `${borrowBaseUrl}/borrow`;
+    if (user_account)
+        url += `?user_account=${user_account}`;
+
+    console.log(`Making GET request to: ${url}`);
+    return axios.get(url).then(function(res) {
+        if (res.status !== 200)
+            throw new Error(`Unexpected response code: ${res.status}`);
+        return res.data;
+    });*/
 }
+
+
 /*
 export function listBorrowRecords() {
     return new Promise((resolve, reject) => {

@@ -28,7 +28,7 @@ class HistoryRecordList extends React.Component {
         
         if (historyRecords.length) {
             children = historyRecords.map(p => (
-                <ListGroupItem key={p.id} action>
+                <ListGroupItem key={p.record_id} action>
                     <HistoryRecordItem {...p}/>
                 </ListGroupItem>
             ));
