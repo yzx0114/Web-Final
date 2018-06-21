@@ -8,16 +8,21 @@ if (!global.db) {
 }
 
 function list(user_account = '') {
-    user_account = 'admin1'; // 登入此帳號的人(借款人))
-    
+    user_account = 'admin2'; // 登入此帳號的人(借款人))
+    const where = [];
+
+    if(user_account){
+        where.push(`borrower = '${user_account}'`);
+        where.push(`paid = false`);
+    }
     const sql = `
         SELECT record_id,name,expect_date,amount
         FROM record
-        INNER JOIN users ON record.borrower = users.account
-        WHERE lender = '%$1:value%' AND paid = false
+        INNER JOIN users ON record.lender = users.account
+        ${where.length ? 'WHERE ' + where.join(' AND ') : ''}
     `;
    
-    return db.any(sql, [user_account]);
+    return db.any(sql);
 }
 
 /*function list(user_account = '') {

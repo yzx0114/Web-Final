@@ -11,15 +11,17 @@ function list(user_account = '') {
     user_account = 'admin1'; // 登入此帳號的人(借款人))
     
     const sql = `
-        SELECT record_id,name,expect_date,repay_date,amount
+        SELECT record_id,name,expect_date,repay_date,amount,
+        CASE
+            WHEN (borrower = '${user_account}') THEN 'borrower'
+            WHEN (lender = '${user_account}') THEN 'lender'
+            END AS who
         FROM record
-        INNER JOIN users ON record.lender = users.account
-        WHERE borrower = '%$1:value%' OR lender = '%$1:value%' AND paid = true
+        INNER JOIN users ON CASE WHEN borrower = '${user_account}' THEN record.lender = users.account ELSE record.borrower = users.account END
+        WHERE borrower = '${user_account}' OR lender = '${user_account}' AND paid = true;
     `;
-    
-    //console.log(sql);
    
-    return db.any(sql, [user_account]);
+    return db.any(sql);
 }
 
 /*function list(user_account = '') {
