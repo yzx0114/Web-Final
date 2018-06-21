@@ -49,7 +49,7 @@ function create(name, money, date) {
     });*/
     const sql =`
     INSERT INTO record (lender, borrower, expect_date, amount)
-    VALUES ('shan', $<name>, $<money>, $<date>)
+    VALUES ('shan', $<name>, $<date>,$<money>)
     RETURNING *
   `;
   console.log(db.one(sql, {name, money, date}));

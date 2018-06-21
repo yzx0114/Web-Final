@@ -17,7 +17,7 @@ function list(user_account = '') {
         WHERE borrower = 'admin1' OR lender = 'admin1' AND paid = true
     `;
     
-    console.log(sql);
+    //console.log(sql);
    
     return db.any(sql, [user_account]);
 }

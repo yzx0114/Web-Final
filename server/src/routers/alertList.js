@@ -11,26 +11,34 @@ router.use(accessController);
 router.use(bodyParser.json());
 
 //List
-router.get('/alert', function(req, res, next) {
-    alertModel.list().then(alerts => {
-         res.json(alerts);
+router.post('/listAlert', function(req, res, next) {
+    const {myUserName} = req.body;
+    
+    alertModel.list(myUserName).then(alerts => {
+        res.json(alerts);
     }).catch(next);
 });
 router.use(accessController);
 //Create
-router.post('/alert', function(req, res, next) {
-    console.log("server get post cmd");
-    let lender="蔡旻翰";
-    let borrower="貓咪上樹";
-    const {name, money, expect_date} = req.body;
-    if (!name || !money || !expect_date) {
+router.post('/createAlert', function(req, res, next) {
+    const {newAlert} = req.body;
+   
+    if (!newAlert) {
         const err = new Error('error');
         err.status = 400;
         throw err;
     }
-    alertModel.create(lender,name,expect_date,money).then(newAlert => {
+    alertModel.create(newAlert).then(newAlert => {
          res.json(newAlert);
     }).catch(next);
 });
-
+router.post('/cancelAlert', function(req, res, next) {
+    const {id} = req.body;
+    if (!id) {
+        const err = new Error('error');
+        err.status = 400;
+        throw err;
+    }
+    alertModel.cancel(id);
+});
 module.exports = router;
