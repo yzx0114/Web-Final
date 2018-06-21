@@ -1,11 +1,31 @@
-.main
+.register
 {
-	height:100%;
+	height: 100%;
 }
-.main .content
-{
-	min-height: 100%;
-	top:5rem;
-  display: flex;
-  align-items: center;
+.register .header {
+	font-size: 4rem;
+	font-family: 'Indie Flower', cursive;
+	color: rgb(18, 108, 168);
+	text-align: center;
+	
+}
+.register .content {
+	position: relative;
+	top: 100px;
+
+}
+
+.register .row {
+	margin-bottom: 12.5px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.register .button1{
+	width: 50%;
+}
+
+.register .button2{
+	width: 50%;
 }

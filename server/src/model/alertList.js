@@ -24,7 +24,7 @@ function list(){
     const sql=
     `SELECT * 
     FROM alerts
-    ORDER BY date DESC
+    ORDER BY expect_date DESC
     `;
     return db.any(sql);
 }

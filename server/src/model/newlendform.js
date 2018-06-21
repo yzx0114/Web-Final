@@ -27,7 +27,6 @@ function list() {
 function create(name, money, date) {
     console.log("hiihihihi");
     /*return new Promise((resolve, reject) => {
-    return new Promise((resolve, reject) => {
         const newlend = {
             id: uuid(),
             name: name,
@@ -49,10 +48,10 @@ function create(name, money, date) {
     });*/
     const sql =`
     INSERT INTO record (lender, borrower, expect_date, amount)
-    VALUES ('shan', $<name>, $<money>, $<date>)
+    VALUES ('admin1', $<name>, $<date>, $<money>)
     RETURNING *
   `;
-  console.log(db.one(sql, {name, money, date}));
+    console.log(name, money, date);
     return db.one(sql, {name, money, date});
 }
 module.exports = {

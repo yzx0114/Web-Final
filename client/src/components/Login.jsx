@@ -40,7 +40,7 @@ import Main from 'components/Main.jsx';
 import './Login.css';
 class Login extends React.Component {
     static propTypes = {
-		    LoginLoading : PropTypes.bool,
+		LoginLoading : PropTypes.bool,
         LoginAccount : PropTypes.string,
         LoginPassword : PropTypes.string,
         dispatch : PropTypes.func,
@@ -56,7 +56,7 @@ class Login extends React.Component {
     this.handleLogin = this.handleLogin.bind(this);
     this.handleAccount = this.handleAccount.bind(this);
     this.handlePassword = this.handlePassword.bind(this);
-		this.handleRegister = this.handleRegister.bind(this);
+	this.handleRegister = this.handleRegister.bind(this);
 
 
     }
@@ -78,15 +78,17 @@ class Login extends React.Component {
     render() {
         return (
             <Router>
-                <div className='main'>
-
-                        <div className='content'>
+                <div className='login'>
+                    <div className='content'>
                          <Container>
 						 <Row>
-						 <Col>
+						 <Col className='col1'>
+                        <div className="header">
+                            Salmoney
+                        </div>
 							<div className="icon">
 							<img src={require('../image/LPICON.jpg')}/>
-							</div>
+						    </div>
 						 </Col>
 
 						 <Col>
@@ -94,23 +96,23 @@ class Login extends React.Component {
 						 <div className="message">
 							<Container>
 							<Row>
-							<Col>
-								<Label>請輸入帳號</Label>
-								<Input type="text" value = {this.props.LoginAccount} placeholder="Please Enter Your Account" onChange={this.handleAccount}/>
+							<Col className="account">
+								<Label>帳號</Label>
+								<Input className='input'type="text" value = {this.props.LoginAccount} placeholder="Please Enter Your Account" onChange={this.handleAccount}/>
 							</Col>
 							</Row>
 							<Row>
-								<Col>
-									<Label>請輸入密碼</Label>
-									<Input type="password" placeholder="Please Enter Your Password" value = {this.props.LoginPassword} onChange={this.handlePassword}/>
+								<Col className='password'>
+									<Label>密碼</Label>
+									<Input className='input' type="password" placeholder="Please Enter Your Password" value = {this.props.LoginPassword} onChange={this.handlePassword}/>
 								</Col>
 							</Row>
 							<Row>
 								<Col>
-									<Button onClick={this.handleLogin}>登入</Button>
-								</Col>
-								<Col>
-									<Button onClick ={this.handleRegister}>註冊帳號</Button>
+                                    <div className='buttonRow'>
+									    <Button className='button1' outline color="info" onClick={this.handleLogin}>Login</Button>
+                                        <Button className='button2' outline color="info" onClick ={this.handleRegister}>Sign up</Button>
+                                    </div>
 								</Col>
 							</Row>
 							</Container>
@@ -121,7 +123,6 @@ class Login extends React.Component {
 
 
                     </div>
-
                 </div>
             </Router>
         );

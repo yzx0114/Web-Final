@@ -25,14 +25,17 @@ import {
 	CardText
 } from 'reactstrap';
 import {connect} from 'react-redux';
+import TransitionSwitch from 'react-router-transition-switch'
+import Fader from 'react-fader'
 /*
 import Today from 'components/Today.jsx';
 import Forecast from 'components/Forecast.jsx';
 import {setSearchText} from 'states/post-actions.js';
 import {toggleNavbar} from 'states/main-actions.js';
 
-import './Main.css';
+
 */
+import './LoginMain.css';
 import Register from 'components/Register.jsx';
 import Main from 'components/Main.jsx';
 import Login from 'components/Login.jsx';
@@ -49,13 +52,8 @@ class LoginMain extends React.Component {
     render() {
         return (
             <Router>
-                <div className='main'>
-                    <div className='bg-faded'>
-                        <div className='container'>
-							
-						 
-                        </div>
-                    </div>
+                <div className='LoginMain'>
+                    <TransitionSwitch component={Fader}>
 					<Route exact path="/" render={() => (
                         <Login />
                     )}/>
@@ -65,6 +63,7 @@ class LoginMain extends React.Component {
 					<Route exact path="/main" render={() => (
 						<Main />
                     )}/>
+                    </TransitionSwitch>
 					
 					
        

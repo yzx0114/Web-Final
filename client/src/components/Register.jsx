@@ -41,20 +41,23 @@ class Register extends React.Component {
         super(props);
 
         this.handleSubmit = this.handleSubmit.bind(this);
-          this.handleChange0 = this.handleChange0.bind(this);
-		      this.handleChange1 = this.handleChange1.bind(this);
-          this.handleChange2 = this.handleChange2.bind(this);
-          this.handleChange3 = this.handleChange3.bind(this);
-          this.handleCancel = this.handleCancel.bind(this);
+        this.handleChange0 = this.handleChange0.bind(this);
+		this.handleChange1 = this.handleChange1.bind(this);
+        this.handleChange2 = this.handleChange2.bind(this);
+        this.handleChange3 = this.handleChange3.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
     }
 
     render() {
         return (
             <Router>
-                <div className='main'>
+                <div className='register'>
+                
 					<div className='content'>
-							<Container>
-							<Row>
+                    
+							<Container >
+                                <div className='header'>Join Us Now!</div>
+							<Row className='row'>
 								<Col>
 									<Label>請輸入姓名</Label>
 									<Input type="text" placeholder="Please Enter Your Name" value={this.props.RegisterName} onChange={this.handleChange0} required/>
@@ -80,14 +83,11 @@ class Register extends React.Component {
 							</Row>
 							<Row>
 								<Col>
-									<Button onClick={this.handleSubmit}>送出</Button>
-								</Col>
-								<Col>
-									<Button onClick ={this.handleCancel}>取消</Button>
+									<Button className='button1' outline color="info" onClick={this.handleSubmit}>送出</Button>
+                                    <Button className='button2' outline color="info" onClick ={this.handleCancel}>取消</Button>
 								</Col>
 							</Row>
 							</Container>
-
 
                       </div>
                 </div>
