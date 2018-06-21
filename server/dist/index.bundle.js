@@ -12850,6 +12850,7 @@ function endlistAlert(alerts) {
     };
 }
 function endCreateAlert(alert) {
+    console.log("endCreateAlert:", alert);
     return {
         type: '@MAIN/END_CREATE_ALERT',
         alert: alert
@@ -12868,7 +12869,7 @@ function listAlerts() {
 function createAlert(name, money, date) {
     return function (dispatch, getState) {
         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_api_Alerts_js__["b" /* createAlert */])(name, money, date).then(function (alert) {
-
+            console.log("in the createAlertAction");
             dispatch(endCreateAlert(alert));
         }).catch(function (err) {
             console.error("Error creating Alert", err);
@@ -30739,52 +30740,77 @@ module.exports = function spread(callback) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_moment__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_polyfill__ = __webpack_require__(358);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_polyfill___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_polyfill__);
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
 
 
 
 
 var alertsKey = 'alerts';
 
+var alertBaseUrl = 'http://localhost:8060/api';
 function listAlerts() {
-    return new Promise(function (resolve, reject) {
-        resolve(_listAlerts());
+    var url = alertBaseUrl + '/alert';
+    return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(url).then(function (res) {
+        if (res.status !== 200) throw new Error('Unexpected response code: ' + res.status);
+        return res.date;
+    }).catch(function (err) {
+        console.error("Error sending Alert Request", err);
     });
 }
-function _listAlerts() {
-
-    var alertItems = localStorage.getItem(alertsKey);
-    var alerts = void 0;
-
-    if (alertItems) {
+/*
+export function listAlerts(){
+    return new Promise((resolve, reject)=>{
+        resolve(_listAlerts());
+    }); 
+}
+function _listAlerts(){
+    
+    let alertItems = localStorage.getItem(alertsKey);
+    let alerts;
+    
+    if(alertItems){
         alerts = JSON.parse(alertItems);
-    } else {
-        localStorage.setItem(alertsKey, JSON.stringify([]));
     }
-
+    else{
+        localStorage.setItem(alertsKey,JSON.stringify([]));
+    }
+    
     return alerts;
 }
+*/
 function createAlert(name, money, date) {
 
-    return new Promise(function (resolve, reject) {
-        resolve(_createAlert(name, money, date));
+    var url = alertBaseUrl + '/alert';
+    console.log('Make Alert request to :' + url);
+    return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(url, {
+        name: name, money: money, date: date
+    }).then(function (res) {
+        if (res.status !== 200) throw new Error('Unexcept response code: ' + res.status);
+        return res.data;
+    });
+}
+/*
+export function createAlert(name,money,date){
+    
+    return new Promise((resolve,reject)=>{
+        resolve(_createAlert(name,money,date));
     });
 }
 
-function _createAlert(name, money, date) {
-
-    var newAlert = {
-        id: __WEBPACK_IMPORTED_MODULE_1_uuid_v4___default()(),
-        name: name,
-        money: money,
-        date: date
+function _createAlert(name,money,date){
+    
+    const newAlert={
+        id:uuid(),
+        name:name,
+        money:money,
+        date:date
     };
-
-    var Alerts = [newAlert].concat(_toConsumableArray(_listAlerts()));
-    localStorage.setItem(alertsKey, JSON.stringify(Alerts));
+    const Alerts=[
+        newAlert,
+        ..._listAlerts()
+    ];
+    localStorage.setItem(alertsKey,JSON.stringify(Alerts));
     return newAlert;
-}
+}*/
 
 /***/ }),
 /* 336 */
@@ -30879,7 +30905,6 @@ function listBorrowRecords() {
     console.log('Making GET request to: ' + url);
     return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(url).then(function (res) {
         if (res.status !== 200) throw new Error('Unexpected response code: ' + res.status);
-
         return res.data;
     });
 
@@ -31023,7 +31048,6 @@ function createNewlend(name, money, date) {
         date: date
     }).then(function (res) {
         if (res.status !== 200) throw new Error('Unexpected response code: ' + res.status);
-
         return res.data;
     });
 }
@@ -31920,6 +31944,7 @@ var BorrowRecordItem = function (_React$Component) {
         key: 'handleRemind',
         value: function handleRemind() {
             this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_states_main_actions_js__["c" /* createAlert */])(this.props.name, this.props.money, this.props.date));
+            console.log("after alert!");
         }
     }]);
 

@@ -14,7 +14,6 @@ export function createNewlend(name, money, date) {
     }).then(function(res) {
         if (res.status !== 200)
             throw new Error(`Unexpected response code: ${res.status}`);
-
         return res.data;
     });
 }

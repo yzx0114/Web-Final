@@ -40,10 +40,6 @@ class AlertList extends React.Component {
         this.handleNavClick=this.handleNavClick.bind(this);
      
     }
-    
-   
-   
-
     render() {
         const{modalToggle,alerts,activeTab}=this.props;
         let navChildren;
@@ -55,6 +51,7 @@ class AlertList extends React.Component {
             </div>
         );
         if(alerts.length){
+            console.log(alerts);
             navChildren =alerts.map(p=>(
                 <NavItem key={p.id}>
                     <NavLink className={classnames({ active: activeTab === p.id})} onClick={() => { this.handleNavClick(p.id); }}>

@@ -2,9 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const newlendModel = require('../model/newlendform.js');
+const accessController = require('../middleware/access-controller.js');
 
 const router = express.Router();
-
+router.use(accessController);
 router.use(bodyParser.json());
 
 //List
