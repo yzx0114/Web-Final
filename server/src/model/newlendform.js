@@ -46,14 +46,20 @@ function create(name, money, date) {
             });
         });
     });*/
-    const sql =`
+
+    const sql = `
     INSERT INTO record (lender, borrower, expect_date, amount)
     VALUES ('shan', $<name>, $<date>,$<money>)
     RETURNING *
   `;
     console.log(name, money, date);
-    return db.one(sql, {name, money, date});
+    return db.one(sql, {
+        name,
+        money,
+        date
+    });
 }
 module.exports = {
-    create, list
+    create,
+    list
 };
