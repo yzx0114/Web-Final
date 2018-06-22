@@ -56,7 +56,7 @@ class Login extends React.Component {
     this.handleLogin = this.handleLogin.bind(this);
     this.handleAccount = this.handleAccount.bind(this);
     this.handlePassword = this.handlePassword.bind(this);
-	this.handleRegister = this.handleRegister.bind(this);
+	  this.handleRegister = this.handleRegister.bind(this);
     this.handleKeypress = this.handleKeypress.bind(this);
 
     }
@@ -73,7 +73,7 @@ class Login extends React.Component {
       document.addEventListener("keydown", this.handleKeypress, false);
       if(localStorage.getItem('Account') !== null)
       {
-  
+
           this.props.history.push('/main');
       }
     }
