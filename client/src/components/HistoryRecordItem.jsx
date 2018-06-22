@@ -12,23 +12,33 @@ class HistoryRecordItem extends React.Component {
         name : PropTypes.string,
         amount : PropTypes.number,
         expect_date : PropTypes.string,
-        repay_date : PropTypes.string
+        repay_date : PropTypes.string,
+        who : PropTypes.string
     };
     constructor(props) {
         super(props);
     }
 
     render() {
-        const {name,amount,expect_date,repay_date} = this.props;
+        const {name,amount,expect_date,repay_date,who} = this.props;
+        const color = (who == 'borrower')? true:false;
+        
         return (
-            <div className='record-item row container'>
+            
+            <div className='record-item row container' >
                 <div className='person-info col-sm-9 col-xl-9 row'>
                     <div className='picture col-sm-2 col-xl-2 align-self-center'>
                         <img className="rounded-circle" src="./image/icon.png" width="50" height="50"/>
                     </div>
-                    <div className='name col-sm-3 col-xl-3 align-self-center'>
-                        {name}
-                    </div>
+                    {who == 'borrower' ?
+                        <div className='name col-sm-3 col-xl-3 align-self-center' style={{color:"red"}}>
+                            {name}
+                        </div>
+                    :
+                        <div className='name col-sm-3 col-xl-3 align-self-center' style={{color:"green"}}>
+                            {name}
+                        </div>
+                    }
                     <div className='money col-sm-3 col-xl-3 align-self-center'>
                         ${amount}
                     </div>
