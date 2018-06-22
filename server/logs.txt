@@ -105,3 +105,275 @@
     at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
     at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
     at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529668154 ERROR  error: duplicate key value violates unique constraint "users_pkey"
+    at Connection.parseE (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529668254 ERROR  error: duplicate key value violates unique constraint "users_pkey"
+    at Connection.parseE (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529668298 ERROR  error: duplicate key value violates unique constraint "users_pkey"
+    at Connection.parseE (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529668371 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529668376 ERROR  error: duplicate key value violates unique constraint "users_pkey"
+    at Connection.parseE (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529668434 ERROR  error: duplicate key value violates unique constraint "users_pkey"
+    at Connection.parseE (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529668476 ERROR  TypeError: Cannot read property 'then' of undefined
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\login.js:32:52
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529668512 ERROR  TypeError: Cannot read property 'then' of undefined
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\login.js:32:52
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529668556 ERROR  TypeError: Cannot read property 'then' of undefined
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\login.js:32:52
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529668727 ERROR  TypeError: Cannot read property 'then' of undefined
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\login.js:32:52
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529669395 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529669397 ERROR  TypeError: Cannot read property 'then' of undefined
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\login.js:32:52
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529669399 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\login.js:28:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529669459 ERROR  TypeError: Cannot read property 'then' of undefined
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\login.js:32:52
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529669635 ERROR  TypeError: Cannot read property 'then' of undefined
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\login.js:32:52
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529670019 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529670316 ERROR  error: duplicate key value violates unique constraint "users_pkey"
+    at Connection.parseE (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529671914 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529671914 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529671914 ERROR  Error: Account and Password are required
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\login.js:15:21
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529674808 ERROR  Error: getaddrinfo ENOTFOUND webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com:5432
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+1529674811 ERROR  Error: getaddrinfo ENOTFOUND webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com:5432
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+1529674966 ERROR  Error: getaddrinfo ENOTFOUND webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com:5432
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+1529674968 ERROR  Error: getaddrinfo ENOTFOUND webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com:5432
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+1529674969 ERROR  Error: getaddrinfo ENOTFOUND webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com:5432
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+1529674969 ERROR  Error: getaddrinfo ENOTFOUND webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com:5432
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+1529674977 ERROR  Error: getaddrinfo ENOTFOUND webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com:5432
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+1529674979 ERROR  Error: getaddrinfo ENOTFOUND webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com:5432
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+1529675018 ERROR  Error: getaddrinfo ENOTFOUND webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com webapp.cvx4izpmwddz.us-west-2.rds.amazonaws.com:5432
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+1529675079 ERROR  error: invalid input syntax for integer: "undefined"
+    at Connection.parseE (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+1529676447 ERROR  TypeError: arrearModel.confirm is not a function
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\src\routers\arrearform.js:21:17
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\body-parser\lib\types\json.js:101:7)
+    at Layer.handle [as handle_request] (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\express\lib\router\layer.js:95:5)
+1529676541 ERROR  error: syntax error at or near "{"
+    at Connection.parseE (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:539:11)
+    at Connection.parseMessage (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:366:17)
+    at Socket.<anonymous> (C:\Users\USER\Desktop\WEB_FINAL_REAL\Web-Final\server\node_modules\pg\lib\connection.js:105:22)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)

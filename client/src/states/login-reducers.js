@@ -45,7 +45,8 @@ const initRegisterState = {
     RegisterAccount: '',
     RegisterPassword: '',
     RegisterPasswordAgain: '',
-    RegisterName: ''
+    RegisterName: '',
+    RegisterState: 0
 };
 export function register(state = initRegisterState, action)
 {
@@ -81,6 +82,11 @@ export function register(state = initRegisterState, action)
             ...state,
             RegisterPasswordAgain : action.value
           };
+      case `@REGISTER/SET_REGISTERSTATE`:
+        return{
+            ...state,
+            RegisterState: action.value
+        };
       case '@REGISTER/CLEAR':
         return{
           ...state,

@@ -7,10 +7,10 @@ if (!global.db) {
     db = pgp(process.env.DB_URL);
 }
 
-function list(user_account = '') {
-    user_account = 'admin2'; // 登入此帳號的人(借款人))
+function list(user_account) {
+    //user_account = 'admin2'; // 登入此帳號的人(借款人))
     const where = [];
-
+    console.log(user_account,'hello');
     if(user_account){
         where.push(`borrower = '${user_account}'`);
         where.push(`paid = false`);
@@ -21,10 +21,16 @@ function list(user_account = '') {
         INNER JOIN users ON record.lender = users.account
         ${where.length ? 'WHERE ' + where.join(' AND ') : ''}
     `;
-   
+
     return db.any(sql);
 }
-
+function confirm(id)
+{
+  const sql = `
+      UPDATE record SET confirm = true where record_id = ${id}
+  `
+  return db.none(sql);
+}
 /*function list(user_account = '') {
     return new Promise((resolve, reject) => {
         if (!fs.existsSync('data-borrow.json')) {
@@ -33,7 +39,7 @@ function list(user_account = '') {
 
         fs.readFile('data-borrow.json', 'utf8', (err, data) => {
             if (err) reject(err);
-            
+
             let arrears = data ? JSON.parse(data) : [];
             resolve(arrears);
         });
@@ -41,5 +47,6 @@ function list(user_account = '') {
 }*/
 
 module.exports = {
-    list
+    list,
+    confirm
 };
