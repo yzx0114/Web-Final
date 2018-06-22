@@ -25,11 +25,12 @@ function list(user_account = '') {
 
     return db.any(sql);
 }
-function complete(id)
+function complete(id, dstr)
 {
   const sql = `
-      UPDATE record SET paid = true where record_id = ${id}
+      UPDATE record SET paid = true,repay_date = '${dstr}' where record_id = ${id}
   `
+
   return db.none(sql);
 }
 function deletes(id)

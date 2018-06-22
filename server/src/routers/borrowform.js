@@ -17,7 +17,9 @@ router.get('/borrow', function(req, res, next) {
 
 router.post('/complete',function(req, res, next) {
     const {id} = req.body;
-    borrowModel.complete(id).then(arrears => {
+    let date = new Date();
+    let dstr = date.getFullYear() + '-' +(date.getMonth() + 1) + '-' + date.getDate();
+    borrowModel.complete(id, dstr).then(arrears => {
         res.json(arrears);
     }).catch(next);
 });
