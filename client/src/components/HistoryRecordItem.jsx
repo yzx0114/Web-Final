@@ -32,7 +32,7 @@ class HistoryRecordItem extends React.Component {
                     <div className='money col-sm-3 col-xl-3 align-self-center'>
                         ${amount}
                     </div>
-                    <div className='date col-sm-3 col-xl-3 align-self-center'>
+                    <div className='date col-sm-4 col-xl-4 align-self-center'>
                         {expect_date}
                     </div>
                 </div>
