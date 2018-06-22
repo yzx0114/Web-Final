@@ -28,13 +28,13 @@ router.use(bodyParser.json());
 
 //Create
 router.post('/newlend', function(req, res, next) {
-    const {name, money, date} = req.body;
+    const {lender, name, money, date} = req.body;
     if (!name || !money || !date) {
         const err = new Error('error');
         err.status = 400;
         throw err;
     }
-    newlendModel.create(name, money, date).then(newlend => {
+    newlendModel.create(lender, name, money, date).then(newlend => {
         res.json(newlend);
     }).catch(next);
 });

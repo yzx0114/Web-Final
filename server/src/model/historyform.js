@@ -8,8 +8,8 @@ if (!global.db) {
 }
 
 function list(user_account = '') {
-    user_account = 'admin1'; // 登入此帳號的人(借款人))
-    
+  //  user_account = 'admin1'; // 登入此帳號的人(借款人))
+
     const sql = `
         SELECT record_id,name,expect_date,repay_date,amount,
         CASE
@@ -18,9 +18,9 @@ function list(user_account = '') {
             END AS who
         FROM record
         INNER JOIN users ON CASE WHEN borrower = '${user_account}' THEN record.lender = users.account ELSE record.borrower = users.account END
-        WHERE borrower = '${user_account}' OR lender = '${user_account}' AND paid = true;
+        WHERE (borrower = '${user_account}' OR lender = '${user_account}') AND paid = true;
     `;
-   
+
     return db.any(sql);
 }
 
@@ -32,7 +32,7 @@ function list(user_account = '') {
 
         fs.readFile('data-history.json', 'utf8', (err, data) => {
             if (err) reject(err);
-            
+
             let historys = data ? JSON.parse(data) : [];
             resolve(historys);
         });

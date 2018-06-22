@@ -22,7 +22,7 @@ function endLoading(){
 export function listBorrowRecords() {
     return (dispatch, getState)=>{
         dispatch(startLoading());
-        return listBorrowRecordsFromApi().then(borrowRecords=>{
+        return listBorrowRecordsFromApi(localStorage.getItem('Account')).then(borrowRecords=>{
             dispatch(endListRecords(borrowRecords));
         }).catch(err=> {
             console.error('Error listing borrowRecords', err);
