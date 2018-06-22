@@ -15,6 +15,19 @@ router.get('/borrow', function(req, res, next) {
     }).catch(next);
 });
 
+router.post('/complete',function(req, res, next) {
+    const {id} = req.body;
+    borrowModel.complete(id).then(arrears => {
+        res.json(arrears);
+    }).catch(next);
+});
+
+router.post('/deletes',function(req, res, next) {
+    const {id} = req.body;
+    borrowModel.deletes(id).then(arrears => {
+        res.json(arrears);
+    }).catch(next);
+});
 /*
 router.get('/borrow', function(req, res, next) {
     borrowModel.list(req.query.user_account).then(borrows => {

@@ -1,5 +1,7 @@
 import {
-    listBorrowRecords as listBorrowRecordsFromApi
+    listBorrowRecords as listBorrowRecordsFromApi,
+    complete as CompleteFromApi,
+    deletes as deletesFromApi
 } from 'api/borrow.js'
 
 function startLoading(){
@@ -18,7 +20,32 @@ function endLoading(){
         type:'@BORROW/END_LOADING'
     };
 };
+export function deletes(id)
+{
+  return (dispatch, getState)=>{
+      dispatch(startLoading());
+      return deletesFromApi(id).then(()=>{
 
+      }).catch(err=> {
+          console.error('Error listing borrowRecords', err);
+      }).then(()=> {
+          dispatch(endLoading());
+      });
+  };
+}
+export function complete(id)
+{
+  return (dispatch, getState)=>{
+      dispatch(startLoading());
+      return CompleteFromApi(id).then(()=>{
+
+      }).catch(err=> {
+          console.error('Error listing borrowRecords', err);
+      }).then(()=> {
+          dispatch(endLoading());
+      });
+  };
+}
 export function listBorrowRecords() {
     return (dispatch, getState)=>{
         dispatch(startLoading());

@@ -25,7 +25,20 @@ function list(user_account = '') {
 
     return db.any(sql);
 }
-
+function complete(id)
+{
+  const sql = `
+      UPDATE record SET paid = true where record_id = ${id}
+  `
+  return db.none(sql);
+}
+function deletes(id)
+{
+  const sql = `
+      DELETE FROM record where record_id = ${id}
+  `
+  return db.none(sql);
+}
 // function list(user_account = '') {
 //     return new Promise((resolve, reject) => {
 //         if (!fs.existsSync('data-borrow.json')) {
@@ -43,5 +56,7 @@ function list(user_account = '') {
 
 
 module.exports = {
-    list
+    list,
+    complete,
+    deletes
 };
