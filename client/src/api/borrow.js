@@ -16,6 +16,22 @@ export function listBorrowRecords(user_account = '') {
     return axios.get(url).then(function(res) {
         if (res.status !== 200)
             throw new Error(`Unexpected response code: ${res.status}`);
+        else{
+            // Convert Date format
+            for(var i=0; i<res.data.length; i++){
+                const date = new Date(res.data[i].expect_date);
+                var year = date.getFullYear();
+                var month = date.getMonth()+1;
+                var dt = date.getDate();
+                if (dt < 10) {
+                    dt = '0' + dt;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
+                res.data[i].expect_date = year +　'-' + month + '-' + dt;
+            }
+        }
         return res.data;
     });
     
