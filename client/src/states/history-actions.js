@@ -22,7 +22,7 @@ function endLoading(){
 export function listHistoryRecords() {
     return (dispatch, getState)=>{
         dispatch(startLoading());
-        return listHistoryRecordsFromApi().then(historyRecords=>{
+        return listHistoryRecordsFromApi(localStorage.getItem('Account')).then(historyRecords=>{
             dispatch(endListRecords(historyRecords));
         }).catch(err=> {
             console.error('Error listing historyRecords', err);

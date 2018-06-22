@@ -50,7 +50,7 @@ class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            showerror: false
         };
 
         this.handleLogin = this.handleLogin.bind(this);
@@ -84,12 +84,14 @@ class Login extends React.Component {
                                 <Col className='col1'>
                                     <div className="header">
                                         Salmoney
-                                    </div>
+                        </div>
                                     <div className="icon">
                                         <img src={require('../image/LPICON.jpg')} />
                                     </div>
                                 </Col>
+
                                 <Col>
+
                                     <div className="message">
                                         <Container>
                                             <Row>
@@ -112,10 +114,17 @@ class Login extends React.Component {
                                                     </div>
                                                 </Col>
                                             </Row>
+                                            <Row>
+                                                <Col>
+                                                    <p style={{ visibility: this.state.showerror ? 'visible' : 'hidden' }}>帳號或密碼錯誤</p>
+                                                </Col>
+                                            </Row>
                                         </Container>
                                     </div>
                                 </Col>
                             </Row>
+
+
                         </Container>
 
 
@@ -142,9 +151,10 @@ class Login extends React.Component {
             this.props.dispatch(login(this.props.LoginAccount, this.props.LoginPassword));
             return resolve();
         }).then(() => {
-            this.props.dispatch(AccountChange(''));
-            this.props.dispatch(PasswordChange(''));
-        });
+            this.setState({
+                showerror: true
+            });
+        })
     }
     handleRegister() {
         this.props.dispatch(AccountChange(''));

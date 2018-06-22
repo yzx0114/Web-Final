@@ -30,7 +30,10 @@ class HistoryForm extends React.Component {
                     <div className='header container'>
                             <div className='person-info col-sm-12 col-xl-12 row' >
                                 <div  className='name col-sm-3 col-xl-3'>
-                                借款人
+                                    <span style={{color:"red",fontWeight:"bold"}}>借</span>
+                                    <span>/</span>
+                                    <span style={{color:"green",fontWeight:"bold"}}>欠</span>
+                                    <span>款人</span>
                                 </div>
                                 <div className='money col-sm-3 col-xl-3'>
                                 金額

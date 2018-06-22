@@ -29,6 +29,7 @@ import './Register.css';
 class Register extends React.Component {
     static propTypes = {
         RegisterLoading: PropTypes.bool,
+        RegisterState: PropTypes.number,
         RegisterAccount: PropTypes.string,
         RegisterPassword: PropTypes.string,
         RegisterPasswordAgain: PropTypes.string,
@@ -47,7 +48,18 @@ class Register extends React.Component {
         this.handleChange3 = this.handleChange3.bind(this);
         this.handleCancel = this.handleCancel.bind(this);
     }
-
+    componentDidMount() {
+        /*
+        if(this.props.RegisterState == 1)
+        {
+          this.props.history.push('/');
+        }
+        else if(this.props.RegisterState == 2)
+        {
+          alert('帳號已存在');
+          this.props.dispatch(setRegisterState(0));
+        }*/
+    }
     render() {
         return (
             <Router>
