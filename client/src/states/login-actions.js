@@ -53,7 +53,11 @@ export function login(account, password) {
             localStorage.setItem('Account',account);
             dispatch(Accept());
           }
-          else dispatch(Deny());
+          else
+          {
+            alert('帳號或密碼錯誤');
+            dispatch(Deny());
+          }
           dispatch(endLoading());
         }).catch(err => {
             console.error('Error login', err);
@@ -115,18 +119,27 @@ export function Change3(value)
       value
   };
 };
-export function register(name ,account, password) {
+export function register(name ,account, password, history) {
     return (dispatch, getState) => {
 
-
+console.log(history);
 		dispatch(startRegister());
-      console.log('hello?');
         return registerFromApi(name,account, password).then(success => {
   /*
           if(success > 0) dispatch(setRegisterState(0));
           else dispatch(setRegisterState(1));
 */
-           dispatch(endRegister());
+          if(success[0] === undefined)
+          {
+            alert('帳號已存在');
+            dispatch(endRegister());
+          }
+          else {
+            dispatch(endRegister());
+            history.push('/');
+
+          }
+
         }).catch(err => {
             console.error('Error login', err);
             dispatch(endRegister());
