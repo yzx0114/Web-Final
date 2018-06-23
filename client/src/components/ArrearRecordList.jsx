@@ -4,7 +4,7 @@ import {
     ListGroup,
     ListGroupItem
 } from 'reactstrap';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import ArrearRecordItem from './ArrearRecordItem.jsx';
 import './RecordList.css';
 
@@ -18,7 +18,7 @@ class ArrearRecordList extends React.Component {
     }
 
     render() {
-        const {arrearRecords} = this.props;
+        const { arrearRecords } = this.props;
 
         let children = (
             <ListGroupItem className='empty d-flex justify-content-center align-items-center'>
@@ -27,10 +27,10 @@ class ArrearRecordList extends React.Component {
         );
 
         if (arrearRecords.length) {
-          console.log(arrearRecords);
+            console.log(arrearRecords);
             children = arrearRecords.map(p => (
-                <ListGroupItem color={p.confirm? '':'danger'} key={p.record_id} action>
-                    <ArrearRecordItem {...p}/>
+                <ListGroupItem color={p.confirm ? '' : 'danger'} key={p.record_id} action>
+                    <ArrearRecordItem {...p} />
                 </ListGroupItem>
             ));
         }
@@ -45,6 +45,6 @@ class ArrearRecordList extends React.Component {
     }
 }
 
-export default connect(state =>({
-    arrearRecords:state.arrear.arrearRecords
+export default connect(state => ({
+    arrearRecords: state.arrear.arrearRecords
 }))(ArrearRecordList);

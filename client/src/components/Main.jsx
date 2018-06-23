@@ -21,9 +21,9 @@ import {
     ModalBody,
     ModalFooter
 } from 'reactstrap';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
-import {toggleNavbar} from 'states/main-actions.js';
+import { toggleNavbar } from 'states/main-actions.js';
 import NewlendForm from './NewlendForm.jsx';
 import BorrowForm from './BorrowForm.jsx';
 import ArrearForm from './ArrearForm.jsx';
@@ -50,7 +50,7 @@ class Main extends React.Component {
                     <div className='bg-light'>
                         <div className='container'>
                             <Navbar color='faded' light expand="md">
-                                <NavbarToggler onClick={this.handleNavbarToggle}/>
+                                <NavbarToggler onClick={this.handleNavbarToggle} />
                                 <NavbarBrand className='text-info' href="/">Salmoney</NavbarBrand>
                                 <Collapse isOpen={this.props.navbarToggle} navbar>
                                     <Nav navbar>
@@ -73,16 +73,16 @@ class Main extends React.Component {
                     </div>
                     <Route exact path="/" render={() => (
                         <BorrowForm />
-                    )}/>
+                    )} />
                     <Route exact path="/ArrearForm" render={() => (
                         <ArrearForm />
-                     )}/>
-                     <Route exact path="/HistoryForm" render={() => (
+                    )} />
+                    <Route exact path="/HistoryForm" render={() => (
                         <HistoryForm />
-                     )}/>
+                    )} />
                     <Route exact path="/NewlendForm" render={() => (
                         <NewlendForm />
-                     )}/>
+                    )} />
                 </div>
 
             </Router>

@@ -1,24 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {render} from 'react-dom'
-import {connect} from 'react-redux';
+import { render } from 'react-dom'
+import { connect } from 'react-redux';
 import classnames from 'classnames';
 import {
-    NavItem, 
-    NavLink, 
+    NavItem,
+    NavLink,
 } from 'reactstrap';
 
-export default class AlertNav extends React.Component{
-    static propTypes={
-        id:PropTypes.string,
-        dispatch:PropTypes.func
+export default class AlertNav extends React.Component {
+    static propTypes = {
+        id: PropTypes.string,
+        dispatch: PropTypes.func
     }
-    constructor(props){
+    constructor(props) {
         super(props);
     }
-    render(){
-        const {name}=this.props;
-        return(
+    render() {
+        const { name } = this.props;
+        return (
             <div>
                 {name}
             </div>
