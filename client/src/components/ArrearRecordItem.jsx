@@ -17,6 +17,7 @@ class ArrearRecordItem extends React.Component {
     };
     constructor(props) {
         super(props);
+        console.log(this.props);
         this.handleConfirm = this.handleConfirm.bind(this);
     }
 
@@ -46,7 +47,7 @@ class ArrearRecordItem extends React.Component {
                     </div>
                     <div className='row'>
                     <div className='mx-auto'>
-                        <Button type="button" className="btn btn-success" onClick={this.handleConfirm}>確認借款</Button>
+                        <Button type="button" className={this.props.confirm?"confirm":"btn btn-success"} onClick={this.handleConfirm}>確認借款</Button>
                     </div>
                     </div>
                 </div>
@@ -55,6 +56,7 @@ class ArrearRecordItem extends React.Component {
     }
     handleConfirm()
     {
+      //console.log(this.props.confirm);
       console.log('hihi');
       this.props.dispatch(Confirm(this.props.record_id));
     }

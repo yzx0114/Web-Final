@@ -14,7 +14,8 @@ class BorrowRecordItem extends React.Component {
         name : PropTypes.string,
         amount : PropTypes.number,
         expect_date : PropTypes.string,
-        dispatch:PropTypes.func,
+        confirm: PropTypes.bool,
+        dispatch: PropTypes.func,
     };
     constructor(props) {
         super(props);
@@ -44,12 +45,12 @@ class BorrowRecordItem extends React.Component {
                 <div className='buttons col-sm-3 col-xl-3 align-self-center'>
                     <div className='row'>
                         <div className='mx-auto'>
-                            <Button type="button" className="btn btn-success" onClick={this.handleComplete}>已還款</Button>
+                            <Button type="button" className="btn btn-success" onClick={this.handleComplete} disabled={!this.props.confirm}>已還款</Button>
                         </div>
                         </div>
                         <div className='row'>
                             <div className='mx-auto'>
-                                <Button type="button" className="btn btn-warning" onClick={this.handleRemind}>提醒他</Button>
+                                <Button type="button" className="btn btn-warning" onClick={this.handleRemind} disabled={!this.props.confirm}>提醒他</Button>
                             </div>
                         </div>
                         <div className='row'>
@@ -64,7 +65,7 @@ class BorrowRecordItem extends React.Component {
     handleComplete()
     {
       this.props.dispatch(complete(this.props.record_id));
-      this.props.dispatch(listBorrowRecords());
+    //  this.props.dispatch(listBorrowRecords());
     }
     handleRemind(){
         this.props.dispatch(createAlert(this.props.name,this.props.money,this.props.date));
@@ -72,7 +73,7 @@ class BorrowRecordItem extends React.Component {
     handleDelete()
     {
       this.props.dispatch(deletes(this.props.record_id));
-      this.props.dispatch(listBorrowRecords());
+    //  this.props.dispatch(listBorrowRecords());
     }
 }
 export default connect(state => ({

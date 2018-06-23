@@ -10,6 +10,6 @@
 .record-item .person-info .name{
     font-weight: bold;
 }
-.un-confirm{
-  background-color: gray;
+.record-item .confirm{
+  display: none;
 }

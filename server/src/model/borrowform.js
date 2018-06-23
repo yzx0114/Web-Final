@@ -17,7 +17,7 @@ function list(user_account = '') {
         where.push(`paid = false`);
     }
     const sql = `
-        SELECT record_id,name,expect_date,amount
+        SELECT record_id,name,expect_date,amount,confirm
         FROM record
         INNER JOIN users ON record.borrower = users.account
         ${where.length ? 'WHERE ' + where.join(' AND ') : ''}
