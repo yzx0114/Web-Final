@@ -22,12 +22,13 @@ router.use(accessController);
 //Create
 router.post('/createAlert', function(req, res, next) {
     const {newAlert} = req.body;
-   
+   console.log(newAlert.money);
     if (!newAlert) {
         const err = new Error('error');
         err.status = 400;
         throw err;
     }
+
     alertModel.create(newAlert).then(newAlert => {
          res.json(newAlert);
     }).catch(next);

@@ -57,6 +57,7 @@ export function listAlerts(){
 }
 export function createAlert(name,money,date){
     return (dispatch,getState)=>{
+        console.log(name,money,date);
         return createAlertsFromApi(name,money,date).then(alert=>{
             dispatch(endCreateAlert(alert));
         }).catch(err =>{
