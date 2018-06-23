@@ -26,40 +26,47 @@ class BorrowForm extends React.Component {
 
     render() {
         const {recordLoading} = this.props;
-        
+        let children=(<div className='image0'><img className='image0' src="./image/no-record1.png" /></div>);
+        if(this.props.borrowRecords.length)
+        {
+          children=(
+            <div className='person-info col-sm-12 col-xl-12 row' >
+                <div  className='name col-sm-3 col-xl-3'>
+                欠款人
+                </div>
+                <div className='money col-sm-3 col-xl-3'>
+                金額
+                </div>
+                <div className='date col-sm-3 col-xl-3'>
+                預計還款日
+                </div>
+                <div className='date col-sm-3 col-xl-3'>
+
+                </div>
+            </div>
+          );
+        }
+
         return (
 
             <div className='borrow-form'>
                 <div className='list'>
                     <AlertList/>
                         <div className='header container'>
-                            <div className='person-info col-sm-12 col-xl-12 row' >
-                                <div  className='name col-sm-3 col-xl-3'>
-                                欠款人
-                                </div>
-                                <div className='money col-sm-3 col-xl-3'>
-                                金額
-                                </div>
-                                <div className='date col-sm-3 col-xl-3'>
-                                預計還款日
-                                </div>
-                                <div className='date col-sm-3 col-xl-3'>
-                                
-                                </div>
-                            </div>
-                        </div> 
+                            {children}
+                        </div>
                 </div>
                 <BorrowRecordList />{
                         recordLoading &&
                         <Alert color='warning' className='loading'>Loading...</Alert>
                 }
             </div>
-                    
+
     )}
-   
+
 }
 
 export default connect(state => ({
-    recordLoading: state.borrow.recordLoading
+    recordLoading: state.borrow.recordLoading,
+    borrowRecords: state.borrow.borrowRecords
 }))(BorrowForm);
-
