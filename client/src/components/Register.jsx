@@ -50,7 +50,6 @@ class Register extends React.Component {
         this.handleChange2 = this.handleChange2.bind(this);
         this.handleChange3 = this.handleChange3.bind(this);
         this.handleCancel = this.handleCancel.bind(this);
-        // this.handleFile = this.handleFile.bind(this);
     }
     componentDidMount() {
         /*
@@ -140,10 +139,9 @@ class Register extends React.Component {
             alert('兩次密碼不一樣');
             return;
         }
-
-        this.props.dispatch(register(this.props.RegisterName, this.props.RegisterAccount, this.props.RegisterPassword));
+        this.props.dispatch(register(this.props.RegisterName, this.props.RegisterAccount, this.props.RegisterPassword, this.props.history));
         this.props.dispatch(Clear());
-        this.props.history.push('/');
+        //  this.props.history.push('/');
     }
     handleCancel() {
         this.props.history.push('/');

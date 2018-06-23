@@ -13,8 +13,16 @@ function register(name, account, password)
     select COUNT(account) from users where account = '${account}'
   `;*/
   const sql =`
-    INSERT INTO users values('${account}','${password}','${name}')
+INSERT INTO users
+    (account,password,name)
+    SELECT '${account}', '${password}','${name}'
+WHERE
+    NOT EXISTS (
+        SELECT account FROM users WHERE account = '${account}'
+    )
+RETURNING account;
 	`;/*
+
   countOBJ = db.one(sql0);
 
   countOBJ.then(count=>{
@@ -22,7 +30,7 @@ function register(name, account, password)
     if(count.count > 0) {
       return countOBJ;
     }*/
-    toprint = db.none(sql); //to see what db any get
+    toprint = db.any(sql);
     return toprint;
 /*
   });

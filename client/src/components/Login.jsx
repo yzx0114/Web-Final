@@ -113,11 +113,6 @@ class Login extends React.Component {
                                                     </div>
                                                 </Col>
                                             </Row>
-                                            <Row>
-                                                <Col>
-                                                    <p style={{ visibility: this.state.showerror ? 'visible' : 'hidden' }}>帳號或密碼錯誤</p>
-                                                </Col>
-                                            </Row>
                                         </Container>
                                     </div>
                                 </Col>
