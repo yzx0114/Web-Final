@@ -26,7 +26,7 @@ class BorrowRecordItem extends React.Component {
             <div className='record-item row container'>
                 <div className='person-info col-sm-9 col-xl-9 row'>
                     <div className='picture col-sm-2 col-xl-2 align-self-center'>
-                        <img className="rounded-circle" src="./images/icon.png" width="50" height="50"/> 
+                        <img className="rounded-circle" src="./image/LPICON.png" width="50" height="50"/> 
                     </div>
                     <div className='name col-sm-3 col-xl-3 align-self-center'>
                         {name}
@@ -59,7 +59,7 @@ class BorrowRecordItem extends React.Component {
         );
     }
     handleRemind(){
-        this.props.dispatch(createAlert(this.props.name,this.props.money,this.props.date));
+        this.props.dispatch(createAlert(this.props.name,this.props.amount,this.props.expect_date));
     }
 }
 export default connect(state => ({
