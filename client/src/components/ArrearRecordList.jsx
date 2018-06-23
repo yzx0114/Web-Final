@@ -25,10 +25,11 @@ class ArrearRecordList extends React.Component {
                 <div className='empty-text'>No record here.</div>
             </ListGroupItem>
         );
-        
+
         if (arrearRecords.length) {
+          console.log(arrearRecords);
             children = arrearRecords.map(p => (
-                <ListGroupItem key={p.record_id} action>
+                <ListGroupItem color={p.confirm? '':'danger'} key={p.record_id} action>
                     <ArrearRecordItem {...p}/>
                 </ListGroupItem>
             ));

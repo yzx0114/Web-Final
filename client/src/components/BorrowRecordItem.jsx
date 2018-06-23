@@ -5,7 +5,7 @@ import {
     Button
 } from 'reactstrap';
 import {createAlert} from 'states/main-actions.js';
-import {complete, deletes} from 'states/borrow-actions.js';
+import {complete, deletes, listBorrowRecords} from 'states/borrow-actions.js';
 import './RecordItem.css';
 
 class BorrowRecordItem extends React.Component {
@@ -64,6 +64,7 @@ class BorrowRecordItem extends React.Component {
     handleComplete()
     {
       this.props.dispatch(complete(this.props.record_id));
+      this.props.dispatch(listBorrowRecords());
     }
     handleRemind(){
         this.props.dispatch(createAlert(this.props.name,this.props.money,this.props.date));
@@ -71,6 +72,7 @@ class BorrowRecordItem extends React.Component {
     handleDelete()
     {
       this.props.dispatch(deletes(this.props.record_id));
+      this.props.dispatch(listBorrowRecords());
     }
 }
 export default connect(state => ({

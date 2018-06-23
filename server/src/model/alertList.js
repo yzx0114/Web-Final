@@ -3,9 +3,9 @@ if (!global.db) {
     db = pgp(process.env.DB_URL);
 }
 // function create(name,money,date){
-//     const sql = 
-//         `INSERT INTO alerts($<this:name>) 
-//         VALUES ($<this:value>) 
+//     const sql =
+//         `INSERT INTO alerts($<this:name>)
+//         VALUES ($<this:value>)
 //         RETURNING *`
 //     ;
 //     return db.none(sql,{name,money,date});
@@ -16,12 +16,13 @@ function create(newAlert){
     VALUES ('${newAlert.id}','${newAlert.lender}','${newAlert.borrower}','${newAlert.expect_date}','${newAlert.money}')
     `
     ;
+    console.log(newAlert);
     return db.none(sql,newAlert);
-    
+
 }
 function list(myUserName){
     const sql=
-    `SELECT * 
+    `SELECT *
     FROM alerts
     WHERE borrower= '${myUserName}'
     ORDER BY money DESC
@@ -30,7 +31,7 @@ function list(myUserName){
 }
 function cancel(id){
     const sql=
-    `DELETE FROM alerts 
+    `DELETE FROM alerts
      WHERE id='${id}';
     `;
     return db.none(sql,id);

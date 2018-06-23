@@ -22,11 +22,13 @@ function endLoading(){
 export function Confirm(id){
   return (dispatch, getState)=>{
       dispatch(startLoading());
+      console.log('in confirm');
       return ConfirmFromApi(id).then(()=>{
 
       }).catch(err=> {
           console.error('Error listing arrearRecords', err);
       }).then(()=> {
+          dispatch(listArrearRecords(localStorage.getItem('Account')));
           dispatch(endLoading());
       });
   };
@@ -34,11 +36,13 @@ export function Confirm(id){
 export function listArrearRecords(user_account) {
     return (dispatch, getState)=>{
         dispatch(startLoading());
+        console.log('in list record');
         return listArrearRecordsFromApi(user_account).then(arrearRecords=>{
             dispatch(endListRecords(arrearRecords));
         }).catch(err=> {
             console.error('Error listing arrearRecords', err);
         }).then(()=> {
+          console.log('finish list');
             dispatch(endLoading());
         });
     };

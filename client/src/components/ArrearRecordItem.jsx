@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {Confirm} from 'states/arrear-actions.js';
+import {Confirm, listArrearRecords} from 'states/arrear-actions.js';
 import {
     Button
 } from 'reactstrap';
@@ -12,7 +12,8 @@ class ArrearRecordItem extends React.Component {
         record_id : PropTypes.number,
         name : PropTypes.string,
         amount : PropTypes.number,
-        expect_date : PropTypes.string
+        expect_date : PropTypes.string,
+        confirm: PropTypes.bool
     };
     constructor(props) {
         super(props);
