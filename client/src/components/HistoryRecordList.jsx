@@ -4,7 +4,7 @@ import {
     ListGroup,
     ListGroupItem
 } from 'reactstrap';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import HistoryRecordItem from './HistoryRecordItem.jsx';
 import './RecordList.css';
 
@@ -18,18 +18,18 @@ class HistoryRecordList extends React.Component {
     }
 
     render() {
-        const {historyRecords} = this.props;
+        const { historyRecords } = this.props;
 
         let children = (
             <ListGroupItem className='empty d-flex justify-content-center align-items-center'>
                 <div className='empty-text'>No record here.</div>
             </ListGroupItem>
         );
-        
+
         if (historyRecords.length) {
             children = historyRecords.map(p => (
                 <ListGroupItem key={p.record_id} action>
-                    <HistoryRecordItem {...p}/>
+                    <HistoryRecordItem {...p} />
                 </ListGroupItem>
             ));
         }
@@ -44,6 +44,6 @@ class HistoryRecordList extends React.Component {
     }
 }
 
-export default connect(state =>({
-    historyRecords:state.history.historyRecords
+export default connect(state => ({
+    historyRecords: state.history.historyRecords
 }))(HistoryRecordList);

@@ -17,7 +17,7 @@ function list(user_account = '') {
         where.push(`paid = false`);
     }
     const sql = `
-        SELECT record_id,name,expect_date,amount,read
+        SELECT record_id,name,expect_date,amount,read,confirm
         FROM record
         INNER JOIN users ON record.borrower = users.account
         ${where.length ? 'WHERE ' + where.join(' AND ') : ''}
@@ -26,17 +26,26 @@ function list(user_account = '') {
 }
 function complete(id, dstr)
 {
-  const sql = `
+    const sql1=`
+        DELETE FROM alerts WHERE record_id='${id}'
+    `;
+    db.none(sql1);
+    const sql2 = `
       UPDATE record SET paid = true,repay_date = '${dstr}' where record_id = ${id}
-  `
-  return db.none(sql);
+    `;
+  
+  return db.none(sql2);
 }
 function deletes(id)
 {
-  const sql = `
-      DELETE FROM record where record_id = ${id}
-  `
-  return db.none(sql);
+    const sql1=`
+        DELETE FROM alerts WHERE record_id='${id}'
+    `;
+    db.none(sql1);
+    const sql2 = `
+        DELETE FROM record where record_id = ${id}
+    `;
+    return db.none(sql2);
 }
 // function list(user_account = '') {
 //     return new Promise((resolve, reject) => {

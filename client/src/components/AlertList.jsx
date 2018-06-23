@@ -82,7 +82,7 @@ class AlertList extends React.Component {
         return (
             <div>
                 <Button color="danger" onClick={this.handleModalClick}>check Alerts</Button>
-                <Modal isOpen={modalToggle} toggle={this.handleModalClick} >
+                <Modal isOpen={modalToggle && (alerts.length>0)} toggle={this.handleModalClick} >
                     <ModalHeader toggle={this.handleModalClick}>{infoMessage}</ModalHeader>
                     <ModalBody>
                         <div>

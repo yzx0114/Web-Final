@@ -1,6 +1,6 @@
 const initMainState = {
     navbarToggle: false,
-    modalToggle: false,
+    modalToggle:true,
     alerts:[],
     activeTab:0,
     records:[]

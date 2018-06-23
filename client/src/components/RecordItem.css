@@ -10,4 +10,6 @@
 .record-item .person-info .name{
     font-weight: bold;
 }
-
+.record-item .confirm{
+  display: none;
+}

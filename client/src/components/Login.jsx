@@ -86,12 +86,11 @@ class Login extends React.Component {
                                         Salmoney
                         </div>
                                     <div className="icon">
-                                        <img src={require('../image/LPICON.jpg')} />
+                                        <img src={require('../image/LPICON.png')} className='image' />
                                     </div>
                                 </Col>
 
                                 <Col>
-
                                     <div className="message">
                                         <Container>
                                             <Row>
@@ -112,11 +111,6 @@ class Login extends React.Component {
                                                         <Button className='button1' outline color="info" onClick={this.handleLogin}>Login</Button>
                                                         <Button className='button2' outline color="info" onClick={this.handleRegister}>Sign up</Button>
                                                     </div>
-                                                </Col>
-                                            </Row>
-                                            <Row>
-                                                <Col>
-                                                    <p style={{ visibility: this.state.showerror ? 'visible' : 'hidden' }}>帳號或密碼錯誤</p>
                                                 </Col>
                                             </Row>
                                         </Container>

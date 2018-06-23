@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {Confirm} from 'states/arrear-actions.js';
+import {Confirm, listArrearRecords} from 'states/arrear-actions.js';
 import {
     Button
 } from 'reactstrap';
@@ -12,10 +12,12 @@ class ArrearRecordItem extends React.Component {
         record_id : PropTypes.number,
         name : PropTypes.string,
         amount : PropTypes.number,
-        expect_date : PropTypes.string
+        expect_date : PropTypes.string,
+        confirm: PropTypes.bool
     };
     constructor(props) {
         super(props);
+        console.log(this.props);
         this.handleConfirm = this.handleConfirm.bind(this);
     }
 
@@ -45,7 +47,7 @@ class ArrearRecordItem extends React.Component {
                     </div>
                     <div className='row'>
                     <div className='mx-auto'>
-                        <Button type="button" className="btn btn-success" onClick={this.handleConfirm}>確認借款</Button>
+                        <Button type="button" className={this.props.confirm?"confirm":"btn btn-success"} onClick={this.handleConfirm}>確認借款</Button>
                     </div>
                     </div>
                 </div>
@@ -54,6 +56,7 @@ class ArrearRecordItem extends React.Component {
     }
     handleConfirm()
     {
+      //console.log(this.props.confirm);
       console.log('hihi');
       this.props.dispatch(Confirm(this.props.record_id));
     }

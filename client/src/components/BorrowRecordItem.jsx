@@ -4,8 +4,10 @@ import {connect} from 'react-redux';
 import {
     Button
 } from 'reactstrap';
-import {createAlert,listAlerts} from 'states/main-actions.js';
-import {complete, deletes} from 'states/borrow-actions.js';
+
+import {createAlert} from 'states/main-actions.js';
+import {complete, deletes, listBorrowRecords} from 'states/borrow-actions.js';
+
 import './RecordItem.css';
 
 class BorrowRecordItem extends React.Component {
@@ -14,7 +16,8 @@ class BorrowRecordItem extends React.Component {
         name : PropTypes.string,
         amount : PropTypes.number,
         expect_date : PropTypes.string,
-        dispatch:PropTypes.func,
+        confirm: PropTypes.bool,
+        dispatch: PropTypes.func,
     };
     constructor(props) {
         super(props);
@@ -31,7 +34,7 @@ class BorrowRecordItem extends React.Component {
             <div className='record-item row container'>
                 <div className='person-info col-sm-9 col-xl-9 row'>
                     <div className='picture col-sm-2 col-xl-2 align-self-center'>
-                        <img className="rounded-circle" src="./image/LPICON.png" width="50" height="50"/> 
+                        <img className="rounded-circle" src="./image/icon.png" width="50" height="50"/> 
                     </div>
                     <div className='name col-sm-3 col-xl-3 align-self-center'>
                         {name}
@@ -46,12 +49,12 @@ class BorrowRecordItem extends React.Component {
                 <div className='buttons col-sm-3 col-xl-3 align-self-center'>
                     <div className='row'>
                         <div className='mx-auto'>
-                            <Button type="button" className="btn btn-success" onClick={this.handleComplete}>已還款</Button>
+                            <Button type="button" className={(!this.props.confirm)?"confirm":"btn btn-success"} onClick={this.handleComplete}>已還款</Button>
                         </div>
                         </div>
                         <div className='row'>
                             <div className='mx-auto'>
-                                <Button type="button" className="btn btn-warning" onClick={this.handleRemind} disabled={this.props.read}>提醒他</Button>
+                                <Button type="button" className={(this.props.read || !this.props.confirm)?"confirm":"btn btn-warning"} onClick={this.handleRemind}>提醒他</Button>
                             </div>
                         </div>
                         <div className='row'>
@@ -66,6 +69,7 @@ class BorrowRecordItem extends React.Component {
     handleComplete()
     {
       this.props.dispatch(complete(this.props.record_id));
+    //  this.props.dispatch(listBorrowRecords());
     }
     handleRemind(){
         this.props.dispatch(createAlert(this.props.record_id));
@@ -73,6 +77,7 @@ class BorrowRecordItem extends React.Component {
     handleDelete()
     {
       this.props.dispatch(deletes(this.props.record_id));
+    //  this.props.dispatch(listBorrowRecords());
     }
     
 }

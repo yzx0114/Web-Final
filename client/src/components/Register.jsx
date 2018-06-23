@@ -40,7 +40,10 @@ class Register extends React.Component {
 
     constructor(props) {
         super(props);
-
+        this.state = {
+            file: '',
+            imagePreviewUrl: ''
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange0 = this.handleChange0.bind(this);
         this.handleChange1 = this.handleChange1.bind(this);
@@ -123,13 +126,22 @@ class Register extends React.Component {
         this.props.dispatch(Change3(text));
     }
     handleSubmit() {
+        if (!this.props.RegisterName)
+            return;
+        if (!this.props.RegisterAccount)
+            return;
+        if (!this.props.RegisterPassword)
+            return;
+        if (!this.props.RegisterPasswordAgain)
+            return;
+
         if (this.props.RegisterPassword != this.props.RegisterPasswordAgain) {
             alert('兩次密碼不一樣');
             return;
         }
-        this.props.dispatch(register(this.props.RegisterName, this.props.RegisterAccount, this.props.RegisterPassword));
+        this.props.dispatch(register(this.props.RegisterName, this.props.RegisterAccount, this.props.RegisterPassword, this.props.history));
         this.props.dispatch(Clear());
-        this.props.history.push('/');
+        //  this.props.history.push('/');
     }
     handleCancel() {
         this.props.history.push('/');

@@ -25,10 +25,10 @@ class BorrowRecordList extends React.Component {
                 <div className='empty-text'>No record here.</div>
             </ListGroupItem>
         );
-        
+
         if (borrowRecords.length) {
             children = borrowRecords.map(p => (
-                <ListGroupItem key={p.record_id} action>
+                <ListGroupItem color={p.confirm? '':'danger'} key={p.record_id} action>
                     <BorrowRecordItem {...p}/>
                 </ListGroupItem>
             ));

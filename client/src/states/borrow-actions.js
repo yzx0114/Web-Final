@@ -29,6 +29,7 @@ export function deletes(id)
       }).catch(err=> {
           console.error('Error listing borrowRecords', err);
       }).then(()=> {
+        dispatch(listBorrowRecords());
           dispatch(endLoading());
       });
   };
@@ -42,6 +43,7 @@ export function complete(id)
       }).catch(err=> {
           console.error('Error listing borrowRecords', err);
       }).then(()=> {
+          dispatch(listBorrowRecords());
           dispatch(endLoading());
       });
   };

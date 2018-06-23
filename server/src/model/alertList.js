@@ -3,9 +3,9 @@ if (!global.db) {
     db = pgp(process.env.DB_URL);
 }
 // function create(name,money,date){
-//     const sql = 
-//         `INSERT INTO alerts($<this:name>) 
-//         VALUES ($<this:value>) 
+//     const sql =
+//         `INSERT INTO alerts($<this:name>)
+//         VALUES ($<this:value>)
 //         RETURNING *`
 //     ;
 //     return db.none(sql,{name,money,date});
@@ -26,23 +26,24 @@ function create(id){
     db.none(sql2);
 
     const sql3=
-    `SELECT alerts.record_id,name,expect_date,repay_date,amount,iknow
+    `SELECT alerts.record_id,name,expect_date,repay_date,amount
     FROM alerts
-    INNER JOIN record ON alerts.record_id = record.record_id
-    INNER JOIN users ON users.account=borrower
+    INNER JOIN record ON  record.record_id ='${id}'
+    INNER JOIN users ON lender=users.account
     `;
      return db.any(sql3);
 }
 function list(myUserName){
     const sql=
-    `SELECT alerts.record_id,name,expect_date,repay_date,amount,iknow
+    `SELECT alerts.record_id,name,expect_date,repay_date,amount
     FROM alerts
-    INNER JOIN record ON alerts.record_id = record.record_id
-    INNER JOIN users ON users.account=borrower
+    INNER JOIN record ON alerts.record_id = record.record_id AND record.borrower='${myUserName}'
+    INNER JOIN users ON lender = users.account
     `;
     return db.any(sql);
 }
 function cancel(id){
+
     const sql1=
     `DELETE FROM alerts 
      WHERE record_id='${id}'
