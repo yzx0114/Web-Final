@@ -41,16 +41,16 @@ class Register extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-     file: '',
-     imagePreviewUrl: ''
-   };
+            file: '',
+            imagePreviewUrl: ''
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange0 = this.handleChange0.bind(this);
         this.handleChange1 = this.handleChange1.bind(this);
         this.handleChange2 = this.handleChange2.bind(this);
         this.handleChange3 = this.handleChange3.bind(this);
         this.handleCancel = this.handleCancel.bind(this);
-        this.handleFile = this.handleFile.bind(this);
+        // this.handleFile = this.handleFile.bind(this);
     }
     componentDidMount() {
         /*
