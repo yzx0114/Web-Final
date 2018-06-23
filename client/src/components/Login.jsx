@@ -86,12 +86,11 @@ class Login extends React.Component {
                                         Salmoney
                         </div>
                                     <div className="icon">
-                                        <img src={require('../image/LPICON.jpg')} />
+                                        <img src={require('../image/LPICON.png')} className='image' />
                                     </div>
                                 </Col>
 
                                 <Col>
-
                                     <div className="message">
                                         <Container>
                                             <Row>

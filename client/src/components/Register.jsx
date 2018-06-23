@@ -127,10 +127,20 @@ class Register extends React.Component {
         this.props.dispatch(Change3(text));
     }
     handleSubmit() {
+        if (!this.props.RegisterName)
+            return;
+        if (!this.props.RegisterAccount)
+            return;
+        if (!this.props.RegisterPassword)
+            return;
+        if (!this.props.RegisterPasswordAgain)
+            return;
+
         if (this.props.RegisterPassword != this.props.RegisterPasswordAgain) {
             alert('兩次密碼不一樣');
             return;
         }
+
         this.props.dispatch(register(this.props.RegisterName, this.props.RegisterAccount, this.props.RegisterPassword));
         this.props.dispatch(Clear());
         this.props.history.push('/');
