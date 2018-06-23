@@ -50,10 +50,6 @@ class Register extends React.Component {
         this.handleChange2 = this.handleChange2.bind(this);
         this.handleChange3 = this.handleChange3.bind(this);
         this.handleCancel = this.handleCancel.bind(this);
-<<<<<<< HEAD
-=======
-        // this.handleFile = this.handleFile.bind(this);
->>>>>>> 2cef9621312b395899950184623e98e42b405ea5
     }
     componentDidMount() {
         /*
