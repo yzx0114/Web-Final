@@ -16471,22 +16471,23 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var Register = function (_React$Component) {
-  _inherits(Register, _React$Component);
+    _inherits(Register, _React$Component);
 
-  function Register(props) {
-    _classCallCheck(this, Register);
+    function Register(props) {
+        _classCallCheck(this, Register);
 
-    var _this = _possibleConstructorReturn(this, (Register.__proto__ || Object.getPrototypeOf(Register)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Register.__proto__ || Object.getPrototypeOf(Register)).call(this, props));
 
-    _this.handleSubmit = _this.handleSubmit.bind(_this);
-    _this.handleChange0 = _this.handleChange0.bind(_this);
-    _this.handleChange1 = _this.handleChange1.bind(_this);
-    _this.handleChange2 = _this.handleChange2.bind(_this);
-    _this.handleChange3 = _this.handleChange3.bind(_this);
-    _this.handleCancel = _this.handleCancel.bind(_this);
-    return _this;
-  }
+        _this.handleSubmit = _this.handleSubmit.bind(_this);
+        _this.handleChange0 = _this.handleChange0.bind(_this);
+        _this.handleChange1 = _this.handleChange1.bind(_this);
+        _this.handleChange2 = _this.handleChange2.bind(_this);
+        _this.handleChange3 = _this.handleChange3.bind(_this);
+        _this.handleCancel = _this.handleCancel.bind(_this);
+        return _this;
+    }
 
+<<<<<<< HEAD
   _createClass(Register, [{
     key: 'render',
     value: function render() {
@@ -16579,71 +16580,169 @@ var Register = function (_React$Component) {
                     { className: 'button2', outline: true, color: 'info', onClick: this.handleCancel },
                     '\u53D6\u6D88'
                   )
+=======
+    _createClass(Register, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_3_react_router_dom__["a" /* BrowserRouter */],
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'register' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'wrapper' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'content' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                __WEBPACK_IMPORTED_MODULE_4_reactstrap__["t" /* Container */],
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'header' },
+                                    'Join Us Now!'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    __WEBPACK_IMPORTED_MODULE_4_reactstrap__["u" /* Row */],
+                                    { className: 'row' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
+                                        null,
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["j" /* Label */],
+                                            null,
+                                            '\u8ACB\u8F38\u5165\u59D3\u540D'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Input */], { type: 'text', placeholder: 'Please Enter Your Name', value: this.props.RegisterName, onChange: this.handleChange0, required: true })
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    __WEBPACK_IMPORTED_MODULE_4_reactstrap__["u" /* Row */],
+                                    null,
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
+                                        null,
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["j" /* Label */],
+                                            null,
+                                            '\u8ACB\u8F38\u5165\u5E33\u865F'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Input */], { type: 'text', placeholder: 'Please Enter Your Account', value: this.props.RegisterAccount, onChange: this.handleChange1, required: true })
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    __WEBPACK_IMPORTED_MODULE_4_reactstrap__["u" /* Row */],
+                                    null,
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
+                                        null,
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["j" /* Label */],
+                                            null,
+                                            '\u8ACB\u8F38\u5165\u5BC6\u78BC'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Input */], { type: 'password', placeholder: 'Please Enter Your Password', value: this.props.RegisterPassword, onChange: this.handleChange2, required: true })
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    __WEBPACK_IMPORTED_MODULE_4_reactstrap__["u" /* Row */],
+                                    null,
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
+                                        null,
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["j" /* Label */],
+                                            null,
+                                            '\u8ACB\u518D\u6B21\u8F38\u5165\u5BC6\u78BC'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Input */], { type: 'password', placeholder: 'Please Enter Your Password Again', value: this.props.RegisterPasswordAgain, onChange: this.handleChange3, required: true })
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    __WEBPACK_IMPORTED_MODULE_4_reactstrap__["u" /* Row */],
+                                    null,
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
+                                        null,
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Button */],
+                                            { className: 'button1', outline: true, color: 'info', onClick: this.handleSubmit },
+                                            '\u9001\u51FA'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Button */],
+                                            { className: 'button2', outline: true, color: 'info', onClick: this.handleCancel },
+                                            '\u53D6\u6D88'
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+>>>>>>> ebd5d7fb726d9e67f112837b218b5b01a038b19a
                 )
-              )
-            )
-          )
-        )
-      );
-    }
-  }, {
-    key: 'handleChange0',
-    value: function handleChange0(e) {
-      var text = e.target.value;
-      console.log(text);
-      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["a" /* Change0 */])(text));
-    }
-  }, {
-    key: 'handleChange1',
-    value: function handleChange1(e) {
-      var text = e.target.value;
-      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["b" /* Change1 */])(text));
-    }
-  }, {
-    key: 'handleChange2',
-    value: function handleChange2(e) {
-      var text = e.target.value;
-      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["c" /* Change2 */])(text));
-    }
-  }, {
-    key: 'handleChange3',
-    value: function handleChange3(e) {
-      var text = e.target.value;
-      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["d" /* Change3 */])(text));
-    }
-  }, {
-    key: 'handleSubmit',
-    value: function handleSubmit() {
-      if (this.props.RegisterPassword != this.props.RegisterPasswordAgain) {
-        alert('兩次密碼不一樣');
-        return;
-      }
-      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["e" /* register */])(this.props.RegisterName, this.props.RegisterAccount, this.props.RegisterPassword));
-      this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["f" /* Clear */])());
-      this.props.history.push('/');
-    }
-  }, {
-    key: 'handleCancel',
-    value: function handleCancel() {
-      this.props.history.push('/');
-    }
-  }]);
+            );
+        }
+    }, {
+        key: 'handleChange0',
+        value: function handleChange0(e) {
+            var text = e.target.value;
+            console.log(text);
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["a" /* Change0 */])(text));
+        }
+    }, {
+        key: 'handleChange1',
+        value: function handleChange1(e) {
+            var text = e.target.value;
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["b" /* Change1 */])(text));
+        }
+    }, {
+        key: 'handleChange2',
+        value: function handleChange2(e) {
+            var text = e.target.value;
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["c" /* Change2 */])(text));
+        }
+    }, {
+        key: 'handleChange3',
+        value: function handleChange3(e) {
+            var text = e.target.value;
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["d" /* Change3 */])(text));
+        }
+    }, {
+        key: 'handleSubmit',
+        value: function handleSubmit() {
+            if (this.props.RegisterPassword != this.props.RegisterPasswordAgain) {
+                alert('兩次密碼不一樣');
+                return;
+            }
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["e" /* register */])(this.props.RegisterName, this.props.RegisterAccount, this.props.RegisterPassword));
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["f" /* Clear */])());
+            this.props.history.push('/');
+        }
+    }, {
+        key: 'handleCancel',
+        value: function handleCancel() {
+            this.props.history.push('/');
+        }
+    }]);
 
-  return Register;
+    return Register;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 Register.propTypes = {
-  RegisterLoading: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
-  RegisterAccount: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
-  RegisterPassword: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
-  RegisterPasswordAgain: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
-  RegisterName: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
-  dispatch: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func
+    RegisterLoading: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
+    RegisterAccount: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+    RegisterPassword: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+    RegisterPasswordAgain: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+    RegisterName: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+    dispatch: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func
 };
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_react_router_dom__["d" /* withRouter */])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_react_redux__["b" /* connect */])(function (state) {
-  return _extends({}, state.register);
+    return _extends({}, state.register);
 })(Register)));
 
 /***/ }),
@@ -16832,6 +16931,7 @@ exports.default = function () {
 
 /***/ }),
 /* 177 */
+<<<<<<< HEAD
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16960,6 +17060,136 @@ module.exports = function (fn, that, length) {
 /* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
+=======
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _setPrototypeOf = __webpack_require__(426);
+
+var _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);
+
+var _create = __webpack_require__(424);
+
+var _create2 = _interopRequireDefault(_create);
+
+var _typeof2 = __webpack_require__(179);
+
+var _typeof3 = _interopRequireDefault(_typeof2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : (0, _typeof3.default)(superClass)));
+  }
+
+  subClass.prototype = (0, _create2.default)(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _setPrototypeOf2.default ? (0, _setPrototypeOf2.default)(subClass, superClass) : subClass.__proto__ = superClass;
+};
+
+/***/ }),
+/* 178 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _typeof2 = __webpack_require__(179);
+
+var _typeof3 = _interopRequireDefault(_typeof2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return call && ((typeof call === "undefined" ? "undefined" : (0, _typeof3.default)(call)) === "object" || typeof call === "function") ? call : self;
+};
+
+/***/ }),
+/* 179 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _iterator = __webpack_require__(428);
+
+var _iterator2 = _interopRequireDefault(_iterator);
+
+var _symbol = __webpack_require__(427);
+
+var _symbol2 = _interopRequireDefault(_symbol);
+
+var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj; };
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.default) === "symbol" ? function (obj) {
+  return typeof obj === "undefined" ? "undefined" : _typeof(obj);
+} : function (obj) {
+  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
+};
+
+/***/ }),
+/* 180 */
+/***/ (function(module, exports) {
+
+var toString = {}.toString;
+
+module.exports = function (it) {
+  return toString.call(it).slice(8, -1);
+};
+
+
+/***/ }),
+/* 181 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// optional / simple context binding
+var aFunction = __webpack_require__(442);
+module.exports = function (fn, that, length) {
+  aFunction(fn);
+  if (that === undefined) return fn;
+  switch (length) {
+    case 1: return function (a) {
+      return fn.call(that, a);
+    };
+    case 2: return function (a, b) {
+      return fn.call(that, a, b);
+    };
+    case 3: return function (a, b, c) {
+      return fn.call(that, a, b, c);
+    };
+  }
+  return function (/* ...args */) {
+    return fn.apply(that, arguments);
+  };
+};
+
+
+/***/ }),
+/* 182 */
+/***/ (function(module, exports, __webpack_require__) {
+
+>>>>>>> ebd5d7fb726d9e67f112837b218b5b01a038b19a
 var isObject = __webpack_require__(67);
 var document = __webpack_require__(42).document;
 // typeof document.createElement is 'object' in old IE
@@ -31860,8 +32090,11 @@ import Today from 'components/Today.jsx';
 import Forecast from 'components/Forecast.jsx';
 import {setSearchText} from 'states/post-actions.js';
 import {toggleNavbar} from 'states/main-actions.js';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ebd5d7fb726d9e67f112837b218b5b01a038b19a
 */
 
 
@@ -33933,7 +34166,7 @@ var ArrearRecordItem = function (_React$Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'picture col-sm-2 col-xl-2 align-self-center' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'rounded-circle', src: './images/icon.png', width: '50', height: '50' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'rounded-circle', src: './image/icon.png', width: '50', height: '50' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -34252,7 +34485,7 @@ var BorrowRecordItem = function (_React$Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'picture col-sm-2 col-xl-2 align-self-center' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'rounded-circle', src: './images/icon.png', width: '50', height: '50' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'rounded-circle', src: './image/icon.png', width: '50', height: '50' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -34599,7 +34832,7 @@ var HistoryRecordItem = function (_React$Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'picture col-sm-2 col-xl-2 align-self-center' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'rounded-circle', src: './images/icon.png', width: '50', height: '50' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'rounded-circle', src: './image/icon.png', width: '50', height: '50' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -43237,7 +43470,11 @@ exports = module.exports = __webpack_require__(27)(undefined);
 
 
 // module
+<<<<<<< HEAD
 exports.push([module.i, ".login\r\n{\r\n\theight: 100%;\r\n}\r\n.login .content\r\n{\r\n\theight: 100%;\r\n\r\n}\r\n.login .header\r\n{\r\n\tfont-size: 5rem;\r\n\tposition: relative;\r\n\tfont-family: 'Indie Flower', cursive;\r\n\tleft: 15%;\r\n\tcolor: rgb(18, 108, 168);\r\n}\r\n.login .col1 {\r\n\tmargin-left: 50px;\r\n\tmargin-top: 100px;\r\n}\r\n\r\n.login .input{\r\n\twidth: 50%;\r\n}\r\n\r\n.login .account\r\n{\r\n\tmargin-bottom: 5%;\r\n}\r\n\r\n.login .password\r\n{\r\n\tmargin-bottom: 5%;\r\n}\r\n\r\n.login .buttonRow\r\n{\r\n\twidth: 50%;\t\r\n}\r\n\r\n.login .button1\r\n{\r\n\twidth: 50%;\r\n}\r\n\r\n.login .button2\r\n{\r\n\twidth: 50%;\r\n}\r\n\r\n.login .message\r\n{\r\n\tmin-height: 100%;\r\n\ttop:5rem;\r\n  \tdisplay: flex;\r\n  \talign-items: center;\r\n}", ""]);
+=======
+exports.push([module.i, ".login {\r\n\theight: 100%;\r\n}\r\n\r\n.login .content {\r\n\theight: 100%;\r\n}\r\n\r\n.login .header {\r\n\tfont-size: 5rem;\r\n\tposition: relative;\r\n\tfont-family: 'Indie Flower', cursive;\r\n\t/* left: 15%; */\r\n\tcolor: rgb(18, 108, 168);\r\n}\r\n\r\n.login .col1 {\r\n\tmargin-left: 50px;\r\n\tmargin-top: 100px;\r\n}\r\n\r\n.login .input {\r\n\twidth: 50%;\r\n}\r\n\r\n.login .account {\r\n\tmargin-bottom: 5%;\r\n}\r\n\r\n.login .password {\r\n\tmargin-bottom: 5%;\r\n}\r\n\r\n.login .buttonRow {\r\n\twidth: 50%;\r\n}\r\n\r\n.login .button1 {\r\n\twidth: 50%;\r\n}\r\n\r\n.login .button2 {\r\n\twidth: 50%;\r\n}\r\n\r\n.login .message {\r\n\tmin-height: 100%;\r\n\ttop: 5rem;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n}", ""]);
+>>>>>>> ebd5d7fb726d9e67f112837b218b5b01a038b19a
 
 // exports
 
@@ -43321,7 +43558,11 @@ exports = module.exports = __webpack_require__(27)(undefined);
 
 
 // module
+<<<<<<< HEAD
 exports.push([module.i, ".register\r\n{\r\n\theight: 100%;\r\n}\r\n.register .header {\r\n\tfont-size: 4rem;\r\n\tfont-family: 'Indie Flower', cursive;\r\n\tcolor: rgb(18, 108, 168);\r\n\ttext-align: center;\r\n\t\r\n}\r\n.register .content {\r\n\tposition: relative;\r\n\ttop: 100px;\r\n\r\n}\r\n\r\n.register .row {\r\n\tmargin-bottom: 12.5px;\r\n\twidth: 50%;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\n.register .button1{\r\n\twidth: 50%;\r\n}\r\n\r\n.register .button2{\r\n\twidth: 50%;\r\n}", ""]);
+=======
+exports.push([module.i, ".register {\r\n\theight: 100%;\r\n\tbackground-image: url('../image/back.png');\r\n}\r\n\r\n.register .header {\r\n\tfont-size: 4rem;\r\n\tfont-family: 'Indie Flower', cursive;\r\n\tcolor: rgb(18, 108, 168);\r\n\ttext-align: center;\r\n\tfont-weight: bolder;\r\n\tpadding-top: 1rem;\r\n}\r\n\r\n.register .wrapper {\r\n\tposition: relative;\r\n\twidth: 50%;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\n.register .content {\r\n\tbackground-color: white;\r\n\tmargin: 2rem;\r\n}\r\n\r\n.register .row {\r\n\tmargin-bottom: 12.5px;\r\n\twidth: 50%;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n}\r\n\r\n.register .button1 {\r\n\twidth: 50%;\r\n\theight: 90%;\r\n}\r\n\r\n.register .button2 {\r\n\twidth: 50%;\r\n\theight: 90%;\r\n}", ""]);
+>>>>>>> ebd5d7fb726d9e67f112837b218b5b01a038b19a
 
 // exports
 

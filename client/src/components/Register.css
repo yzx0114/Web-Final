@@ -1,18 +1,25 @@
-.register
-{
+.register {
 	height: 100%;
 }
+
 .register .header {
 	font-size: 4rem;
 	font-family: 'Indie Flower', cursive;
 	color: rgb(18, 108, 168);
 	text-align: center;
-	
+	font-weight: bolder;
 }
-.register .content {
-	position: relative;
-	top: 100px;
 
+.register .wrapper {
+	position: relative;
+	width: 50%;
+	top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.register .content {
+	/* margin: 2rem; */
 }
 
 .register .row {
@@ -22,10 +29,10 @@
 	margin-right: auto;
 }
 
-.register .button1{
+.register .button1 {
 	width: 50%;
 }
 
-.register .button2{
+.register .button2 {
 	width: 50%;
 }

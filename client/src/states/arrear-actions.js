@@ -1,5 +1,6 @@
 import {
-    listArrearRecords as listArrearRecordsFromApi
+    listArrearRecords as listArrearRecordsFromApi,
+    Confirm as ConfirmFromApi
 } from 'api/arrear.js'
 
 function startLoading(){
@@ -18,11 +19,22 @@ function endLoading(){
         type:'@ARREAR/END_LOADING'
     };
 };
+export function Confirm(id){
+  return (dispatch, getState)=>{
+      dispatch(startLoading());
+      return ConfirmFromApi(id).then(()=>{
 
-export function listArrearRecords() {
+      }).catch(err=> {
+          console.error('Error listing arrearRecords', err);
+      }).then(()=> {
+          dispatch(endLoading());
+      });
+  };
+};
+export function listArrearRecords(user_account) {
     return (dispatch, getState)=>{
         dispatch(startLoading());
-        return listArrearRecordsFromApi().then(arrearRecords=>{
+        return listArrearRecordsFromApi(user_account).then(arrearRecords=>{
             dispatch(endListRecords(arrearRecords));
         }).catch(err=> {
             console.error('Error listing arrearRecords', err);

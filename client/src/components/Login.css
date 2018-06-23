@@ -1,58 +1,51 @@
-.login
-{
+.login {
 	height: 100%;
 }
-.login .content
-{
-	height: 100%;
 
+.login .content {
+	height: 100%;
 }
-.login .header
-{
+
+.login .header {
 	font-size: 5rem;
 	position: relative;
 	font-family: 'Indie Flower', cursive;
 	left: 15%;
 	color: rgb(18, 108, 168);
 }
+
 .login .col1 {
 	margin-left: 50px;
 	margin-top: 100px;
 }
 
-.login .input{
+.login .input {
 	width: 50%;
 }
 
-.login .account
-{
+.login .account {
 	margin-bottom: 5%;
 }
 
-.login .password
-{
+.login .password {
 	margin-bottom: 5%;
 }
 
-.login .buttonRow
-{
-	width: 50%;	
-}
-
-.login .button1
-{
+.login .buttonRow {
 	width: 50%;
 }
 
-.login .button2
-{
+.login .button1 {
 	width: 50%;
 }
 
-.login .message
-{
+.login .button2 {
+	width: 50%;
+}
+
+.login .message {
 	min-height: 100%;
-	top:5rem;
-  	display: flex;
-  	align-items: center;
+	top: 5rem;
+	display: flex;
+	align-items: center;
 }

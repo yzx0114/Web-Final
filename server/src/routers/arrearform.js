@@ -16,6 +16,12 @@ router.get('/arrear', function(req, res, next) {
     }).catch(next);
 });
 
+router.post('/confirm',function(req, res, next) {
+    const {id} = req.body;
+    arrearModel.confirm(id).then(arrears => {
+        res.json(arrears);
+    }).catch(next);
+});
 /*
 router.get('/arrear', function(req, res, next) {
     arrearModel.list(req.query.user_account).then(arrears => {

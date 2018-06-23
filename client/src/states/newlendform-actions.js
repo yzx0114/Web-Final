@@ -46,7 +46,7 @@ export function submit(name, money, date) {
     return (dispatch, getState) => {
         dispatch(startLoading());
 
-        return createNewlendFromApi(name, money, date).then(() => {
+        return createNewlendFromApi(localStorage.getItem('Account'),name, money, date).then(() => {
         }).catch(err => {
             console.error('Error creating todos', err);
             dispatch(endLoading());

@@ -63,15 +63,22 @@ export function login(account, password) {
 };
 
 // Register
+export function setRegisterState(value)
+{
+  return {
+    type: `@REGISTER/SET_REGISTERSTATE`,
+    value
+  };
+}
 function startRegister() {
     return {
-        type: '@LOGIN/START_REGISTER'
+        type: '@REGISTER/START_REGISTER'
     };
 }
 
 function endRegister() {
     return {
-        type: '@LOGIN/END_REGISTER'
+        type: '@Register/END_REGISTER'
     };
 }
 export function Clear()
@@ -115,7 +122,10 @@ export function register(name ,account, password) {
 		dispatch(startRegister());
       console.log('hello?');
         return registerFromApi(name,account, password).then(success => {
-           
+  /*
+          if(success > 0) dispatch(setRegisterState(0));
+          else dispatch(setRegisterState(1));
+*/
            dispatch(endRegister());
         }).catch(err => {
             console.error('Error login', err);

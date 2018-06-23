@@ -18,7 +18,8 @@ class ArrearForm extends React.Component {
     }
 
     componentDidMount() {
-        this.props.dispatch(listArrearRecords());
+      console.log(localStorage.getItem('Account'));
+        this.props.dispatch(listArrearRecords(localStorage.getItem('Account')));
     }
 
     render() {
@@ -39,10 +40,10 @@ class ArrearForm extends React.Component {
                                 預計還款日
                                 </div>
                                 <div className='date col-sm-3 col-xl-3'>
-                                
+
                                 </div>
                             </div>
-                    </div> 
+                    </div>
                     <ArrearRecordList />{
                         recordLoading &&
                         <Alert color='warning' className='loading'>Loading...</Alert>

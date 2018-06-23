@@ -24,7 +24,7 @@ function list() {
     });
 }
 
-function create(name, money, date) {
+function create(lender, name, money, date) {
     console.log("hiihihihi");
     /*return new Promise((resolve, reject) => {
         const newlend = {
@@ -46,14 +46,21 @@ function create(name, money, date) {
             });
         });
     });*/
-    const sql =`
+
+    const sql = `
     INSERT INTO record (lender, borrower, expect_date, amount)
-    VALUES ('shan', $<name>, $<date>,$<money>)
+    VALUES ($<lender>, $<name>, $<date>,$<money>)
     RETURNING *
   `;
-    console.log(name, money, date);
-    return db.one(sql, {name, money, date});
+    //  console.log(name, money, date);
+    return db.one(sql, {
+        lender,
+        name,
+        money,
+        date
+    });
 }
 module.exports = {
-    create, list
+    create,
+    list
 };
