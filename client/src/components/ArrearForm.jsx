@@ -24,25 +24,31 @@ class ArrearForm extends React.Component {
 
     render() {
         const { recordLoading } = this.props;
+        let children = (<div className='image0'><img className='image0' src="./image/no-record1.png" /></div>);
+        console.log(this.props.arrearRecords);
+        if (this.props.arrearRecords.length) {
+            children = (
+                <div className='person-info col-sm-12 col-xl-12 row' >
+                    <div className='name col-sm-3 col-xl-3'>
+                        借款人
+               </div>
+                    <div className='money col-sm-3 col-xl-3'>
+                        金額
+               </div>
+                    <div className='date col-sm-3 col-xl-3'>
+                        預計還款日
+               </div>
+                    <div className='date col-sm-3 col-xl-3'>
 
+                    </div>
+                </div>
+            );
+        }
         return (
             <div className='arrear-form'>
                 <div className='list'>
                     <div className='header container'>
-                        <div className='person-info col-sm-12 col-xl-12 row' >
-                            <div className='name col-sm-3 col-xl-3'>
-                                借款人
-                                </div>
-                            <div className='money col-sm-3 col-xl-3'>
-                                金額
-                                </div>
-                            <div className='date col-sm-3 col-xl-3'>
-                                預計還款日
-                                </div>
-                            <div className='date col-sm-3 col-xl-3'>
-
-                            </div>
-                        </div>
+                        {children}
                     </div>
                     <ArrearRecordList />{
                         recordLoading &&
@@ -55,5 +61,6 @@ class ArrearForm extends React.Component {
 }
 
 export default connect(state => ({
-    recordLoading: state.arrear.recordLoading
+    recordLoading: state.arrear.recordLoading,
+    arrearRecords: state.arrear.arrearRecords
 }))(ArrearForm);

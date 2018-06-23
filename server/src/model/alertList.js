@@ -10,31 +10,55 @@ if (!global.db) {
 //     ;
 //     return db.none(sql,{name,money,date});
 // }
-function create(newAlert){
-   const sql=
-    `INSERT INTO alerts(id,lender,borrower,expect_date,money)
-    VALUES ('${newAlert.id}','${newAlert.lender}','${newAlert.borrower}','${newAlert.expect_date}','${newAlert.money}')
+function create(id){
+   const sql1=
+    `INSERT INTO alerts(record_id,iknow)
+    VALUES ('${id}',false)
     `
     ;
-    console.log(newAlert);
-    return db.none(sql,newAlert);
+    db.none(sql1);
 
+    const sql2=
+    `UPDATE record 
+    SET read=true
+    WHERE record_id='${id}';
+    `;
+    db.none(sql2);
+
+    const sql3=
+    `SELECT alerts.record_id,name,expect_date,repay_date,amount
+    FROM alerts
+    INNER JOIN record ON  record.record_id ='${id}'
+    INNER JOIN users ON lender=users.account
+    `;
+     return db.any(sql3);
 }
 function list(myUserName){
     const sql=
-    `SELECT *
+    `SELECT alerts.record_id,name,expect_date,repay_date,amount
     FROM alerts
-    WHERE borrower= '${myUserName}'
-    ORDER BY money DESC
+    INNER JOIN record ON alerts.record_id = record.record_id AND record.borrower='${myUserName}'
+    INNER JOIN users ON lender = users.account
     `;
     return db.any(sql);
 }
 function cancel(id){
-    const sql=
-    `DELETE FROM alerts
-     WHERE id='${id}';
+
+    const sql1=
+    `DELETE FROM alerts 
+     WHERE record_id='${id}'
     `;
-    return db.none(sql,id);
+    db.none(sql1);
+    const sql2=
+    `UPDATE record 
+    SET read=false 
+    WHERE record_id='${id}';
+    `;
+    db.none(sql2);
+    const sql3=
+    `SELECT record_id FROM alerts
+    `
+    return db.any(sql3);
 }
 
 module.exports = {

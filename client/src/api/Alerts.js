@@ -7,6 +7,7 @@ const alertBaseUrl ='http://localhost:8060/api';
 var myUserName=localStorage.getItem('Account');
 
 export function listAlerts(){
+    console.log("list");
     let url = `${alertBaseUrl}/listAlert`;
     return axios.post(url,{myUserName}).then(function(res){
         if (res.status !== 200)
@@ -37,14 +38,29 @@ export function listAlerts(){
 //     return alerts;
 // }
 
-export function createAlert(borrower,money,expect_date){
+export function createAlert(id){
     let url = `${alertBaseUrl}/createAlert`;
     console.log(`Make Alert request to :${url}`);
-    let newAlert = _createAlert(myUserName,borrower,money,expect_date);
-    return axios.post(url,{newAlert}).then(function(res){
-        if(res.status !==200)
-            throw new Error(`Unexcept response code: ${res.status}`);
-        return newAlert;
+    return axios.post(url,{id}).then(function(res){
+        if(res.status !==200){
+             throw new Error(`Unexcept response code: ${res.status}`);
+        }else{
+            // Convert Date format
+            for(var i=0; i<res.data.length; i++){
+                const date = new Date(res.data[i].expect_date);
+                var year = date.getFullYear();
+                var month = date.getMonth()+1;
+                var dt = date.getDate();
+                if (dt < 10) {
+                    dt = '0' + dt;
+                }
+                if (month < 10) {
+                    month = '0' + month;
+                }
+                res.data[i].expect_date = year +　'-' + month + '-' + dt;
+            }
+        } 
+        return res.data;
     });
 
 }
@@ -56,22 +72,25 @@ export function createAlert(name,money,date){
     });
 }
 */
-function _createAlert(lender,borrower,money,expect_date){
-    const newAlert={
-        id:uuid(),
-        lender:lender,
-        borrower:borrower,
-        expect_date:expect_date,
-        money:money
-    };
-    return newAlert;
-}
+// function _createAlert(lender,borrower,money,expect_date){
+//     const newAlert={
+//         id:uuid(),
+//         lender:lender,
+//         borrower:borrower,
+//         expect_date:expect_date,
+//         money:money
+//     };
+//     return newAlert;
+// }
 export function cancelAlert(id){
     let url = `${alertBaseUrl}/cancelAlert`;
     console.log(`Make cancelAlert request to :${url}`);
     return axios.post(url,{id}).then(function(res){
         if(res.status !==200)
             throw new Error(`Unexcept response code: ${res.status}`);
+            console.log(res.data);
+            return res.data;
     });
+
 
 }

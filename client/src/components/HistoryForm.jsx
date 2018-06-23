@@ -23,28 +23,35 @@ class HistoryForm extends React.Component {
 
     render() {
         const { recordLoading } = this.props;
-
+        let children = (<div className='image0'><img className='image0' src="./image/no-record1.png" /></div>);
+        if (this.props.historyRecords.length) {
+            children = (
+                <div className='person-info col-sm-12 col-xl-12 row' >
+                    <div className='name col-sm-3 col-xl-3'>
+                        <span style={{ color: "red", fontWeight: "bold" }}>借</span>
+                        <span>/</span>
+                        <span style={{ color: "green", fontWeight: "bold" }}>欠</span>
+                        <span>款人</span>
+                    </div>
+                    <div className='money col-sm-3 col-xl-3'>
+                        金額
+              </div>
+                    <div className='date col-sm-3 col-xl-3'>
+                        預計還款日
+              </div>
+                    <div className='done-date col-sm-3 col-xl-3'>
+                        還款日
+              </div>
+                </div>
+            );
+        }
         return (
             <div className='history-form'>
                 <div className='list'>
                     <div className='header container'>
-                        <div className='person-info col-sm-12 col-xl-12 row' >
-                            <div className='name col-sm-3 col-xl-3'>
-                                <span style={{ color: "red", fontWeight: "bold" }}>借</span>
-                                <span>/</span>
-                                <span style={{ color: "green", fontWeight: "bold" }}>欠</span>
-                                <span>款人</span>
-                            </div>
-                            <div className='money col-sm-3 col-xl-3'>
-                                金額
-                                </div>
-                            <div className='date col-sm-3 col-xl-3'>
-                                預計還款日
-                                </div>
-                            <div className='done-date col-sm-3 col-xl-3'>
-                                還款日
-                                </div>
-                        </div>
+                        {children}
+
+
                     </div>
                     <HistoryRecordList />{
                         recordLoading &&
@@ -57,5 +64,6 @@ class HistoryForm extends React.Component {
 }
 
 export default connect(state => ({
-    recordLoading: state.history.recordLoading
+    recordLoading: state.history.recordLoading,
+    historyRecords: state.history.historyRecords
 }))(HistoryForm);

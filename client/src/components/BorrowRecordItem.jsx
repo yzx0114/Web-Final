@@ -4,8 +4,10 @@ import { connect } from 'react-redux';
 import {
     Button
 } from 'reactstrap';
+
 import { createAlert } from 'states/main-actions.js';
 import { complete, deletes, listBorrowRecords } from 'states/borrow-actions.js';
+
 import './RecordItem.css';
 
 class BorrowRecordItem extends React.Component {
@@ -25,7 +27,9 @@ class BorrowRecordItem extends React.Component {
     }
 
     render() {
-        const { name, amount, expect_date } = this.props;
+        const { name, amount, expect_date, read } = this.props;
+
+
         return (
             <div className='record-item row container'>
                 <div className='person-info col-sm-9 col-xl-9 row'>
@@ -45,17 +49,17 @@ class BorrowRecordItem extends React.Component {
                 <div className='buttons col-sm-3 col-xl-3 align-self-center'>
                     <div className='row'>
                         <div className='mx-auto'>
-                            <Button type="button" className="btn btn-success" onClick={this.handleComplete} disabled={!this.props.confirm}>已還款</Button>
+                            <Button type="button" className={(!this.props.confirm) ? "confirm" : "btn btn-success"} onClick={this.handleComplete}>已還款</Button>
                         </div>
                     </div>
                     <div className='row'>
                         <div className='mx-auto'>
                             <Button type="button" className="btn btn-warning" onClick={this.handleRemind} disabled={!this.props.confirm}>提醒他</Button>
                         </div>
-                    </div>
-                    <div className='row'>
-                        <div className='mx-auto'>
-                            <Button type="button" className="btn btn-danger" onClick={this.handleDelete}>刪除</Button>
+                        <div className='row'>
+                            <div className='mx-auto'>
+                                <Button type="button" className={(this.props.read || !this.props.confirm) ? "confirm" : "btn btn-warning"} onClick={this.handleRemind}>提醒他</Button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,12 +71,13 @@ class BorrowRecordItem extends React.Component {
         //  this.props.dispatch(listBorrowRecords());
     }
     handleRemind() {
-        this.props.dispatch(createAlert(this.props.name, this.props.amount, this.props.expect_date));
+        this.props.dispatch(createAlert(this.props.record_id));
     }
     handleDelete() {
         this.props.dispatch(deletes(this.props.record_id));
         //  this.props.dispatch(listBorrowRecords());
     }
+
 }
 export default connect(state => ({
     alerts: state.main.alerts

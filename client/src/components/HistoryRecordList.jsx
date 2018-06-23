@@ -21,9 +21,7 @@ class HistoryRecordList extends React.Component {
         const { historyRecords } = this.props;
 
         let children = (
-            <ListGroupItem className='empty d-flex justify-content-center align-items-center'>
-                <div className='empty-text'>No record here.</div>
-            </ListGroupItem>
+            <div></div>
         );
 
         if (historyRecords.length) {

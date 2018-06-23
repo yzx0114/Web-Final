@@ -21,9 +21,7 @@ class BorrowRecordList extends React.Component {
         const { borrowRecords } = this.props;
 
         let children = (
-            <ListGroupItem className='empty d-flex justify-content-center align-items-center'>
-                <div className='empty-text'>No record here.</div>
-            </ListGroupItem>
+            <div></div>
         );
 
         if (borrowRecords.length) {

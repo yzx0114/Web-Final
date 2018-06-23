@@ -35,7 +35,6 @@ export function listBorrowRecords(user_account = '') {
     console.log(`Making GET request to: ${url}`);
 
     return axios.get(url).then(function(res) {
-        console.log(res);
         if (res.status !== 200)
             throw new Error(`Unexpected response code: ${res.status}`);
         else{

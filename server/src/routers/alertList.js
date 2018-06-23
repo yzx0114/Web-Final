@@ -21,16 +21,14 @@ router.post('/listAlert', function(req, res, next) {
 router.use(accessController);
 //Create
 router.post('/createAlert', function(req, res, next) {
-    const {newAlert} = req.body;
-   console.log(newAlert.money);
-    if (!newAlert) {
+    const {id} = req.body;
+    if (!id) {
         const err = new Error('error');
         err.status = 400;
         throw err;
     }
-
-    alertModel.create(newAlert).then(newAlert => {
-         res.json(newAlert);
+    alertModel.create(id).then(newAlert => {
+        res.json(newAlert);
     }).catch(next);
 });
 router.post('/cancelAlert', function(req, res, next) {
@@ -40,6 +38,9 @@ router.post('/cancelAlert', function(req, res, next) {
         err.status = 400;
         throw err;
     }
-    alertModel.cancel(id);
+    alertModel.cancel(id).then(newAlerts => {
+        console.log(newAlerts);
+        res.json(newAlerts);
+    }).catch(next);
 });
 module.exports = router;
