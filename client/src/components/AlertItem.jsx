@@ -17,19 +17,19 @@ export default class AlertItem extends React.Component{
         super(props);
     }
     render(){
-        const{id,name,money,date}=this.props;
+        const{record_id,name,amount,expect_date}=this.props;
         
         return(
-            <TabPane tabId={id}>
+            <TabPane tabId={record_id}>
                     <div className="tabContent d-flex flex-column justify-content-around">
                         <div>
                             來自:{name}
                         </div>
                         <div>
-                            你還欠我: {money} 塊
+                            你還欠我: {amount} 塊
                         </div>
                         <div>
-                            日期: {date}
+                            日期: {expect_date}
                         </div>
                     </div>
             </TabPane>

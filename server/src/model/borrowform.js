@@ -17,12 +17,11 @@ function list(user_account = '') {
         where.push(`paid = false`);
     }
     const sql = `
-        SELECT record_id,name,expect_date,amount
+        SELECT record_id,name,expect_date,amount,read
         FROM record
         INNER JOIN users ON record.borrower = users.account
         ${where.length ? 'WHERE ' + where.join(' AND ') : ''}
     `;
-
     return db.any(sql);
 }
 function complete(id, dstr)
@@ -30,7 +29,6 @@ function complete(id, dstr)
   const sql = `
       UPDATE record SET paid = true,repay_date = '${dstr}' where record_id = ${id}
   `
-
   return db.none(sql);
 }
 function deletes(id)

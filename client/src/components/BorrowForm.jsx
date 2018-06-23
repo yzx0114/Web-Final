@@ -31,7 +31,7 @@ class BorrowForm extends React.Component {
 
             <div className='borrow-form'>
                 <div className='list'>
-                    <AlertList />
+                    <AlertList/>
                         <div className='header container'>
                             <div className='person-info col-sm-12 col-xl-12 row' >
                                 <div  className='name col-sm-3 col-xl-3'>
@@ -56,6 +56,7 @@ class BorrowForm extends React.Component {
             </div>
                     
     )}
+   
 }
 
 export default connect(state => ({

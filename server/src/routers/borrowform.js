@@ -11,8 +11,7 @@ router.use(bodyParser.json());
 router.get('/borrow', function(req, res, next) {
     const {user_account} = req.query;
     borrowModel.list(user_account).then(borrows => {
-        console.log(borrows);
-        //res.json(borrows);
+        res.json(borrows);
     }).catch(next);
 });
 

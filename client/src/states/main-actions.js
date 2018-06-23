@@ -3,7 +3,7 @@ import{
     createAlert as createAlertsFromApi,
     cancelAlert as cancelAlertsFromApi
 }from 'api/Alerts.js'
-
+import {listBorrowRecords} from './borrow-actions.js'
 export function toggleNavbar() {
     return {
         type: '@MAIN/TOGGLE_NAVBAR'
@@ -20,13 +20,29 @@ export function toggleTabId(tabId){
         tabId
     };
 }
-export function clickIKnow(tabId){
-    cancelAlertsFromApi(tabId);
+function iknow(alerts){
     return {
         type: '@MAIN/I_KNOW_BUTTON',
-        tabId
+        alerts
     };
 }
+export function clickIKnow(tabId){
+    return (dispatch,getState)=>{
+        return cancelAlertsFromApi(tabId).then(alerts=>{
+                dispatch(iknow(alerts));
+            }).catch(err=>{
+                console.error('error cancel',err);
+            }).then(()=>{
+                dispatch(listBorrowRecords());
+                dispatch(listAlerts());
+            }).catch(err=>{
+                console.error('error cancel',err);
+            });
+    };
+    
+    
+}
+
 export function RemindNextTime(tabId){
     return {
         type: '@MAIN/REMIND_NEXT_TIME',
@@ -55,10 +71,11 @@ export function listAlerts(){
         });
     };
 }
-export function createAlert(name,money,date){
+export function createAlert(id){
     return (dispatch,getState)=>{
-        console.log(name,money,date);
-        return createAlertsFromApi(name,money,date).then(alert=>{
+        return createAlertsFromApi(id).then(alert=>{
+            dispatch(listAlerts());
+            dispatch(listBorrowRecords());
             dispatch(endCreateAlert(alert));
         }).catch(err =>{
             console.error("Error creating Alert",err);

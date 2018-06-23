@@ -55,16 +55,15 @@ class AlertList extends React.Component {
             </div>
         );
         if(alerts.length){
-            console.log(alerts);
             navChildren =alerts.map(p=>(
-                <NavItem key={p.id}>
-                    <NavLink className={classnames({ active: activeTab === p.id})} onClick={() => { this.handleNavClick(p.id); }}>
-                         <AlertNav name={p.lender}/>
+                <NavItem key={p.record_id}>
+                    <NavLink className={classnames({ active: activeTab === p.record_id})} onClick={() => { this.handleNavClick(p.record_id); }}>
+                         <AlertNav name={p.name}/>
                     </NavLink>
                 </NavItem>
             ));
             tabChildren =alerts.map(p=>(
-                <AlertItem key={p.id} {...p}/>
+                <AlertItem key={p.record_id} {...p}/>
             ));
             infoButton=(
                 <div>
