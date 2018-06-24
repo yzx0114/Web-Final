@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 import FriendItem from './FriendItem.jsx';
 import {showDetail} from 'states/friend-action.js';
 import './RecordList.css';
+import './FriendList.css';
 
 class ArrearRecordList extends React.Component {
     static propTypes = {
@@ -35,7 +36,7 @@ class ArrearRecordList extends React.Component {
         }
 
         return (
-            <div className='record-list'>
+            <div className='friend-list'>
                 <ListGroup>
                   <ListGroupItem key='all' onClick={this.handleClick} action>
                     顯示全部
