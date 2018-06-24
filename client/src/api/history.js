@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const historyBaseUrl = 'http://localhost:8060/api';
+const historyBaseUrl = 'http://salmoney-dev.us-west-2.elasticbeanstalk.com/api';
 
 export function listHistoryRecords(user_account = '', target_account) {
 

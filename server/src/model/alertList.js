@@ -36,16 +36,20 @@ function create(id){
 function list(myUserName){
   let d = new Date();
   let rd =  d.toISOString().slice(0,10);
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 5d0646f6a247fcadf7cc099b6a85f0a2cec2fc47
     const sql1 =
     `
       INSERT INTO alerts (record_id)
-      SELECT record.record_id FROM record WHERE record.expect_date <= '${rd}' AND paid = false AND read = false AND confirm = true
+      SELECT record.record_id FROM record WHERE record.expect_date <= '${rd}' AND paid = false AND read = false AND confirm = true AND (record.remind_date != CURRENT_DATE  OR record.remind_date is NULL)
     `;
     db.none(sql1);
     const sql2 =
     `
-      UPDATE record set read = true where record.expect_date <= '${rd}' AND paid = false AND read = false AND confirm = true
+      UPDATE record set read = true,remind_date = CURRENT_DATE where record.expect_date <= '${rd}' AND paid = false AND read = false AND confirm = true AND (record.remind_date != CURRENT_DATE OR record.remind_date is NULL)
     `;
     db.none(sql2);
     const sql3=

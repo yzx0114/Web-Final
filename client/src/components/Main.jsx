@@ -42,6 +42,7 @@ class Main extends React.Component {
         super(props);
 
         this.handleNavbarToggle = this.handleNavbarToggle.bind(this);
+        this.handleLogOut = this.handleLogOut.bind(this);
         this.link = React.createRef();;
     }
     componentDidMount()
@@ -72,6 +73,10 @@ class Main extends React.Component {
                                     <div className='ml-auto'>
                                         <NavLink tag={Link} to='/main/NewlendForm'>新增借款</NavLink>
                                     </div>
+                                    <div>
+                                        <Button outline color="danger" onClick={this.handleLogOut}>登出</Button>
+                                    </div>
+
                                 </Collapse>
                             </Navbar>
                         </div>
@@ -101,7 +106,11 @@ class Main extends React.Component {
     handleNavbarToggle() {
         this.props.dispatch(toggleNavbar());
     }
-
+    handleLogOut()
+    {
+      localStorage.removeItem('Account');
+      this.props.history.push('/');
+    }
 }
 
 export default withRouter(connect(state => ({
