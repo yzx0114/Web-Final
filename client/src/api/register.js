@@ -3,7 +3,7 @@ import uuid from 'uuid/v4';
 import moment from 'moment';
 import 'babel-polyfill';
 //const todoBaseUrl = 'http://weathermood-11.us-west-2.elasticbeanstalk.com/api';
-const loginBaseUrl = 'http://Salmoney-dev.us-west-2.elasticbeanstalk.com/api';
+const loginBaseUrl = 'http://salmoney-dev.us-west-2.elasticbeanstalk.com/api';
 //const todoKey = 'todos';
 export function register(name, account, password) {
     /*return new Promise((resolve, reject) => {

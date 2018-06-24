@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const borrowBaseUrl = 'http://Salmoney-dev.us-west-2.elasticbeanstalk.com/api';
+const borrowBaseUrl = 'http://salmoney-dev.us-west-2.elasticbeanstalk.com/api';
 export function complete(id){
     let url = `${borrowBaseUrl}/complete`;
     return axios.post(url, {

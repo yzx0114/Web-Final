@@ -33475,7 +33475,7 @@ module.exports = function spread(callback) {
 
 
 var alertsKey = 'alerts';
-var alertBaseUrl = 'http://Salmoney-dev.us-west-2.elasticbeanstalk.com/api';
+var alertBaseUrl = 'http://salmoney-dev.us-west-2.elasticbeanstalk.com/api';
 var myUserName = localStorage.getItem('Account');
 
 function listAlerts() {
@@ -33573,7 +33573,7 @@ function cancelAlert(id) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 
 
-var arrearBaseUrl = 'http://Salmoney-dev.us-west-2.elasticbeanstalk.com/api';
+var arrearBaseUrl = 'http://salmoney-dev.us-west-2.elasticbeanstalk.com/api';
 
 function Confirm(id) {
     var url = arrearBaseUrl + '/confirm';
@@ -33667,7 +33667,7 @@ function _listArrearRecords() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 
 
-var borrowBaseUrl = 'http://Salmoney-dev.us-west-2.elasticbeanstalk.com/api';
+var borrowBaseUrl = 'http://salmoney-dev.us-west-2.elasticbeanstalk.com/api';
 function complete(id) {
     var url = borrowBaseUrl + '/complete';
     return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(url, {
@@ -33772,7 +33772,7 @@ function _listBorrowRecords() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 
 
-var arrearBaseUrl = 'http://Salmoney-dev.us-west-2.elasticbeanstalk.com/api';
+var arrearBaseUrl = 'http://salmoney-dev.us-west-2.elasticbeanstalk.com/api';
 
 function Confirm(id) {
     var url = arrearBaseUrl + '/confirm';
@@ -33919,7 +33919,7 @@ function _listHistoryRecords() {
 
 
 //const todoBaseUrl = 'http://weathermood-11.us-west-2.elasticbeanstalk.com/api';
-var loginBaseUrl = 'http://Salmoney-dev.us-west-2.elasticbeanstalk.com/api';
+var loginBaseUrl = 'http://salmoney-dev.us-west-2.elasticbeanstalk.com/api';
 //const todoKey = 'todos';
 function login(account, password) {
     /*return new Promise((resolve, reject) => {
@@ -33949,7 +33949,7 @@ function login(account, password) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 
 
-var newlendBaseUrl = 'http://Salmoney-dev.us-west-2.elasticbeanstalk.com/api';
+var newlendBaseUrl = 'http://salmoney-dev.us-west-2.elasticbeanstalk.com/api';
 
 function createNewlend(lender, name, money, date) {
     var url = newlendBaseUrl + '/newlend';
@@ -33986,7 +33986,7 @@ function createNewlend(lender, name, money, date) {
 
 
 //const todoBaseUrl = 'http://weathermood-11.us-west-2.elasticbeanstalk.com/api';
-var loginBaseUrl = 'http://Salmoney-dev.us-west-2.elasticbeanstalk.com/api';
+var loginBaseUrl = 'http://salmoney-dev.us-west-2.elasticbeanstalk.com/api';
 //const todoKey = 'todos';
 function register(name, account, password) {
     /*return new Promise((resolve, reject) => {
