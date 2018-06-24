@@ -74,7 +74,7 @@ class Main extends React.Component {
                                         <NavLink tag={Link} to='/main/NewlendForm'>新增借款</NavLink>
                                     </div>
                                     <div>
-                                        <Button onClick={this.handleLogOut}>登出</Button>
+                                        <Button outline color="danger" onClick={this.handleLogOut}>登出</Button>
                                     </div>
 
                                 </Collapse>

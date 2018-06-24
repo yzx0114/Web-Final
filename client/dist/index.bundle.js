@@ -4726,7 +4726,7 @@ module.exports = function (it) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return Alert; });
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return Alert; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return Container; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return Row; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return Col; });
@@ -4739,7 +4739,7 @@ module.exports = function (it) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return NavLink; });
 /* unused harmony export Breadcrumb */
 /* unused harmony export BreadcrumbItem */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return Button; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return Button; });
 /* unused harmony export ButtonDropdown */
 /* unused harmony export ButtonGroup */
 /* unused harmony export ButtonToolbar */
@@ -4786,15 +4786,15 @@ module.exports = function (it) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return ListGroup; });
 /* unused harmony export Form */
 /* unused harmony export FormFeedback */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return FormGroup; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return FormGroup; });
 /* unused harmony export FormText */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return Input; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return Input; });
 /* unused harmony export InputGroup */
 /* unused harmony export InputGroupAddon */
 /* unused harmony export InputGroupButton */
 /* unused harmony export InputGroupButtonDropdown */
 /* unused harmony export InputGroupText */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return Label; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return Label; });
 /* unused harmony export CustomInput */
 /* unused harmony export Media */
 /* unused harmony export Pagination */
@@ -13214,6 +13214,7 @@ function listAlerts() {
                 e.expect_date = e.expect_date.substr(0, 10);
             });
             console.log(alerts);
+            dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__borrow_actions_js__["a" /* listBorrowRecords */])());
             dispatch(endlistAlert(alerts));
         }).catch(function (err) {
             console.error('error Alert', err);
@@ -14016,11 +14017,11 @@ var Login = function (_React$Component) {
                                                     __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
                                                     { className: 'account' },
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["j" /* Label */],
+                                                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Label */],
                                                         null,
                                                         '\u5E33\u865F'
                                                     ),
-                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Input */], { className: 'input', type: 'text', value: this.props.LoginAccount, placeholder: 'Please Enter Your Account', onChange: this.handleAccount })
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Input */], { className: 'input', type: 'text', value: this.props.LoginAccount, placeholder: 'Please Enter Your Account', onChange: this.handleAccount })
                                                 )
                                             ),
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -14030,11 +14031,11 @@ var Login = function (_React$Component) {
                                                     __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
                                                     { className: 'password' },
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["j" /* Label */],
+                                                        __WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Label */],
                                                         null,
                                                         '\u5BC6\u78BC'
                                                     ),
-                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Input */], { className: 'input', type: 'password', placeholder: 'Please Enter Your Password', value: this.props.LoginPassword, onChange: this.handlePassword })
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Input */], { className: 'input', type: 'password', placeholder: 'Please Enter Your Password', value: this.props.LoginPassword, onChange: this.handlePassword })
                                                 )
                                             ),
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -14047,12 +14048,12 @@ var Login = function (_React$Component) {
                                                         'div',
                                                         { className: 'buttonRow' },
                                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Button */],
+                                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["h" /* Button */],
                                                             { className: 'button1', outline: true, color: 'info', onClick: this.handleLogin },
                                                             'Login'
                                                         ),
                                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Button */],
+                                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["h" /* Button */],
                                                             { className: 'button2', outline: true, color: 'info', onClick: this.handleRegister },
                                                             'Sign up'
                                                         )
@@ -14180,6 +14181,7 @@ var Main = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props));
 
         _this.handleNavbarToggle = _this.handleNavbarToggle.bind(_this);
+        _this.handleLogOut = _this.handleLogOut.bind(_this);
         _this.link = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createRef();;
         return _this;
     }
@@ -14253,6 +14255,15 @@ var Main = function (_React$Component) {
                                             { tag: __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Link */], to: '/main/NewlendForm' },
                                             '\u65B0\u589E\u501F\u6B3E'
                                         )
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        null,
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            __WEBPACK_IMPORTED_MODULE_3_reactstrap__["h" /* Button */],
+                                            { outline: true, color: 'danger', onClick: this.handleLogOut },
+                                            '\u767B\u51FA'
+                                        )
                                     )
                                 )
                             )
@@ -14282,6 +14293,12 @@ var Main = function (_React$Component) {
         key: 'handleNavbarToggle',
         value: function handleNavbarToggle() {
             this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_main_actions_js__["a" /* toggleNavbar */])());
+        }
+    }, {
+        key: 'handleLogOut',
+        value: function handleLogOut() {
+            localStorage.removeItem('Account');
+            this.props.history.push('/');
         }
     }]);
 
@@ -14622,16 +14639,17 @@ function combine(record) {
             }
         }
         //console.log(arr);
+        console.log(record[i], flag);
         if (flag != -1) {
             if (record[i].paid != true) {
-                if (record[flag].who == 'borrower') {
+                if (record[i].who == 'borrower') {
                     record[flag].amount -= record[i].amount;
                 } else {
                     record[flag].amount += record[i].amount;
                 }
             }
         } else {
-            console.log(record[i], flag);
+
             if (record[i].paid) record[i].amount = 0;
             if (record[i].who == 'borrower') record[i].amount *= -1;
             arr.push(record[i]);
@@ -16803,11 +16821,11 @@ var Register = function (_React$Component) {
                                         __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
                                         null,
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["j" /* Label */],
+                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Label */],
                                             null,
                                             '\u8ACB\u8F38\u5165\u59D3\u540D'
                                         ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Input */], { type: 'text', placeholder: 'Please Enter Your Name', value: this.props.RegisterName, onChange: this.handleChange0, required: true })
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Input */], { type: 'text', placeholder: 'Please Enter Your Name', value: this.props.RegisterName, onChange: this.handleChange0, required: true })
                                     )
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -16817,11 +16835,11 @@ var Register = function (_React$Component) {
                                         __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
                                         null,
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["j" /* Label */],
+                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Label */],
                                             null,
                                             '\u8ACB\u8F38\u5165\u5E33\u865F'
                                         ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Input */], { type: 'text', placeholder: 'Please Enter Your Account', value: this.props.RegisterAccount, onChange: this.handleChange1, required: true })
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Input */], { type: 'text', placeholder: 'Please Enter Your Account', value: this.props.RegisterAccount, onChange: this.handleChange1, required: true })
                                     )
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -16831,11 +16849,11 @@ var Register = function (_React$Component) {
                                         __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
                                         null,
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["j" /* Label */],
+                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Label */],
                                             null,
                                             '\u8ACB\u8F38\u5165\u5BC6\u78BC'
                                         ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Input */], { type: 'password', placeholder: 'Please Enter Your Password', value: this.props.RegisterPassword, onChange: this.handleChange2, required: true })
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Input */], { type: 'password', placeholder: 'Please Enter Your Password', value: this.props.RegisterPassword, onChange: this.handleChange2, required: true })
                                     )
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -16845,11 +16863,11 @@ var Register = function (_React$Component) {
                                         __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
                                         null,
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["j" /* Label */],
+                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Label */],
                                             null,
                                             '\u8ACB\u518D\u6B21\u8F38\u5165\u5BC6\u78BC'
                                         ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["k" /* Input */], { type: 'password', placeholder: 'Please Enter Your Password Again', value: this.props.RegisterPasswordAgain, onChange: this.handleChange3, required: true })
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Input */], { type: 'password', placeholder: 'Please Enter Your Password Again', value: this.props.RegisterPasswordAgain, onChange: this.handleChange3, required: true })
                                     )
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -16859,12 +16877,12 @@ var Register = function (_React$Component) {
                                         __WEBPACK_IMPORTED_MODULE_4_reactstrap__["v" /* Col */],
                                         null,
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Button */],
+                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["h" /* Button */],
                                             { className: 'button1', outline: true, color: 'info', onClick: this.handleSubmit },
                                             '\u9001\u51FA'
                                         ),
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Button */],
+                                            __WEBPACK_IMPORTED_MODULE_4_reactstrap__["h" /* Button */],
                                             { className: 'button2', outline: true, color: 'info', onClick: this.handleCancel },
                                             '\u53D6\u6D88'
                                         )
@@ -34194,14 +34212,14 @@ var AlertList = function (_React$Component) {
                     'div',
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_3_reactstrap__["l" /* Button */],
+                        __WEBPACK_IMPORTED_MODULE_3_reactstrap__["h" /* Button */],
                         { color: 'success', onClick: function onClick() {
                                 _this2.handleButtonFirstClick(activeTab);
                             } },
                         '\u6211\u77E5\u9053\u4E86'
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_3_reactstrap__["l" /* Button */],
+                        __WEBPACK_IMPORTED_MODULE_3_reactstrap__["h" /* Button */],
                         { color: 'info', onClick: function onClick() {
                                 _this2.handleButtonSecondClick(activeTab);
                             } },
@@ -34221,7 +34239,7 @@ var AlertList = function (_React$Component) {
                 'div',
                 null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_3_reactstrap__["l" /* Button */],
+                    __WEBPACK_IMPORTED_MODULE_3_reactstrap__["h" /* Button */],
                     { color: 'danger', onClick: this.handleModalClick },
                     'check Alerts'
                 ),
@@ -34448,7 +34466,7 @@ var ArrearForm = function (_React$Component) {
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__ArrearRecordList_jsx__["a" /* default */], null),
                     recordLoading && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["h" /* Alert */],
+                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["i" /* Alert */],
                         { color: 'warning', className: 'loading' },
                         'Loading...'
                     )
@@ -34562,7 +34580,7 @@ var ArrearRecordItem = function (_React$Component) {
                             'div',
                             { className: 'mx-auto' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Button */],
+                                __WEBPACK_IMPORTED_MODULE_4_reactstrap__["h" /* Button */],
                                 { type: 'button', className: 'btn btn-warning' },
                                 '\u5DF2\u9084\u6B3E!',
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
@@ -34577,7 +34595,7 @@ var ArrearRecordItem = function (_React$Component) {
                             'div',
                             { className: 'mx-auto' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_4_reactstrap__["l" /* Button */],
+                                __WEBPACK_IMPORTED_MODULE_4_reactstrap__["h" /* Button */],
                                 { type: 'button', className: this.props.confirm ? "confirm" : "btn btn-success", onClick: this.handleConfirm },
                                 '\u78BA\u8A8D\u501F\u6B3E'
                             )
@@ -34803,7 +34821,7 @@ var BorrowForm = function (_React$Component) {
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_components_BorrowRecordList_jsx__["a" /* default */], null),
                 recordLoading && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2_reactstrap__["h" /* Alert */],
+                    __WEBPACK_IMPORTED_MODULE_2_reactstrap__["i" /* Alert */],
                     { color: 'warning', className: 'loading' },
                     'Loading...'
                 )
@@ -34924,7 +34942,7 @@ var BorrowRecordItem = function (_React$Component) {
                             'div',
                             { className: 'mx-auto' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_3_reactstrap__["l" /* Button */],
+                                __WEBPACK_IMPORTED_MODULE_3_reactstrap__["h" /* Button */],
                                 { type: 'button', className: !this.props.confirm ? "confirm" : "btn btn-success", onClick: this.handleComplete },
                                 '\u5DF2\u9084\u6B3E'
                             )
@@ -34937,7 +34955,7 @@ var BorrowRecordItem = function (_React$Component) {
                             'div',
                             { className: 'mx-auto' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_3_reactstrap__["l" /* Button */],
+                                __WEBPACK_IMPORTED_MODULE_3_reactstrap__["h" /* Button */],
                                 { type: 'button', className: 'btn btn-danger', onClick: this.handleDelete },
                                 '\u522A\u9664'
                             )
@@ -34950,7 +34968,7 @@ var BorrowRecordItem = function (_React$Component) {
                             'div',
                             { className: 'mx-auto' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_3_reactstrap__["l" /* Button */],
+                                __WEBPACK_IMPORTED_MODULE_3_reactstrap__["h" /* Button */],
                                 { type: 'button', className: this.props.read || !this.props.confirm ? "confirm" : "btn btn-warning", onClick: this.handleRemind },
                                 '\u63D0\u9192\u4ED6'
                             )
@@ -35140,7 +35158,7 @@ var FriendForm = function (_React$Component) {
                     { className: 'list' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__FriendList_jsx__["a" /* default */], null),
                     recordLoading && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["h" /* Alert */],
+                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["i" /* Alert */],
                         { hidden: true, color: 'warning', className: 'loading' },
                         'Loading...'
                     )
@@ -35484,7 +35502,7 @@ var HistoryForm = function (_React$Component) {
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__HistoryRecordList_jsx__["a" /* default */], null),
                     recordLoading && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["h" /* Alert */],
+                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["i" /* Alert */],
                         { color: 'warning', className: 'loading' },
                         'Loading...'
                     )
@@ -35772,40 +35790,40 @@ var NewlendForm = function (_React$Component) {
                 'div',
                 { className: 'newlend-form' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2_reactstrap__["h" /* Alert */],
+                    __WEBPACK_IMPORTED_MODULE_2_reactstrap__["i" /* Alert */],
                     { color: 'info', className: 'd-flex flex-column justify-content-center ' + inputDanger },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["i" /* FormGroup */],
+                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["j" /* FormGroup */],
                         null,
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_2_reactstrap__["j" /* Label */],
+                            __WEBPACK_IMPORTED_MODULE_2_reactstrap__["k" /* Label */],
                             { 'for': 'exampleText' },
                             '\u5C0D\u65B9\u5E33\u865F'
                         ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_reactstrap__["k" /* Input */], { type: 'textarea', name: 'text', id: 'exampleText', value: inputAccount, onChange: this.handleAccountChange, placeholder: '\u8ACB\u8F38\u5165\u5C0D\u65B9\u5E33\u865F' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_reactstrap__["l" /* Input */], { type: 'textarea', name: 'text', id: 'exampleText', value: inputAccount, onChange: this.handleAccountChange, placeholder: '\u8ACB\u8F38\u5165\u5C0D\u65B9\u5E33\u865F' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["i" /* FormGroup */],
+                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["j" /* FormGroup */],
                         null,
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_2_reactstrap__["j" /* Label */],
+                            __WEBPACK_IMPORTED_MODULE_2_reactstrap__["k" /* Label */],
                             { 'for': 'exampleText' },
                             '\u91D1\u984D'
                         ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_reactstrap__["k" /* Input */], { type: 'textarea', name: 'text', id: 'exampleText', value: inputValue, onChange: this.handleValueChange, placeholder: '\u8ACB\u8F38\u5165\u91D1\u984D' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_reactstrap__["l" /* Input */], { type: 'textarea', name: 'text', id: 'exampleText', value: inputValue, onChange: this.handleValueChange, placeholder: '\u8ACB\u8F38\u5165\u91D1\u984D' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["i" /* FormGroup */],
+                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["j" /* FormGroup */],
                         null,
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_2_reactstrap__["j" /* Label */],
+                            __WEBPACK_IMPORTED_MODULE_2_reactstrap__["k" /* Label */],
                             { 'for': 'exampleDate' },
                             '\u9810\u8A08\u9084\u6B3E\u65E5'
                         ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_reactstrap__["k" /* Input */], { min: this.date0, type: 'date', name: 'date', id: 'exampleDate', value: inputDate, onChange: this.handleDateChange, placeholder: 'date placeholder' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_reactstrap__["l" /* Input */], { min: this.date0, type: 'date', name: 'date', id: 'exampleDate', value: inputDate, onChange: this.handleDateChange, placeholder: 'date placeholder' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["l" /* Button */],
+                        __WEBPACK_IMPORTED_MODULE_2_reactstrap__["h" /* Button */],
                         { className: 'btn-submit align-self-end', color: 'info', onClick: this.handleSummit },
                         'Submit'
                     )
