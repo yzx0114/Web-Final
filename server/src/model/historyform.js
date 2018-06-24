@@ -9,7 +9,13 @@ if (!global.db) {
 
 function list(user_account = '', target_account) {
   //  user_account = 'admin1'; // 登入此帳號的人(借款人))
-
+    const where = [];
+    where.push(`WHERE paid = true AND (borrower = '${user_account}'`);
+    if(target_account != 'unknown') where.push(`AND lender = '${target_account}') OR`);
+    else where.push(') OR');
+    where.push(` (lender = '${user_account}'`)
+    if(target_account != 'unknown') where.push(`AND borrower= '${target_account}')`);
+    else where.push(')');
     const sql = `
         SELECT record_id,name,expect_date,repay_date,amount,
         CASE
@@ -18,9 +24,11 @@ function list(user_account = '', target_account) {
             END AS who
         FROM record
         INNER JOIN users ON CASE WHEN borrower = '${user_account}' THEN record.lender = users.account ELSE record.borrower = users.account END
-        WHERE (borrower = '${user_account}' AND lender = '${target_account}')OR (borrower= '${target_account}' AND lender = '${user_account}') AND paid = true;
-    `;
+        ${where.join('')}
+        `;
 
+
+    console.log(sql);
     return db.any(sql);
 }
 

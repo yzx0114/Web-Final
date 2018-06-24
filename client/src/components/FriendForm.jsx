@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Alert } from 'reactstrap';
 import { connect } from 'react-redux';
-import { listFriend } from 'states/friend-action.js';
+import { listFriend, showDetail } from 'states/friend-action.js';
 import FriendList from './FriendList.jsx';
 import './ArrearForm.css';
 
@@ -19,7 +19,7 @@ class FriendForm extends React.Component {
     }
 
     componentDidMount() {
-        localStorage.setItem('friend_account','');
+        localStorage.removeItem('friend_account');
         this.props.dispatch(listFriend(localStorage.getItem('Account')));
     }
 
