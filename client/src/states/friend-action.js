@@ -63,11 +63,12 @@ function combine(record)
         }
     }
     //console.log(arr);
+    console.log(record[i],flag);
     if(flag != -1)
     {
       if(record[i].paid != true)
       {
-          if(record[flag].who == 'borrower')
+          if(record[i].who == 'borrower')
           {
             record[flag].amount -= record[i].amount;
           }
@@ -77,7 +78,7 @@ function combine(record)
       }
     }
     else {
-        console.log(record[i],flag);
+
         if(record[i].paid) record[i].amount = 0;
         if(record[i].who == 'borrower') record[i].amount *= -1;
         arr.push(record[i]);
