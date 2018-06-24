@@ -13,6 +13,16 @@ export function Confirm(id){
       return res.data;
   });
 }
+export function payBack(id,payBack){
+    let url = `${arrearBaseUrl}/payback`;
+    return axios.post(url, {
+        id,payBack
+    }).then(function(res) {
+        if (res.status !== 200)
+            throw new Error(`Unexpected response code: ${res.status}`);
+        return res.data;
+    });
+}
 export function listArrearRecords(user_account, target_account) {
 
     let url = `${arrearBaseUrl}/arrear`;
@@ -46,19 +56,6 @@ export function listArrearRecords(user_account, target_account) {
         }
         return res.data;
     });
-
-    /*let url = `${arrearBaseUrl}/arrear`;
-    if (user_account)
-        url += `?user_account=${user_account}`;
-
-    console.log(`Making GET request to: ${url}`);
-    return axios.get(url).then(function(res) {
-        if (res.status !== 200)
-            throw new Error(`Unexpected response code: ${res.status}`);
-
-        return res.data;
-    });*/
-
 }
 
 /*

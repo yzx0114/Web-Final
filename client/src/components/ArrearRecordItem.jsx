@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Confirm, listArrearRecords } from 'states/arrear-actions.js';
+import { Confirm, listArrearRecords ,noticePayBack} from 'states/arrear-actions.js';
 import {
     Button
 } from 'reactstrap';
@@ -19,10 +19,11 @@ class ArrearRecordItem extends React.Component {
         super(props);
         console.log(this.props);
         this.handleConfirm = this.handleConfirm.bind(this);
+        this.handlePayBack=this.handlePayBack.bind(this);
     }
 
     render() {
-        const { name, amount, expect_date } = this.props;
+        const { name, amount, expect_date ,payback} = this.props;
         return (
             <div className='record-item row container'>
                 <div className='person-info col-sm-9 col-xl-9 row'>
@@ -42,7 +43,7 @@ class ArrearRecordItem extends React.Component {
                 <div className='buttons col-sm-3 col-xs-3 align-self-center'>
                     <div className='row'>
                         <div className='mx-auto'>
-                            <Button type="button" className="btn btn-warning">已還款!<br />提醒他</Button>
+                            <Button type="button" className={this.props.payback ? "confirm" : "btn btn-warning"} onClick={this.handlePayBack}>已還款!<br />提醒他</Button>
                         </div>
                     </div>
                     <div className='row'>
@@ -56,6 +57,9 @@ class ArrearRecordItem extends React.Component {
     }
     handleConfirm() {
         this.props.dispatch(Confirm(this.props.record_id));
+    }
+    handlePayBack(){
+        this.props.dispatch(noticePayBack(this.props.record_id,true));
     }
 }
 

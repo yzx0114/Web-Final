@@ -1,6 +1,6 @@
 const initRecordState={
     recordLoading:false,
-    arrearRecords:[]
+    arrearRecords:[],
 };
 
 

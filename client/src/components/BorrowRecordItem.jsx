@@ -7,7 +7,7 @@ import {
 
 import { createAlert } from 'states/main-actions.js';
 import { complete, deletes, listBorrowRecords } from 'states/borrow-actions.js';
-
+import { noticePayBack} from 'states/arrear-actions.js';
 import './RecordItem.css';
 
 class BorrowRecordItem extends React.Component {
@@ -27,7 +27,7 @@ class BorrowRecordItem extends React.Component {
     }
 
     render() {
-        const { name, amount, expect_date, read } = this.props;
+        const { name, amount, expect_date, read ,payback} = this.props;
 
 
         return (
@@ -46,7 +46,7 @@ class BorrowRecordItem extends React.Component {
                         {expect_date}
                     </div>
                 </div>
-                <div className='buttons col-sm-3 col-xl-3 align-self-center'>
+                <div className='buttons col-sm-2 col-xl-3 align-self-center'>
                     <div className='row'>
                         <div className='mx-auto'>
                             <Button type="button" className={(!this.props.confirm) ? "confirm" : "btn btn-success"} onClick={this.handleComplete}>已還款</Button>
@@ -63,6 +63,12 @@ class BorrowRecordItem extends React.Component {
                         </div>
                     </div>
                 </div>
+                <div className='buttons col-sm-1 col-xl-3 align-self-center'>
+                    <div className={this.props.payback ? "" : "confirm"}>
+                        <img src="../../image/paid.png" className="paid"/>
+                        
+                    </div>
+                </div>
             </div>
         );
     }
@@ -72,6 +78,7 @@ class BorrowRecordItem extends React.Component {
     }
     handleRemind() {
         this.props.dispatch(createAlert(this.props.record_id));
+        this.props.dispatch(noticePayBack(this.props.record_id,false));
     }
     handleDelete() {
         this.props.dispatch(deletes(this.props.record_id));

@@ -67,7 +67,7 @@ function combine(record)
     {
       if(record[i].paid != true)
       {
-          if(record[flag].who == 'borrower')
+          if(record[i].who == 'borrower')
           {
             record[flag].amount -= record[i].amount;
           }

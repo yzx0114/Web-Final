@@ -22,6 +22,13 @@ router.post('/confirm',function(req, res, next) {
         res.json(arrears);
     }).catch(next);
 });
+router.post('/payback',function(req, res, next) {
+    const {id,payBack} = req.body;
+    arrearModel.payback(id,payBack).then(payback => {
+        res.json(payback);
+    }).catch(next);
+});
+
 /*
 router.get('/arrear', function(req, res, next) {
     arrearModel.list(req.query.user_account).then(arrears => {

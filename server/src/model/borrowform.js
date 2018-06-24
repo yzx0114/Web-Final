@@ -9,7 +9,6 @@ if (!global.db) {
 
 function list(user_account = '', target_account) {
   //  user_account = 'admin1'; // 登入此帳號的人(借款人))
-  console.log(user_account ,'borrow form');
     const where = [];
 
     if(user_account){
@@ -21,7 +20,7 @@ function list(user_account = '', target_account) {
       where.push(`borrower = '${target_account}'`);
     }
     const sql = `
-        SELECT record_id,name,expect_date,amount,read,confirm
+        SELECT record_id,name,expect_date,amount,read,confirm,payback
         FROM record
         INNER JOIN users ON record.borrower = users.account
         ${where.length ? 'WHERE ' + where.join(' AND ') : ''}

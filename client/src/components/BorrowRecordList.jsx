@@ -25,6 +25,7 @@ class BorrowRecordList extends React.Component {
         );
 
         if (borrowRecords.length) {
+            console.log(borrowRecords);
             children = borrowRecords.map(p => (
                 <ListGroupItem color={p.confirm ? '' : 'danger'} key={p.record_id} action>
                     <BorrowRecordItem {...p} />

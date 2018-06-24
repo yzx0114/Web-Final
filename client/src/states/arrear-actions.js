@@ -1,6 +1,7 @@
 import {
     listArrearRecords as listArrearRecordsFromApi,
-    Confirm as ConfirmFromApi
+    Confirm as ConfirmFromApi,
+    payBack as paybackApi
 } from 'api/arrear.js'
 
 function startLoading(){
@@ -19,6 +20,17 @@ function endLoading(){
         type:'@ARREAR/END_LOADING'
     };
 };
+
+export function noticePayBack(id,payback){
+    return (dispatch, getState)=>{
+      return paybackApi(id,payback).then(()=>{
+            dispatch(listArrearRecords(localStorage.getItem('Account')));
+      }).catch(err=> {
+          console.error('Error listing arrearRecords', err);
+      });
+  };
+    
+}
 export function Confirm(id){
   return (dispatch, getState)=>{
       dispatch(startLoading());

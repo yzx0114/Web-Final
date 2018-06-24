@@ -14,3 +14,7 @@
 .record-item .confirm {
     display: none;
 }
+.record-item .paid{
+    height:5rem;
+    width: 6rem;
+}

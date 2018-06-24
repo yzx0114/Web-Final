@@ -38,6 +38,7 @@ router.post('/cancelAlert', function(req, res, next) {
         err.status = 400;
         throw err;
     }
+    console.log(id);
     alertModel.cancel(id).then(newAlerts => {
         console.log(newAlerts);
         res.json(newAlerts);

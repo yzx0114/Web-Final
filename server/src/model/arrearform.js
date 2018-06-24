@@ -10,30 +10,34 @@ if (!global.db) {
 function list(user_account, target_account) {
     //user_account = 'admin2'; // 登入此帳號的人(借款人))
     const where = [];
-    console.log(user_account,'hello');
     if(user_account){
         where.push(`borrower = '${user_account}'`);
         where.push(`paid = false`);
     }
-    console.log(target_account);
     if(target_account !== 'unknown')
     {
       where.push(`lender = '${target_account}'`);
     }
     const sql = `
-        SELECT record_id,name,expect_date,amount,confirm
+        SELECT record_id,name,expect_date,amount,confirm,payback
         FROM record
         INNER JOIN users ON record.lender = users.account
         ${where.length ? 'WHERE ' + where.join(' AND ') : ''}
         ORDER BY expect_date
     `;
-    console.log(sql);
     return db.any(sql);
 }
 function confirm(id)
 {
   const sql = `
       UPDATE record SET confirm = true where record_id = ${id}
+  `
+  return db.none(sql);
+}
+function payback(id,payBack)
+{
+  const sql = `
+      UPDATE record SET payback = '${payBack}' where record_id = ${id}
   `
   return db.none(sql);
 }
@@ -54,5 +58,6 @@ function confirm(id)
 
 module.exports = {
     list,
-    confirm
+    confirm,
+    payback
 };
