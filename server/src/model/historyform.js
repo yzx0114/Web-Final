@@ -25,10 +25,10 @@ function list(user_account = '', target_account) {
         FROM record
         INNER JOIN users ON CASE WHEN borrower = '${user_account}' THEN record.lender = users.account ELSE record.borrower = users.account END
         ${where.join('')}
+        ORDER BY repay_date
         `;
 
 
-    console.log(sql);
     return db.any(sql);
 }
 

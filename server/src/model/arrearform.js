@@ -25,8 +25,9 @@ function list(user_account, target_account) {
         FROM record
         INNER JOIN users ON record.lender = users.account
         ${where.length ? 'WHERE ' + where.join(' AND ') : ''}
+        ORDER BY expect_date
     `;
-
+    console.log(sql);
     return db.any(sql);
 }
 function confirm(id)
