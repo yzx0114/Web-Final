@@ -29,6 +29,7 @@ import BorrowForm from './BorrowForm.jsx';
 import ArrearForm from './ArrearForm.jsx';
 import FriendForm from './FriendForm.jsx';
 import HistoryForm from './HistoryForm.jsx';
+
 import './Main.css';
 
 class Main extends React.Component {
@@ -92,11 +93,11 @@ class Main extends React.Component {
                         <NewlendForm />
                     )} />
                 </div>
-
+                
             </Router>
         );
     }
-
+    
     handleNavbarToggle() {
         this.props.dispatch(toggleNavbar());
     }

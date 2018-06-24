@@ -1,6 +1,17 @@
 .tabContent {
     height: 10rem;
     padding-left: 1rem;
-    display: flex;
-    color: blue;
+    display:flex;
+    color:blue;
+}
+
+.alertNum{
+    background-image: url('./image/alertNum.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    height:5rem;
+    width:5rem;
+    text-align:center;
+    font-size:1.5rem;
+    color:rgb(190, 0, 0);
 }
