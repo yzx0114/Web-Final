@@ -57,7 +57,7 @@ class BorrowRecordItem extends React.Component {
                             <Button type="button" className="btn btn-danger" onClick={this.handledeletes}>刪除</Button>
                         </div>
                     </div>
-                    <div className= 'row'>
+                    <div className='row'>
                         <div className='mx-auto'>
                             <Button type="button" className={(this.props.read || !this.props.confirm) ? "confirm" : "btn btn-warning"} onClick={this.handleRemind}>提醒他</Button>
                         </div>

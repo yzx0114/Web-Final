@@ -14081,10 +14081,14 @@ var Main = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props));
 
         _this.handleNavbarToggle = _this.handleNavbarToggle.bind(_this);
+        _this.link = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createRef();;
         return _this;
     }
 
     _createClass(Main, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {}
+    }, {
         key: 'render',
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -14119,7 +14123,7 @@ var Main = function (_React$Component) {
                                             null,
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                 __WEBPACK_IMPORTED_MODULE_3_reactstrap__["g" /* NavLink */],
-                                                { tag: __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Link */], to: '/' },
+                                                { tag: __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Link */], to: '/main/', ref: this.link },
                                                 '\u501F\u6B3E\u7D00\u9304'
                                             )
                                         ),
@@ -14128,7 +14132,7 @@ var Main = function (_React$Component) {
                                             null,
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                 __WEBPACK_IMPORTED_MODULE_3_reactstrap__["g" /* NavLink */],
-                                                { tag: __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Link */], to: '/ArrearForm' },
+                                                { tag: __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Link */], to: '/main/ArrearForm' },
                                                 '\u6B20\u6B3E\u7D00\u9304'
                                             )
                                         ),
@@ -14137,7 +14141,7 @@ var Main = function (_React$Component) {
                                             null,
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                 __WEBPACK_IMPORTED_MODULE_3_reactstrap__["g" /* NavLink */],
-                                                { tag: __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Link */], to: '/HistoryForm' },
+                                                { tag: __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Link */], to: '/main/HistoryForm' },
                                                 '\u6B77\u53F2\u7D00\u9304'
                                             )
                                         )
@@ -14147,7 +14151,7 @@ var Main = function (_React$Component) {
                                         { className: 'ml-auto' },
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                             __WEBPACK_IMPORTED_MODULE_3_reactstrap__["g" /* NavLink */],
-                                            { tag: __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Link */], to: '/NewlendForm' },
+                                            { tag: __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Link */], to: '/main/NewlendForm' },
                                             '\u65B0\u589E\u501F\u6B3E'
                                         )
                                     )
@@ -14155,16 +14159,16 @@ var Main = function (_React$Component) {
                             )
                         )
                     ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Route */], { exact: true, path: '/', render: function render() {
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Route */], { exact: true, path: '/main', render: function render() {
                             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__BorrowForm_jsx__["a" /* default */], null);
                         } }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Route */], { exact: true, path: '/ArrearForm', render: function render() {
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Route */], { exact: true, path: '/main/ArrearForm', render: function render() {
                             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__ArrearForm_jsx__["a" /* default */], null);
                         } }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Route */], { exact: true, path: '/HistoryForm', render: function render() {
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Route */], { exact: true, path: '/main/HistoryForm', render: function render() {
                             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__HistoryForm_jsx__["a" /* default */], null);
                         } }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Route */], { exact: true, path: '/NewlendForm', render: function render() {
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Route */], { exact: true, path: '/main/NewlendForm', render: function render() {
                             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__NewlendForm_jsx__["a" /* default */], null);
                         } })
                 )
@@ -16560,6 +16564,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Register = function (_React$Component) {
     _inherits(Register, _React$Component);
 
+    _createClass(Register, [{
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["a" /* Clear */])());
+        }
+    }]);
+
     function Register(props) {
         _classCallCheck(this, Register);
 
@@ -16700,25 +16711,25 @@ var Register = function (_React$Component) {
         value: function handleChange0(e) {
             var text = e.target.value;
             console.log(text);
-            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["a" /* Change0 */])(text));
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["b" /* Change0 */])(text));
         }
     }, {
         key: 'handleChange1',
         value: function handleChange1(e) {
             var text = e.target.value;
-            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["b" /* Change1 */])(text));
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["c" /* Change1 */])(text));
         }
     }, {
         key: 'handleChange2',
         value: function handleChange2(e) {
             var text = e.target.value;
-            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["c" /* Change2 */])(text));
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["d" /* Change2 */])(text));
         }
     }, {
         key: 'handleChange3',
         value: function handleChange3(e) {
             var text = e.target.value;
-            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["d" /* Change3 */])(text));
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["e" /* Change3 */])(text));
         }
     }, {
         key: 'handleSubmit',
@@ -16732,8 +16743,8 @@ var Register = function (_React$Component) {
                 alert('兩次密碼不一樣');
                 return;
             }
-            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["e" /* register */])(this.props.RegisterName, this.props.RegisterAccount, this.props.RegisterPassword, this.props.history));
-            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["f" /* Clear */])());
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["f" /* register */])(this.props.RegisterName, this.props.RegisterAccount, this.props.RegisterPassword, this.props.history));
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_states_login_actions_js__["a" /* Clear */])());
             //  this.props.history.push('/');
         }
     }, {
@@ -16824,12 +16835,12 @@ function listArrearRecords(user_account) {
 /* unused harmony export Accept */
 /* harmony export (immutable) */ __webpack_exports__["i"] = login;
 /* unused harmony export setRegisterState */
-/* harmony export (immutable) */ __webpack_exports__["f"] = Clear;
-/* harmony export (immutable) */ __webpack_exports__["a"] = Change0;
-/* harmony export (immutable) */ __webpack_exports__["b"] = Change1;
-/* harmony export (immutable) */ __webpack_exports__["c"] = Change2;
-/* harmony export (immutable) */ __webpack_exports__["d"] = Change3;
-/* harmony export (immutable) */ __webpack_exports__["e"] = register;
+/* harmony export (immutable) */ __webpack_exports__["a"] = Clear;
+/* harmony export (immutable) */ __webpack_exports__["b"] = Change0;
+/* harmony export (immutable) */ __webpack_exports__["c"] = Change1;
+/* harmony export (immutable) */ __webpack_exports__["d"] = Change2;
+/* harmony export (immutable) */ __webpack_exports__["e"] = Change3;
+/* harmony export (immutable) */ __webpack_exports__["f"] = register;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_api_logins_js__ = __webpack_require__(404);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
@@ -32295,7 +32306,12 @@ function newlendForm() {
             return _extends({}, state, {
                 inputDanger: action.danger
             });
-
+        case '@NEWLENDFORM/CLEAR':
+            return _extends({}, state, {
+                inputAccount: '',
+                inputValue: '',
+                inputDate: ''
+            });
         default:
             return state;
     }
@@ -34101,10 +34117,9 @@ var ArrearForm = function (_React$Component) {
 
             var children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: './image/no-image.jpg' })
+                { className: 'image0' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'image0', src: '../../image/no-record1.png' })
             );
-            console.log(this.props.arrearRecords);
             if (this.props.arrearRecords.length) {
                 children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
@@ -34225,7 +34240,7 @@ var ArrearRecordItem = function (_React$Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'picture col-sm-2 col-xl-2 align-self-center' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'rounded-circle', src: './image/icon.png', width: '50', height: '50' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'rounded-circle', src: '../../image/icon.png', width: '50', height: '50' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -34281,8 +34296,6 @@ var ArrearRecordItem = function (_React$Component) {
     }, {
         key: 'handleConfirm',
         value: function handleConfirm() {
-            //console.log(this.props.confirm);
-            console.log('hihi');
             this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_states_arrear_actions_js__["b" /* Confirm */])(this.props.record_id));
         }
     }]);
@@ -34347,15 +34360,7 @@ var ArrearRecordList = function (_React$Component) {
             var arrearRecords = this.props.arrearRecords;
 
 
-            var children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_2_reactstrap__["m" /* ListGroupItem */],
-                { className: 'empty d-flex justify-content-center align-items-center' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'empty-text' },
-                    'No record here.'
-                )
-            );
+            var children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', null);
 
             if (arrearRecords.length) {
                 console.log(arrearRecords);
@@ -34449,6 +34454,33 @@ var BorrowForm = function (_React$Component) {
         value: function render() {
             var recordLoading = this.props.recordLoading;
 
+            var children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'image0' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'image0', src: '../../image/no-record1.png' })
+            );
+            if (this.props.borrowRecords.length) {
+                children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'person-info col-sm-12 col-xl-12 row' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'name col-sm-3 col-xl-3' },
+                        '\u6B20\u6B3E\u4EBA'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'money col-sm-3 col-xl-3' },
+                        '\u91D1\u984D'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'date col-sm-3 col-xl-3' },
+                        '\u9810\u8A08\u9084\u6B3E\u65E5'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'date col-sm-3 col-xl-3' })
+                );
+            }
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
@@ -34460,26 +34492,7 @@ var BorrowForm = function (_React$Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'header container' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'person-info col-sm-12 col-xl-12 row' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'name col-sm-3 col-xl-3' },
-                                '\u6B20\u6B3E\u4EBA'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'money col-sm-3 col-xl-3' },
-                                '\u91D1\u984D'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'date col-sm-3 col-xl-3' },
-                                '\u9810\u8A08\u9084\u6B3E\u65E5'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'date col-sm-3 col-xl-3' })
-                        )
+                        children
                     )
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_components_BorrowRecordList_jsx__["a" /* default */], null),
@@ -34504,7 +34517,8 @@ BorrowForm.propTypes = {
 
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_react_redux__["b" /* connect */])(function (state) {
     return {
-        recordLoading: state.borrow.recordLoading
+        recordLoading: state.borrow.recordLoading,
+        borrowRecords: state.borrow.borrowRecords
     };
 })(BorrowForm));
 
@@ -34574,7 +34588,7 @@ var BorrowRecordItem = function (_React$Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'picture col-sm-2 col-xl-2 align-self-center' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'rounded-circle', src: './image/icon.png', width: '50', height: '50' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'rounded-circle', src: '../../image/icon.png', width: '50', height: '50' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -34617,8 +34631,8 @@ var BorrowRecordItem = function (_React$Component) {
                             { className: 'mx-auto' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 __WEBPACK_IMPORTED_MODULE_3_reactstrap__["l" /* Button */],
-                                { type: 'button', className: this.props.read || !this.props.confirm ? "confirm" : "btn btn-warning", onClick: this.handleRemind },
-                                '\u63D0\u9192\u4ED6'
+                                { type: 'button', className: 'btn btn-danger', onClick: this.handledeletes },
+                                '\u522A\u9664'
                             )
                         )
                     ),
@@ -34630,8 +34644,8 @@ var BorrowRecordItem = function (_React$Component) {
                             { className: 'mx-auto' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 __WEBPACK_IMPORTED_MODULE_3_reactstrap__["l" /* Button */],
-                                { type: 'button', className: 'btn btn-danger', onClick: this.handleDelete },
-                                '\u522A\u9664'
+                                { type: 'button', className: this.props.read || !this.props.confirm ? "confirm" : "btn btn-warning", onClick: this.handleRemind },
+                                '\u63D0\u9192\u4ED6'
                             )
                         )
                     )
@@ -34722,15 +34736,7 @@ var BorrowRecordList = function (_React$Component) {
             var borrowRecords = this.props.borrowRecords;
 
 
-            var children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_2_reactstrap__["m" /* ListGroupItem */],
-                { className: 'empty d-flex justify-content-center align-items-center' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'empty-text' },
-                    'No record here.'
-                )
-            );
+            var children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', null);
 
             if (borrowRecords.length) {
                 children = borrowRecords.map(function (p) {
@@ -34818,7 +34824,56 @@ var HistoryForm = function (_React$Component) {
         value: function render() {
             var recordLoading = this.props.recordLoading;
 
-
+            var children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'image0' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'image0', src: '../../image/no-record1.png' })
+            );
+            if (this.props.historyRecords.length) {
+                children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'person-info col-sm-12 col-xl-12 row' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'name col-sm-3 col-xl-3' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'span',
+                            { style: { color: "red", fontWeight: "bold" } },
+                            '\u501F'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'span',
+                            null,
+                            '/'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'span',
+                            { style: { color: "green", fontWeight: "bold" } },
+                            '\u6B20'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'span',
+                            null,
+                            '\u6B3E\u4EBA'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'money col-sm-3 col-xl-3' },
+                        '\u91D1\u984D'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'date col-sm-3 col-xl-3' },
+                        '\u9810\u8A08\u9084\u6B3E\u65E5'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'done-date col-sm-3 col-xl-3' },
+                        '\u9084\u6B3E\u65E5'
+                    )
+                );
+            }
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'history-form' },
@@ -34828,49 +34883,7 @@ var HistoryForm = function (_React$Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'header container' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'person-info col-sm-12 col-xl-12 row' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'name col-sm-3 col-xl-3' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'span',
-                                    { style: { color: "red", fontWeight: "bold" } },
-                                    '\u501F'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'span',
-                                    null,
-                                    '/'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'span',
-                                    { style: { color: "green", fontWeight: "bold" } },
-                                    '\u6B20'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'span',
-                                    null,
-                                    '\u6B3E\u4EBA'
-                                )
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'money col-sm-3 col-xl-3' },
-                                '\u91D1\u984D'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'date col-sm-3 col-xl-3' },
-                                '\u9810\u8A08\u9084\u6B3E\u65E5'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'done-date col-sm-3 col-xl-3' },
-                                '\u9084\u6B3E\u65E5'
-                            )
-                        )
+                        children
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__HistoryRecordList_jsx__["a" /* default */], null),
                     recordLoading && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -34895,7 +34908,8 @@ HistoryForm.propTypes = {
 
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_react_redux__["b" /* connect */])(function (state) {
     return {
-        recordLoading: state.history.recordLoading
+        recordLoading: state.history.recordLoading,
+        historyRecords: state.history.historyRecords
     };
 })(HistoryForm));
 
@@ -34956,7 +34970,7 @@ var HistoryRecordItem = function (_React$Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'picture col-sm-2 col-xl-2 align-self-center' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'rounded-circle', src: './image/icon.png', width: '50', height: '50' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'rounded-circle', src: '../../image/icon.png', width: '50', height: '50' })
                     ),
                     who == 'borrower' ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -35049,15 +35063,7 @@ var HistoryRecordList = function (_React$Component) {
             var historyRecords = this.props.historyRecords;
 
 
-            var children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_2_reactstrap__["m" /* ListGroupItem */],
-                { className: 'empty d-flex justify-content-center align-items-center' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'empty-text' },
-                    'No record here.'
-                )
-            );
+            var children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', null);
 
             if (historyRecords.length) {
                 children = historyRecords.map(function (p) {
@@ -35129,6 +35135,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var NewlendForm = function (_React$Component) {
     _inherits(NewlendForm, _React$Component);
 
+    _createClass(NewlendForm, [{
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["a" /* Clear */])());
+        }
+    }]);
+
     function NewlendForm(props) {
         _classCallCheck(this, NewlendForm);
 
@@ -35138,6 +35151,8 @@ var NewlendForm = function (_React$Component) {
         _this.handleAccountChange = _this.handleAccountChange.bind(_this);
         _this.handleValueChange = _this.handleValueChange.bind(_this);
         _this.handleDateChange = _this.handleDateChange.bind(_this);
+        var d = new Date();
+        _this.date0 = d.toISOString().slice(0, 10);
         return _this;
     }
 
@@ -35185,7 +35200,7 @@ var NewlendForm = function (_React$Component) {
                             { 'for': 'exampleDate' },
                             '\u9810\u8A08\u9084\u6B3E\u65E5'
                         ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_reactstrap__["k" /* Input */], { type: 'date', name: 'date', id: 'exampleDate', value: inputDate, onChange: this.handleDateChange, placeholder: 'date placeholder' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_reactstrap__["k" /* Input */], { min: this.date0, type: 'date', name: 'date', id: 'exampleDate', value: inputDate, onChange: this.handleDateChange, placeholder: 'date placeholder' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_2_reactstrap__["l" /* Button */],
@@ -35200,9 +35215,9 @@ var NewlendForm = function (_React$Component) {
         value: function handleAccountChange(e) {
             var account = e.target.value;
             console.log(account);
-            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["a" /* inputAccount */])(account));
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["b" /* inputAccount */])(account));
             if (account && this.props.inputDanger) {
-                this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["b" /* inputDanger */])(false));
+                this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["c" /* inputDanger */])(false));
             }
         }
     }, {
@@ -35210,9 +35225,9 @@ var NewlendForm = function (_React$Component) {
         value: function handleValueChange(e) {
             var value = e.target.value;
             console.log(value);
-            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["c" /* inputValue */])(value));
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["d" /* inputValue */])(value));
             if (value && this.props.inputDanger) {
-                this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["b" /* inputDanger */])(false));
+                this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["c" /* inputDanger */])(false));
             }
         }
     }, {
@@ -35220,9 +35235,9 @@ var NewlendForm = function (_React$Component) {
         value: function handleDateChange(e) {
             var date = e.target.value;
             console.log(date);
-            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["d" /* inputDate */])(date));
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["e" /* inputDate */])(date));
             if (date && this.props.inputDanger) {
-                this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["b" /* inputDanger */])(false));
+                this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["c" /* inputDanger */])(false));
             }
         }
     }, {
@@ -35233,11 +35248,11 @@ var NewlendForm = function (_React$Component) {
             if (!this.props.inputDate) return;
 
             alert('已創建一筆新借款');
-            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["e" /* submit */])(this.props.inputAccount, this.props.inputValue, this.props.inputDate));
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["f" /* submit */])(this.props.inputAccount, this.props.inputValue, this.props.inputDate));
 
-            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["a" /* inputAccount */])(''));
-            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["c" /* inputValue */])(''));
-            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["d" /* inputDate */])(''));
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["b" /* inputAccount */])(''));
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["d" /* inputValue */])(''));
+            this.props.dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_states_newlendform_actions_js__["e" /* inputDate */])(''));
         }
     }]);
 
@@ -35360,11 +35375,12 @@ function listHistoryRecords() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = inputAccount;
-/* harmony export (immutable) */ __webpack_exports__["c"] = inputValue;
-/* harmony export (immutable) */ __webpack_exports__["d"] = inputDate;
-/* harmony export (immutable) */ __webpack_exports__["b"] = inputDanger;
-/* harmony export (immutable) */ __webpack_exports__["e"] = submit;
+/* harmony export (immutable) */ __webpack_exports__["b"] = inputAccount;
+/* harmony export (immutable) */ __webpack_exports__["d"] = inputValue;
+/* harmony export (immutable) */ __webpack_exports__["e"] = inputDate;
+/* harmony export (immutable) */ __webpack_exports__["c"] = inputDanger;
+/* harmony export (immutable) */ __webpack_exports__["a"] = Clear;
+/* harmony export (immutable) */ __webpack_exports__["f"] = submit;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_api_newlendform_js__ = __webpack_require__(405);
 
 
@@ -35407,7 +35423,11 @@ function endLoading() {
         type: '@NEWLENDFORM/END_LOADING'
     };
 }
-
+function Clear() {
+    return {
+        type: '@NEWLENDFORM/CLEAR'
+    };
+}
 function submit(name, money, date) {
     return function (dispatch, getState) {
         dispatch(startLoading());
@@ -43465,7 +43485,7 @@ exports = module.exports = __webpack_require__(27)(undefined);
 
 
 // module
-exports.push([module.i, ".tabContent{\r\n    height:10rem;\r\n    padding-left: 1rem;\r\n    display:flex;\r\n    color:blue;\r\n}", ""]);
+exports.push([module.i, ".tabContent {\r\n    height: 10rem;\r\n    padding-left: 1rem;\r\n    display: flex;\r\n    color: blue;\r\n}", ""]);
 
 // exports
 
@@ -43479,7 +43499,7 @@ exports = module.exports = __webpack_require__(27)(undefined);
 
 
 // module
-exports.push([module.i, ".arrear-form {\r\n    width: 50%;\r\n    height: 100%;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    margin-top: 10%;\r\n}\r\n\r\n.arrear-form .person-info {\r\n    position: relative;\r\n}\r\n\r\n.arrear-form .header .name {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: 12%;\r\n}\r\n.arrear-form .header .money {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: 3.5%;\r\n}\r\n.arrear-form .header .date {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: -2%;\r\n}\r\n", ""]);
+exports.push([module.i, ".arrear-form {\r\n    width: 50%;\r\n    height: 100%;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    margin-top: 10%;\r\n}\r\n\r\n.arrear-form .person-info {\r\n    position: relative;\r\n}\r\n\r\n.arrear-form .header .name {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: 12%;\r\n}\r\n\r\n.arrear-form .header .money {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: 3.5%;\r\n}\r\n\r\n.arrear-form .header .date {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: -2%;\r\n}\r\n", ""]);
 
 // exports
 
@@ -43493,7 +43513,7 @@ exports = module.exports = __webpack_require__(27)(undefined);
 
 
 // module
-exports.push([module.i, ".borrow-form {\r\n    width: 50%;\r\n    height: 100%;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    margin-top: 10%;\r\n}\r\n\r\n@media (max-width: 768px) {\r\n    .borrow-form {\r\n        width: 75%;\r\n        height: 100%;\r\n        margin-left: auto;\r\n        margin-right: auto;\r\n        margin-top: 10%;\r\n    }\r\n}\r\n\r\n.borrow-form .person-info {\r\n    position: relative;\r\n}\r\n\r\n.borrow-form .header .name {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: 12%;\r\n}\r\n.borrow-form .header .money {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: 3.5%;\r\n}\r\n.borrow-form .header .date {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: -2%;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".borrow-form {\r\n    width: 50%;\r\n    height: 100%;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    margin-top: 10%;\r\n}\r\n\r\n@media (max-width: 768px) {\r\n    .borrow-form {\r\n        width: 75%;\r\n        height: 100%;\r\n        margin-left: auto;\r\n        margin-right: auto;\r\n        margin-top: 10%;\r\n    }\r\n}\r\n\r\n.borrow-form .person-info {\r\n    position: relative;\r\n}\r\n\r\n.borrow-form .header .name {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: 12%;\r\n}\r\n\r\n.borrow-form .header .money {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: 3.5%;\r\n}\r\n\r\n.borrow-form .header .date {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: -2%;\r\n}", ""]);
 
 // exports
 
@@ -43507,7 +43527,7 @@ exports = module.exports = __webpack_require__(27)(undefined);
 
 
 // module
-exports.push([module.i, ".history-form {\r\n    width: 50%;\r\n    height: 100%;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    margin-top: 10%;\r\n}\r\n.history-form .header .name {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: 12%;\r\n}\r\n.history-form .header .money {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: 3.5%;\r\n}\r\n.history-form .header .date {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: -2%;\r\n}\r\n\r\n.history-form .header .done-date {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: -2%;\r\n}\r\n", ""]);
+exports.push([module.i, ".history-form {\r\n    width: 50%;\r\n    height: 100%;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    margin-top: 10%;\r\n}\r\n\r\n.history-form .header .name {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: 12%;\r\n}\r\n\r\n.history-form .header .money {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: 3.5%;\r\n}\r\n\r\n.history-form .header .date {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: -2%;\r\n}\r\n\r\n.history-form .header .done-date {\r\n    /* font-size: 1.5rem; */\r\n    position: relative;\r\n    left: -2%;\r\n}", ""]);
 
 // exports
 
@@ -43549,7 +43569,7 @@ exports = module.exports = __webpack_require__(27)(undefined);
 
 
 // module
-exports.push([module.i, ".main {\r\n    height: 100%;\r\n}\r\n", ""]);
+exports.push([module.i, ".main {\r\n    height: 100%;\r\n}", ""]);
 
 // exports
 
@@ -43563,7 +43583,7 @@ exports = module.exports = __webpack_require__(27)(undefined);
 
 
 // module
-exports.push([module.i, ".newlend-form {\r\n    width: 50%;\r\n    height: 100%;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    margin-top: 10%;\r\n}\r\n.newlend-form .input{\r\n    height: 7%;\r\n    width: 100%;\r\n    margin: 0 auto;\r\n    margin-top: 0.5rem;\r\n}\r\n\r\n.newlend-form .btn-submit {\r\n    margin-top: 0.5rem;\r\n    width: 100%\r\n}", ""]);
+exports.push([module.i, ".newlend-form {\r\n    width: 50%;\r\n    height: 100%;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    margin-top: 10%;\r\n}\r\n\r\n.newlend-form .input {\r\n    height: 7%;\r\n    width: 100%;\r\n    margin: 0 auto;\r\n    margin-top: 0.5rem;\r\n}\r\n\r\n.newlend-form .btn-submit {\r\n    margin-top: 0.5rem;\r\n    width: 100%\r\n}", ""]);
 
 // exports
 
@@ -43577,7 +43597,7 @@ exports = module.exports = __webpack_require__(27)(undefined);
 
 
 // module
-exports.push([module.i, ".record-item{\r\n    height: 4rem;\r\n}\r\n\r\n.record-item .btn{\r\n    font-size: 0.8rem;\r\n    padding: 0.1rem;\r\n}\r\n\r\n.record-item .person-info .name{\r\n    font-weight: bold;\r\n}\r\n.record-item .confirm{\r\n  display: none;\r\n}\r\n", ""]);
+exports.push([module.i, ".record-item {\r\n    height: 4rem;\r\n}\r\n\r\n.record-item .btn {\r\n    font-size: 0.8rem;\r\n    padding: 0.1rem;\r\n}\r\n\r\n.record-item .person-info .name {\r\n    font-weight: bold;\r\n}\r\n\r\n.record-item .confirm {\r\n    display: none;\r\n}", ""]);
 
 // exports
 
@@ -43591,7 +43611,7 @@ exports = module.exports = __webpack_require__(27)(undefined);
 
 
 // module
-exports.push([module.i, ".record-list{\r\n\r\n}\r\n\r\n.record-list .empty {\r\n    height: 8rem;\r\n    border-color: rgba(255, 255, 255, 0);\r\n    background-color: transparent;\r\n}\r\n\r\n.record-list .empty-text {\r\n    text-align: center;\r\n    color: black;\r\n}\r\n\r\n.record-list .list-group-item {\r\n    padding: 0.5rem 1.25rem;\r\n}", ""]);
+exports.push([module.i, ".record-list {}\r\n\r\n.record-list .empty {\r\n    height: 8rem;\r\n    border-color: rgba(255, 255, 255, 0);\r\n    background-color: transparent;\r\n}\r\n\r\n.record-list .empty-text {\r\n    text-align: center;\r\n    color: black;\r\n}\r\n\r\n.record-list .list-group-item {\r\n    padding: 0.5rem 1.25rem;\r\n}", ""]);
 
 // exports
 
