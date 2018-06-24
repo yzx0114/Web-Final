@@ -39,7 +39,7 @@ export function listArrearRecords(user_account) {
         console.log('in list record');
         let target_account = localStorage.getItem('friend_account');
         if(target_account === null) target_account = 'unknown';
-        return listArrearRecordsFromApi(user_account, target_account).then(arrearRecords=>{
+        return listArrearRecordsFromApi(localStorage.getItem('Account'), target_account).then(arrearRecords=>{
             dispatch(endListRecords(arrearRecords));
         }).catch(err=> {
             console.error('Error listing arrearRecords', err);

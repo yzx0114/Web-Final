@@ -27,7 +27,8 @@ function endLoading(){
 };
 export function showDetail(user_account){
     return (dispatch, getState)=>{
-        localStorage.setItem('friend_account',user_account);
+        if(user_account == '') localStorage.removeItem('friend_account');
+        else localStorage.setItem('friend_account',user_account);
         switch(localStorage.getItem('mode')){
           case 'borrow':
             dispatch(listBorrowRecords());
@@ -47,27 +48,41 @@ export function showDetail(user_account){
 }
 function combine(record)
 {
-
   let arr=[];
   let count = 0;
-  record.forEach(function(e){
-      arr.forEach(function(e0){
-          if(e.account == e0.account)
+  let flag;
+  for(let i = 0; i < record.length; i++)
+  {
+    flag = -1;
+    for(let j = 0; j < arr.length; j++)
+    {
+
+        if(record[i].account === arr[j].account)
+        {
+          flag = j;
+        }
+    }
+    //console.log(arr);
+    if(flag != -1)
+    {
+      if(record[i].paid != true)
+      {
+          if(record[flag].who == 'borrower')
           {
-               if(e.who == 'borrower')
-               {
-                 e0.amount -= e.amount;
-               }
-               else {
-                  e0.amount += e.amount;
-               }
+            record[flag].amount -= record[i].amount;
           }
           else {
-                arr.push(e);
+             record[flag].amount += record[i].amount;
           }
-      });
-      if(arr.length < 1) arr.push(e);
-  });
+      }
+    }
+    else {
+        console.log(record[i],flag);
+        if(record[i].paid) record[i].amount = 0;
+        if(record[i].who == 'borrower') record[i].amount *= -1;
+        arr.push(record[i]);
+    }
+  }
 
   return arr;
 }

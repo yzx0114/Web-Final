@@ -51,6 +51,7 @@ class ArrearRecordList extends React.Component {
     handleClick()
     {
         this.props.dispatch(showDetail(''));
+        localStorage.removeItem('friend_account');
     }
 }
 
