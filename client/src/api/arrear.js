@@ -13,12 +13,13 @@ export function Confirm(id){
       return res.data;
   });
 }
-export function listArrearRecords(user_account) {
+export function listArrearRecords(user_account, target_account) {
 
     let url = `${arrearBaseUrl}/arrear`;
     let query = [];
     if (user_account)
         query.push(`user_account=${user_account}`);
+        query.push(`target_account=${target_account}`);
     if (query.length)
         url += '?' + query.join('&');
 

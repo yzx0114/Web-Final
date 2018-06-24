@@ -1,25 +1,25 @@
-const initRecordState={
+const initFriendState={
     recordLoading:false,
-    arrearRecords:[]
+    friendRecords:[]
 };
 
 
-export function arrear(state = initRecordState , action){
+export function friend(state = initFriendState , action){
     switch(action.type){
-        case '@ARREAR/START_LOADING':
+        case '@FRIEND/START_LOADING':
             return {
                 ...state,
                 recordLoading:true
             };
-        case '@ARREAR/END_LOADING':
+        case '@FRIEND/END_LOADING':
             return{
                 ...state,
                 recordLoading:false
             };
-        case '@ARREAR/END_LIST_RECORDS':
+        case '@FRIEND/END_LIST_RECORDS':
             return{
                 ...state,
-                arrearRecords: action.arrearRecords
+                friendRecords: action.friendRecords
             };
         default:
             return state;

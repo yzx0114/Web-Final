@@ -51,7 +51,9 @@ export function complete(id)
 export function listBorrowRecords() {
     return (dispatch, getState)=>{
         dispatch(startLoading());
-        return listBorrowRecordsFromApi(localStorage.getItem('Account')).then(borrowRecords=>{
+        let target_account = localStorage.getItem('friend_account');
+        if(target_account === null) target_account = 'unknown';
+        return listBorrowRecordsFromApi(localStorage.getItem('Account'), target_account).then(borrowRecords=>{
             dispatch(endListRecords(borrowRecords));
         }).catch(err=> {
             console.error('Error listing borrowRecords', err);

@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Confirm, listArrearRecords } from 'states/arrear-actions.js';
+import { showDetail } from 'states/friend-action.js';
 import {
     Button
 } from 'reactstrap';
 import './RecordItem.css';
 
-class ArrearRecordItem extends React.Component {
+class FriendItem extends React.Component {
     static propTypes = {
         name: PropTypes.string,
         account: PropTypes.string,
@@ -28,7 +28,7 @@ class ArrearRecordItem extends React.Component {
                         <img className="rounded-circle" src="../../image/icon.png" width="50" height="50" />
                     </div>
                     <div className='name col-sm-3 col-xl-3 align-self-center'>
-                        ${name}
+                        {name}
                     </div>
                     <div className='money col-sm-3 col-xl-3 align-self-center'>
                         ${amount}

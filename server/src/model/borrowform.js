@@ -7,7 +7,7 @@ if (!global.db) {
     db = pgp(process.env.DB_URL);
 }
 
-function list(user_account = '') {
+function list(user_account = '', target_account) {
   //  user_account = 'admin1'; // 登入此帳號的人(借款人))
   console.log(user_account ,'borrow form');
     const where = [];
@@ -15,6 +15,10 @@ function list(user_account = '') {
     if(user_account){
         where.push(`lender = '${user_account}'`);
         where.push(`paid = false`);
+    }
+    if(target_account !== 'unknown')
+    {
+      where.push(`borrower = '${target_account}'`);
     }
     const sql = `
         SELECT record_id,name,expect_date,amount,read,confirm
@@ -33,7 +37,7 @@ function complete(id, dstr)
     const sql2 = `
       UPDATE record SET paid = true,repay_date = '${dstr}' where record_id = ${id}
     `;
-  
+
   return db.none(sql2);
 }
 function deletes(id)

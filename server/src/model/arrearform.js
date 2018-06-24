@@ -7,13 +7,18 @@ if (!global.db) {
     db = pgp(process.env.DB_URL);
 }
 
-function list(user_account) {
+function list(user_account, target_account) {
     //user_account = 'admin2'; // 登入此帳號的人(借款人))
     const where = [];
     console.log(user_account,'hello');
     if(user_account){
         where.push(`borrower = '${user_account}'`);
         where.push(`paid = false`);
+    }
+    console.log(target_account);
+    if(target_account !== 'unknown')
+    {
+      where.push(`lender = '${target_account}'`);
     }
     const sql = `
         SELECT record_id,name,expect_date,amount,confirm

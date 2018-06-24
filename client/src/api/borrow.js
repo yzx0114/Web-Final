@@ -23,12 +23,13 @@ export function deletes(id){
         return res.data;
     });
 }
-export function listBorrowRecords(user_account = '') {
+export function listBorrowRecords(user_account = '', target_account) {
 
     let url = `${borrowBaseUrl}/borrow`;
     let query = [];
     if (user_account)
         query.push(`user_account=${user_account}`);
+        query.push(`target_account=${target_account}`);
     if (query.length)
         url += '?' + query.join('&');
 

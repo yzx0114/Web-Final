@@ -22,6 +22,7 @@ class BorrowForm extends React.Component {
     componentDidMount() {
         this.props.dispatch(listBorrowRecords());
         this.props.dispatch(listAlerts());
+        localStorage.setItem('mode','borrow');
     }
 
     render() {

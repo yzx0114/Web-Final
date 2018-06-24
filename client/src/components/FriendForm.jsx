@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Alert } from 'reactstrap';
 import { connect } from 'react-redux';
-import ArrearRecordList from './ArrearRecordList.jsx';
-import { listFriend } from 'states/friend-actions.js';
+import { listFriend } from 'states/friend-action.js';
 import FriendList from './FriendList.jsx';
 import './ArrearForm.css';
 
 class FriendForm extends React.Component {
     static propTypes = {
-      disoatch:PropTypes.func
+      disoatch:PropTypes.func,
+      recordLoading:PropTypes.bool,
+      friendRecords: PropTypes.array
     };
 
     constructor(props) {
@@ -17,6 +18,7 @@ class FriendForm extends React.Component {
     }
 
     componentDidMount() {
+      console.log('friendform');
         this.props.dispatch(listFriend(localStorage.getItem('Account')));
     }
 
@@ -37,5 +39,5 @@ class FriendForm extends React.Component {
 
 export default connect(state => ({
     recordLoading: state.arrear.recordLoading,
-    arrearRecords: state.arrear.arrearRecords
+    friendRecords: state.arrear.friendRecords
 }))(FriendForm);

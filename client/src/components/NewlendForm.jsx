@@ -15,7 +15,7 @@ class NewlendForm extends React.Component {
         dispatch: PropTypes.func
     };
     componentDidMount(){
-      localStorge.setItem('mode','newLend');
+      localStorage.setItem('mode','newLend');
     }
     componentWillUnmount()
     {

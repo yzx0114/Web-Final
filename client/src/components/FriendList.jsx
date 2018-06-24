@@ -5,12 +5,12 @@ import {
     ListGroupItem
 } from 'reactstrap';
 import { connect } from 'react-redux';
-import ArrearRecordItem from './ArrearRecordItem.jsx';
+import FriendItem from './FriendItem.jsx';
 import './RecordList.css';
 
 class ArrearRecordList extends React.Component {
     static propTypes = {
-        arrearRecords: PropTypes.array
+        friendRecords: PropTypes.array
     };
 
     constructor(props) {
@@ -18,15 +18,15 @@ class ArrearRecordList extends React.Component {
     }
 
     render() {
-        const { arrearRecords } = this.props;
+        const {friendRecords } = this.props;
 
         let children = (
             <div></div>
         );
 
-        if (arrearRecords.length) {
-            children = arrearRecords.map(p => (
-                <ListGroupItem color={p.confirm ? '' : 'danger'} key={p.record_id} action>
+        if (friendRecords.length) {
+            children = friendRecords.map(p => (
+                <ListGroupItem key={p.account} action>
                     <FriendItem {...p} />
                 </ListGroupItem>
             ));
@@ -35,8 +35,7 @@ class ArrearRecordList extends React.Component {
         return (
             <div className='record-list'>
                 <ListGroup>
-                3333
-                    //{children}
+                    {children}
                 </ListGroup>
             </div>
         );
@@ -44,5 +43,5 @@ class ArrearRecordList extends React.Component {
 }
 
 export default connect(state => ({
-    arrearRecords: state.arrear.arrearRecords
+    friendRecords: state.friend.friendRecords
 }))(ArrearRecordList);

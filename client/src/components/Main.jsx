@@ -74,13 +74,13 @@ class Main extends React.Component {
                                 </Collapse>
                             </Navbar>
                         </div>
+
                     </div>
                     <div>
-
+                        <FriendForm />
                     </div>
                     <Route exact path="/main" render={() => (
                         <BorrowForm />
-
                     )} />
                     <Route exact path="/main/ArrearForm" render={() => (
                         <ArrearForm />
