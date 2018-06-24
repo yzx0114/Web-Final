@@ -35,4 +35,7 @@
     position: relative;
     left: -2%;
 }
-
+.checkAlert{
+    height: 100% ;
+    width: 45%
+}

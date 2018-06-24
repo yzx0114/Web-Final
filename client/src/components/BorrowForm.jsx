@@ -7,7 +7,7 @@ import {listBorrowRecords} from 'states/borrow-actions.js';
 import AlertList from './AlertList.jsx';
 import {listAlerts} from 'states/main-actions.js';
 import './BorrowForm.css';
-
+import './AlertList.css'
 class BorrowForm extends React.Component {
     static propTypes = {
         borrowRecords: PropTypes.array,
@@ -30,8 +30,11 @@ class BorrowForm extends React.Component {
         return (
 
             <div className='borrow-form'>
-                <div className='list'>
-                    <AlertList/>
+                <div className='list'>        
+                     <div className='checkAlert row align-items-center'>
+                            <AlertList className='col-8'/>
+                            <div className='alertNum col12 '>{this.props.alerts.length}</div>
+                    </div>
                         <div className='header container'>
                             <div className='person-info col-sm-12 col-xl-12 row' >
                                 <div  className='name col-sm-3 col-xl-3'>
@@ -48,11 +51,13 @@ class BorrowForm extends React.Component {
                                 </div>
                             </div>
                         </div> 
+                        
                 </div>
                 <BorrowRecordList />{
                         recordLoading &&
                         <Alert color='warning' className='loading'>Loading...</Alert>
                 }
+                
             </div>
                     
     )}
@@ -60,6 +65,7 @@ class BorrowForm extends React.Component {
 }
 
 export default connect(state => ({
-    recordLoading: state.borrow.recordLoading
+    recordLoading: state.borrow.recordLoading,
+    alerts:state.main.alerts
 }))(BorrowForm);
 
