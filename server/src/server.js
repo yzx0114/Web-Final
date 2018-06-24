@@ -31,7 +31,7 @@ app.get('/*', (req, res) => res.redirect('/'));
 app.use(accessController);
 app.use(errorHandler);
 
-const port = 8080;
+const port = 8081;
 app.listen(port, () => {
     console.log(`Server is up and running on port ${port}...`);
 });
