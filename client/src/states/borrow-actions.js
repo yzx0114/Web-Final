@@ -4,60 +4,60 @@ import {
     deletes as deletesFromApi
 } from 'api/borrow.js'
 
-function startLoading(){
+function startLoading() {
     return {
-        type:'@BORROW/START_LOADING',
+        type: '@BORROW/START_LOADING',
     };
 };
-function endListRecords(borrowRecords){
-    return{
-        type:'@BORROW/END_LIST_RECORDS',
+
+function endListRecords(borrowRecords) {
+    return {
+        type: '@BORROW/END_LIST_RECORDS',
         borrowRecords
     };
 };
-function endLoading(){
-    return{
-        type:'@BORROW/END_LOADING'
+
+function endLoading() {
+    return {
+        type: '@BORROW/END_LOADING'
     };
 };
-export function deletes(id)
-{
-  return (dispatch, getState)=>{
-      dispatch(startLoading());
-      return deletesFromApi(id).then(()=>{
+export function deletes(id) {
+    return (dispatch, getState) => {
+        dispatch(startLoading());
+        return deletesFromApi(id).then(() => {
 
-      }).catch(err=> {
-          console.error('Error listing borrowRecords', err);
-      }).then(()=> {
-        dispatch(listBorrowRecords());
-          dispatch(endLoading());
-      });
-  };
+        }).catch(err => {
+            console.error('Error listing borrowRecords', err);
+        }).then(() => {
+            dispatch(listBorrowRecords());
+            dispatch(endLoading());
+        });
+    };
 }
-export function complete(id)
-{
-  return (dispatch, getState)=>{
-      dispatch(startLoading());
-      return CompleteFromApi(id).then(()=>{
+export function complete(id) {
+    return (dispatch, getState) => {
+        dispatch(startLoading());
+        return CompleteFromApi(id).then(() => {
 
-      }).catch(err=> {
-          console.error('Error listing borrowRecords', err);
-      }).then(()=> {
-          dispatch(listBorrowRecords());
-          dispatch(endLoading());
-      });
-  };
+        }).catch(err => {
+            console.error('Error listing borrowRecords', err);
+        }).then(() => {
+            dispatch(listBorrowRecords());
+            dispatch(endLoading());
+        });
+    };
 }
 export function listBorrowRecords() {
-    return (dispatch, getState)=>{
+    return (dispatch, getState) => {
         dispatch(startLoading());
         let target_account = localStorage.getItem('friend_account');
         if(target_account === null) target_account = 'unknown';
         return listBorrowRecordsFromApi(localStorage.getItem('Account'), target_account).then(borrowRecords=>{
             dispatch(endListRecords(borrowRecords));
-        }).catch(err=> {
+        }).catch(err => {
             console.error('Error listing borrowRecords', err);
-        }).then(()=> {
+        }).then(() => {
             dispatch(endLoading());
         });
     };
