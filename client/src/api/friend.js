@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const arrearBaseUrl = 'http://salmoney-dev.us-west-2.elasticbeanstalk.com/api';
+const arrearBaseUrl = 'http://Salmoney-dev.us-west-2.elasticbeanstalk.com/api';
 
 export function Confirm(id){
   let url = `${arrearBaseUrl}/confirm`;
