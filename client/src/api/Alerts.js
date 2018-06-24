@@ -3,7 +3,7 @@ import uuid from 'uuid/v4';
 import moment from 'moment';
 import 'babel-polyfill';
 const alertsKey = 'alerts';
-const alertBaseUrl ='http://localhost:8060/api';
+const alertBaseUrl ='http://salmoney-dev.us-west-2.elasticbeanstalk.com/api';
 var myUserName=localStorage.getItem('Account');
 
 export function listAlerts(){

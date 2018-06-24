@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const newlendBaseUrl = 'http://localhost:8060/api';
+const newlendBaseUrl = 'http://salmoney-dev.us-west-2.elasticbeanstalk.com/api';
 
 export function createNewlend(lender, name, money, date) {
     let url = `${newlendBaseUrl}/newlend`;
