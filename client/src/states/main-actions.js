@@ -69,6 +69,7 @@ export function listAlerts(){
               e.expect_date = e.expect_date.substr(0,10);
             });
             console.log(alerts);
+            dispatch(listBorrowRecords());
             dispatch(endlistAlert(alerts));
         }).catch(err =>{
             console.error('error Alert',err);

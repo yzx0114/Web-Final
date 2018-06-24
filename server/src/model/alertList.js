@@ -36,19 +36,19 @@ function create(id){
 function list(myUserName){
   let d = new Date();
   let rd =  d.toISOString().slice(0,10);
-  console.log(rd);
+
     const sql1 =
     `
       INSERT INTO alerts (record_id)
-      SELECT record.record_id FROM record WHERE record.expect_date <= '${rd}' AND paid = false AND read = false AND confirm = true
+      SELECT record.record_id FROM record WHERE record.expect_date <= '${rd}' AND paid = false AND read = false AND confirm = true AND (record.remind_date != CURRENT_DATE  OR record.remind_date is NULL)
     `;
     db.none(sql1);
     const sql2 =
     `
-      UPDATE record set read = true where record.expect_date <= '${rd}' AND paid = false AND read = false AND confirm = true
+      UPDATE record set read = true,remind_date = CURRENT_DATE where record.expect_date <= '${rd}' AND paid = false AND read = false AND confirm = true AND (record.remind_date != CURRENT_DATE OR record.remind_date is NULL)
     `;
     db.none(sql2);
-    console.log('sql2');
+    console.log('sql2', sql2);
     const sql3=
     `SELECT alerts.record_id,name,expect_date,repay_date,amount
     FROM alerts
@@ -67,7 +67,7 @@ function cancel(id){
     const sql2=
     `UPDATE record
     SET read=false
-    WHERE record_id='${id}';
+    WHERE record_id='${id}'
     `;
     db.none(sql2);
     const sql3=
