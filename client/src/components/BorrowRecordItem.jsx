@@ -54,7 +54,7 @@ class BorrowRecordItem extends React.Component {
                     </div>
                     <div className='row'>
                         <div className='mx-auto'>
-                            <Button type="button" className="btn btn-danger" onClick={this.handledeletes}>刪除</Button>
+                            <Button type="button" className="btn btn-danger" onClick={this.handleDelete}>刪除</Button>
                         </div>
                     </div>
                     <div className='row'>

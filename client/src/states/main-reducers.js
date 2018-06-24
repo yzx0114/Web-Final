@@ -6,14 +6,14 @@ const initMainState = {
     records:[]
 };
 
-export function main(state = initMainState, action) {  
+export function main(state = initMainState, action) {
     switch (action.type) {
         case '@MAIN/TOGGLE_NAVBAR':
             return {
                 ...state,
                 navbarToggle: !state.navbarToggle
             };
-         case '@MAIN/TOGGLE_MODAL':   
+         case '@MAIN/TOGGLE_MODAL':
             return {
                 ...state,
                 activeTab:(state.alerts.length > 0) ? state.alerts[0].record_id : 0,
@@ -27,6 +27,7 @@ export function main(state = initMainState, action) {
         case '@MAIN/END_LIST_ALERTS':
             return {
                 ...state,
+                activeTab:(action.alerts.length > 0) ? action.alerts[0].record_id : 0,
                 alerts:action.alerts
             };
         case '@MAIN/END_CREATE_ALERT':
@@ -50,4 +51,3 @@ export function main(state = initMainState, action) {
             return state;
     }
 }
-
