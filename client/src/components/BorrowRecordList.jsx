@@ -4,7 +4,7 @@ import {
     ListGroup,
     ListGroupItem
 } from 'reactstrap';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import BorrowRecordItem from './BorrowRecordItem.jsx';
 import './RecordList.css';
 import './RecordItem.css';
@@ -18,7 +18,7 @@ class BorrowRecordList extends React.Component {
     }
 
     render() {
-        const {borrowRecords} = this.props;
+        const { borrowRecords } = this.props;
 
         let children = (
             <div></div>
@@ -26,8 +26,8 @@ class BorrowRecordList extends React.Component {
 
         if (borrowRecords.length) {
             children = borrowRecords.map(p => (
-                <ListGroupItem color={p.confirm? '':'danger'} key={p.record_id} action>
-                    <BorrowRecordItem {...p}/>
+                <ListGroupItem color={p.confirm ? '' : 'danger'} key={p.record_id} action>
+                    <BorrowRecordItem {...p} />
                 </ListGroupItem>
             ));
         }
@@ -42,6 +42,6 @@ class BorrowRecordList extends React.Component {
     }
 }
 
-export default connect(state =>({
-    borrowRecords:state.borrow.borrowRecords
+export default connect(state => ({
+    borrowRecords: state.borrow.borrowRecords
 }))(BorrowRecordList);

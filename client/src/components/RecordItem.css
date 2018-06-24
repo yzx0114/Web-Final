@@ -1,15 +1,16 @@
-.record-item{
+.record-item {
     height: 4rem;
 }
 
-.record-item .btn{
+.record-item .btn {
     font-size: 0.8rem;
     padding: 0.1rem;
 }
 
-.record-item .person-info .name{
+.record-item .person-info .name {
     font-weight: bold;
 }
-.record-item .confirm{
-  display: none;
+
+.record-item .confirm {
+    display: none;
 }

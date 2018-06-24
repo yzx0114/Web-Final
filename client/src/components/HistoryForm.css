@@ -5,16 +5,19 @@
     margin-right: auto;
     margin-top: 10%;
 }
+
 .history-form .header .name {
     /* font-size: 1.5rem; */
     position: relative;
     left: 12%;
 }
+
 .history-form .header .money {
     /* font-size: 1.5rem; */
     position: relative;
     left: 3.5%;
 }
+
 .history-form .header .date {
     /* font-size: 1.5rem; */
     position: relative;

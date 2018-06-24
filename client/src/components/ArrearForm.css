@@ -15,16 +15,22 @@
     position: relative;
     left: 12%;
 }
+
 .arrear-form .header .money {
     /* font-size: 1.5rem; */
     position: relative;
     left: 3.5%;
 }
+
 .arrear-form .header .date {
     /* font-size: 1.5rem; */
     position: relative;
     left: -2%;
+<<<<<<< HEAD
+}
+=======
 }
 .arrear-form .header .image0{
   padding-left: 0%;
 }
+>>>>>>> c0082952cab9a10de8e916565298ac2b9c2f5b76

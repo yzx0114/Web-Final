@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import {
     Button
 } from 'reactstrap';
 
-import {createAlert} from 'states/main-actions.js';
-import {complete, deletes, listBorrowRecords} from 'states/borrow-actions.js';
+import { createAlert } from 'states/main-actions.js';
+import { complete, deletes, listBorrowRecords } from 'states/borrow-actions.js';
 
 import './RecordItem.css';
 
 class BorrowRecordItem extends React.Component {
     static propTypes = {
-        record_id : PropTypes.number,
-        name : PropTypes.string,
-        amount : PropTypes.number,
-        expect_date : PropTypes.string,
+        record_id: PropTypes.number,
+        name: PropTypes.string,
+        amount: PropTypes.number,
+        expect_date: PropTypes.string,
         confirm: PropTypes.bool,
         dispatch: PropTypes.func,
     };
@@ -27,14 +27,14 @@ class BorrowRecordItem extends React.Component {
     }
 
     render() {
-        const {name,amount,expect_date,read} = this.props;
-        
-        
+        const { name, amount, expect_date, read } = this.props;
+
+
         return (
             <div className='record-item row container'>
                 <div className='person-info col-sm-9 col-xl-9 row'>
                     <div className='picture col-sm-2 col-xl-2 align-self-center'>
-                        <img className="rounded-circle" src="./image/icon.png" width="50" height="50"/> 
+                        <img className="rounded-circle" src="./image/icon.png" width="50" height="50" />
                     </div>
                     <div className='name col-sm-3 col-xl-3 align-self-center'>
                         {name}
@@ -49,38 +49,36 @@ class BorrowRecordItem extends React.Component {
                 <div className='buttons col-sm-3 col-xl-3 align-self-center'>
                     <div className='row'>
                         <div className='mx-auto'>
-                            <Button type="button" className={(!this.props.confirm)?"confirm":"btn btn-success"} onClick={this.handleComplete}>已還款</Button>
+                            <Button type="button" className={(!this.props.confirm) ? "confirm" : "btn btn-success"} onClick={this.handleComplete}>已還款</Button>
                         </div>
+                    </div>
+                    <div className='row'>
+                        <div className='mx-auto'>
+                            <Button type="button" className="btn btn-warning" onClick={this.handleRemind} disabled={!this.props.confirm}>提醒他</Button>
                         </div>
                         <div className='row'>
                             <div className='mx-auto'>
-                                <Button type="button" className={(this.props.read || !this.props.confirm)?"confirm":"btn btn-warning"} onClick={this.handleRemind}>提醒他</Button>
+                                <Button type="button" className={(this.props.read || !this.props.confirm) ? "confirm" : "btn btn-warning"} onClick={this.handleRemind}>提醒他</Button>
                             </div>
                         </div>
-                        <div className='row'>
-                            <div className='mx-auto'>
-                                <Button type="button" className="btn btn-danger" onClick={this.handleDelete}>刪除</Button>
-                            </div>
                     </div>
                 </div>
             </div>
         );
     }
-    handleComplete()
-    {
-      this.props.dispatch(complete(this.props.record_id));
-    //  this.props.dispatch(listBorrowRecords());
+    handleComplete() {
+        this.props.dispatch(complete(this.props.record_id));
+        //  this.props.dispatch(listBorrowRecords());
     }
-    handleRemind(){
+    handleRemind() {
         this.props.dispatch(createAlert(this.props.record_id));
     }
-    handleDelete()
-    {
-      this.props.dispatch(deletes(this.props.record_id));
-    //  this.props.dispatch(listBorrowRecords());
+    handleDelete() {
+        this.props.dispatch(deletes(this.props.record_id));
+        //  this.props.dispatch(listBorrowRecords());
     }
-    
+
 }
 export default connect(state => ({
-    alerts:state.main.alerts
+    alerts: state.main.alerts
 }))(BorrowRecordItem);
