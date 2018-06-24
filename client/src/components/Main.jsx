@@ -76,7 +76,7 @@ class Main extends React.Component {
                         </div>
 
                     </div>
-                    <div className='friend-form'>
+                    <div className='friend-form' }>
                         <FriendForm />
                     </div>
                     <Route exact path="/main" render={() => (

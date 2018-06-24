@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { listFriend, showDetail } from 'states/friend-action.js';
 import FriendList from './FriendList.jsx';
 import './ArrearForm.css';
-import './FriendForm.css';
+
 class FriendForm extends React.Component {
     static propTypes = {
       disoatch:PropTypes.func,
@@ -19,19 +19,22 @@ class FriendForm extends React.Component {
     }
 
     componentDidMount() {
-        localStorage.removeItem('friend_account');
+        localStorage.removeItem('friend-account')
         this.props.dispatch(listFriend(localStorage.getItem('Account')));
     }
 
     render() {
         const {recordLoading} = this.props;
         return (
+            <div className='arrear-form'>
+
                 <div className='list'>
                 <FriendList />{
                     recordLoading &&
-                      <Alert color='warning' className='loading'>Loading...</Alert>
+                      <Alert hidden color='warning' className='loading'>Loading...</Alert>
                     }
                 </div>
+            </div>
         )
     }
 
