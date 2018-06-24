@@ -9,8 +9,8 @@ router.use(accessController);
 router.use(bodyParser.json());
 
 router.get('/borrow', function(req, res, next) {
-    const {user_account} = req.query;
-    borrowModel.list(user_account).then(borrows => {
+    const {user_account, target_account} = req.query;
+    borrowModel.list(user_account, target_account).then(borrows => {
         res.json(borrows);
     }).catch(next);
 });

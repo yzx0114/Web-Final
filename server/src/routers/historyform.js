@@ -10,8 +10,8 @@ router.use(bodyParser.json());
 
 
 router.get('/history', function(req, res, next) {
-    const {user_account} = req.query;
-    historyModel.list(user_account).then(historys => {
+    const {user_account, target_account} = req.query;
+    historyModel.list(user_account, target_account).then(historys => {
         res.json(historys);
     }).catch(next);
 });

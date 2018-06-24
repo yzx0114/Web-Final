@@ -2,12 +2,13 @@ import axios from 'axios';
 
 const historyBaseUrl = 'http://localhost:8060/api';
 
-export function listHistoryRecords(user_account = '') {
-    
+export function listHistoryRecords(user_account = '', target_account) {
+
     let url = `${historyBaseUrl}/history`;
     let query = [];
     if (user_account)
         query.push(`user_account=${user_account}`);
+        query.push(`target_account=${target_account}`);
     if (query.length)
         url += '?' + query.join('&');
 
@@ -46,7 +47,7 @@ export function listHistoryRecords(user_account = '') {
         }
         return res.data;
     });
-    
+
     /*let url = `${historyBaseUrl}/history`;
     if (user_account)
         url += `?user_account=${user_account}`;
@@ -58,7 +59,7 @@ export function listHistoryRecords(user_account = '') {
 
         return res.data;
     });*/
-    
+
 }
 
 /*
@@ -74,20 +75,20 @@ export function listHistoryRecords() {
 // Simulated server-side code
 function _listHistoryRecords() {
     let historyRecords = [
-        {   
+        {
             id : 1,
             name : 'Turtle',
             money : 100,
             date : '2018-04-22',
             repayDate: '2018-05-22'
         },
-        {   
+        {
             id : 2,
             name : 'Shan',
             money : 10,
             date : '2018-04-23',
             repayDate: '2018-05-23'
         }
-    ]; 
+    ];
     return historyRecords;
 };*/

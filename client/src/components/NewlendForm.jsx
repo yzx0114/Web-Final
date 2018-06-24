@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Button, Form, FormGroup, Label, Input, Alert} from 'reactstrap';
-import {connect} from 'react-redux';
+import { Button, Form, FormGroup, Label, Input, Alert } from 'reactstrap';
+import { connect } from 'react-redux';
 import './NewlendForm.css';
-import {inputAccount, inputValue, inputDate, inputDanger, submit} from 'states/newlendform-actions.js';
+import { inputAccount, inputValue, inputDate, inputDanger, submit, Clear } from 'states/newlendform-actions.js';
 
 class NewlendForm extends React.Component {
     static propTypes = {
@@ -14,7 +14,13 @@ class NewlendForm extends React.Component {
         inputDangre: PropTypes.bool,
         dispatch: PropTypes.func
     };
-
+    componentDidMount(){
+      localStorage.setItem('mode','newLend');
+    }
+    componentWillUnmount()
+    {
+      this.props.dispatch(Clear());
+    }
     constructor(props) {
         super(props);
 
@@ -22,31 +28,33 @@ class NewlendForm extends React.Component {
         this.handleAccountChange = this.handleAccountChange.bind(this);
         this.handleValueChange = this.handleValueChange.bind(this);
         this.handleDateChange = this.handleDateChange.bind(this);
+        let d = new Date();
+        this.date0 =  d.toISOString().slice(0,10);
     }
-
     render() {
-        const {inputAccount, inputValue, inputDate} = this.props;
+        const { inputAccount, inputValue, inputDate } = this.props;
         const inputDanger = this.props.inputDanger ? 'has-danger' : '';
 
         return (
             <div className='newlend-form'>
-            <Alert color='info' className={`d-flex flex-column justify-content-center ${inputDanger}`}>
-                <FormGroup>
-                    <Label for="exampleText">對方帳號</Label>
-                    <Input type="textarea" name="text" id="exampleText" value={inputAccount} onChange={this.handleAccountChange} placeholder='請輸入對方帳號'/>
-                </FormGroup>
-                <FormGroup>
-                    <Label for="exampleText">金額</Label>
-                    <Input type="textarea" name="text" id="exampleText" value={inputValue} onChange={this.handleValueChange} placeholder='請輸入金額'/>
-                </FormGroup>
-                <FormGroup>
-                    <Label for="exampleDate">預計還款日</Label>
-                    <Input type="date" name="date" id="exampleDate" value={inputDate} onChange={this.handleDateChange} placeholder="date placeholder" />
-                </FormGroup>
-                <Button className='btn-submit align-self-end' color="info" onClick={this.handleSummit}>Submit</Button>
-            </Alert>
+                <Alert color='info' className={`d-flex flex-column justify-content-center ${inputDanger}`}>
+                    <FormGroup>
+                        <Label for="exampleText">對方帳號</Label>
+                        <Input type="textarea" name="text" id="exampleText" value={inputAccount} onChange={this.handleAccountChange} placeholder='請輸入對方帳號' />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="exampleText">金額</Label>
+                        <Input type="textarea" name="text" id="exampleText" value={inputValue} onChange={this.handleValueChange} placeholder='請輸入金額' />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="exampleDate">預計還款日</Label>
+                        <Input min={this.date0} type="date" name="date" id="exampleDate" value={inputDate} onChange={this.handleDateChange}  placeholder="date placeholder" />
+                    </FormGroup>
+                    <Button className='btn-submit align-self-end' color="info" onClick={this.handleSummit}>Submit</Button>
+                </Alert>
             </div>
-    )}
+        )
+    }
 
     handleAccountChange(e) {
         const account = e.target.value;
@@ -81,7 +89,7 @@ class NewlendForm extends React.Component {
             return;
         if (!this.props.inputDate)
             return;
-        
+
         alert('已創建一筆新借款');
         this.props.dispatch(submit(this.props.inputAccount, this.props.inputValue, this.props.inputDate));
 

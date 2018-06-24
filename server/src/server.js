@@ -10,6 +10,7 @@ const arrearRouter = require('./routers/arrearform.js');
 const historyRouter = require('./routers/historyform.js');
 const alertListRouter = require('./routers/alertList.js');
 const loginRouter = require('./routers/login.js');
+const friendRouter = require('./routers/friend.js');
 const app = express();
 
 // app.use(requestLogger); // debug only
@@ -25,6 +26,7 @@ app.use('/api', arrearRouter);
 app.use('/api', historyRouter);
 app.use('/api', alertListRouter);
 app.use('/api', loginRouter);
+app.use('/api', friendRouter);
 app.get('/*', (req, res) => res.redirect('/'));
 app.use(accessController);
 app.use(errorHandler);

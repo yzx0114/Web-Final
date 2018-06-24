@@ -10,8 +10,8 @@ router.use(bodyParser.json());
 
 
 router.get('/arrear', function(req, res, next) {
-    const {user_account} = req.query;
-    arrearModel.list(user_account).then(arrears => {
+    const {user_account, target_account} = req.query;
+    arrearModel.list(user_account, target_account).then(arrears => {
         res.json(arrears);
     }).catch(next);
 });

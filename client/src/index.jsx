@@ -16,13 +16,14 @@ import { arrear } from 'states/arrear-reducers.js';
 import { history } from 'states/history-reducers.js';
 import { login } from 'states/login-reducers.js';
 import { register } from 'states/login-reducers.js';
+import { friend } from 'states/friend-reducer.js';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
 window.onload = function () {
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
     const store = createStore(combineReducers({
-        main, newlendForm, borrow, arrear, history, login, register
+        main, newlendForm, borrow, arrear, history, login, register, friend
     }), composeEnhancers(applyMiddleware(thunkMiddleware/*, loggerMiddleware*/)));
 
     ReactDOM.render(

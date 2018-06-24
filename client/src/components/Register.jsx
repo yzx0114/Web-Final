@@ -37,7 +37,10 @@ class Register extends React.Component {
         dispatch: PropTypes.func
     };
 
-
+    componentWillUnmount()
+    {
+      this.props.dispatch(Clear());
+    }
     constructor(props) {
         super(props);
         this.state = {

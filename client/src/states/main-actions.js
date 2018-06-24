@@ -39,8 +39,8 @@ export function clickIKnow(tabId){
                 console.error('error cancel',err);
             });
     };
-    
-    
+
+
 }
 
 export function RemindNextTime(tabId){
@@ -65,6 +65,10 @@ function endCreateAlert(alert){
 export function listAlerts(){
     return (dispatch,getState)=>{
         return listAlertsFromApi().then(alerts=>{
+            alerts.forEach(function(e){
+              e.expect_date = e.expect_date.substr(0,10);
+            });
+            console.log(alerts);
             dispatch(endlistAlert(alerts));
         }).catch(err =>{
             console.error('error Alert',err);
