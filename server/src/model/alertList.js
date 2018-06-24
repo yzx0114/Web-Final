@@ -36,11 +36,7 @@ function create(id){
 function list(myUserName){
   let d = new Date();
   let rd =  d.toISOString().slice(0,10);
-<<<<<<< HEAD
   
-=======
-
->>>>>>> 5d0646f6a247fcadf7cc099b6a85f0a2cec2fc47
     const sql1 =
     `
       INSERT INTO alerts (record_id)

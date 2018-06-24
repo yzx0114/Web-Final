@@ -32,21 +32,21 @@ class BorrowRecordItem extends React.Component {
 
         return (
             <div className='record-item row container'>
-                <div className='person-info col-sm-9 col-xl-9 row'>
-                    <div className='picture col-sm-2 col-xl-2 align-self-center'>
+                <div className='person-info col-xs-9 col-sm-9 col-xl-9 row'>
+                    <div className='picture col-xs-2 col-sm-2 col-xl-2 align-self-center'>
                         <img className="rounded-circle" src="../../image/icon.png" width="50" height="50" />
                     </div>
-                    <div className='name col-sm-3 col-xl-3 align-self-center'>
+                    <div className='name col-xs-3 col-sm-3 col-xl-3 align-self-center'>
                         {name}
                     </div>
-                    <div className='money col-sm-3 col-xl-3 align-self-center'>
+                    <div className='money col-xs-3 col-sm-3 col-xl-3 align-self-center'>
                         ${amount}
                     </div>
-                    <div className='date col-sm-4 col-xl-4 align-self-center'>
+                    <div className='date col-xs-4 col-sm-4 col-xl-4 align-self-center'>
                         {expect_date}
                     </div>
                 </div>
-                <div className='buttons col-sm-2 col-xl-3 align-self-center'>
+                <div className='buttons col-xs-2 col-sm-2 col-xl-2 align-self-center'>
                     <div className='row'>
                         <div className='mx-auto'>
                             <Button type="button" className={(!this.props.confirm) ? "confirm" : "btn btn-success"} onClick={this.handleComplete}>已還款</Button>
@@ -63,7 +63,7 @@ class BorrowRecordItem extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className='buttons col-sm-1 col-xl-3 align-self-center'>
+                <div className='buttons col-xs-1 col-sm-1 col-xl-1 align-self-center'>
                     <div className={this.props.payback ? "" : "confirm"}>
                         <img src="../../image/paid.png" className="paid"/>
                         
