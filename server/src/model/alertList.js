@@ -19,7 +19,7 @@ function create(id){
     db.none(sql1);
 
     const sql2=
-    `UPDATE record 
+    `UPDATE record
     SET read=true
     WHERE record_id='${id}';
     `;
@@ -34,24 +34,39 @@ function create(id){
      return db.any(sql3);
 }
 function list(myUserName){
-    const sql=
+  let d = new Date();
+  let rd =  d.toISOString().slice(0,10);
+  console.log(rd);
+    const sql1 =
+    `
+      INSERT INTO alerts (record_id)
+      SELECT record.record_id FROM record WHERE record.expect_date <= '${rd}' AND paid = false AND read = false AND confirm = true
+    `;
+    db.none(sql1);
+    const sql2 =
+    `
+      UPDATE record set read = true where record.expect_date <= '${rd}' AND paid = false AND read = false AND confirm = true
+    `;
+    db.none(sql2);
+    console.log('sql2');
+    const sql3=
     `SELECT alerts.record_id,name,expect_date,repay_date,amount
     FROM alerts
     INNER JOIN record ON alerts.record_id = record.record_id AND record.borrower='${myUserName}'
     INNER JOIN users ON lender = users.account
     `;
-    return db.any(sql);
+    return db.any(sql3);
 }
 function cancel(id){
 
     const sql1=
-    `DELETE FROM alerts 
+    `DELETE FROM alerts
      WHERE record_id='${id}'
     `;
     db.none(sql1);
     const sql2=
-    `UPDATE record 
-    SET read=false 
+    `UPDATE record
+    SET read=false
     WHERE record_id='${id}';
     `;
     db.none(sql2);

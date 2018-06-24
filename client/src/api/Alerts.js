@@ -21,20 +21,20 @@ export function listAlerts(){
 // export function listAlerts(){
 //     return new Promise((resolve, reject)=>{
 //         resolve(_listAlerts());
-//     }); 
+//     });
 // }
 // function _listAlerts(){
-    
+
 //     let alertItems = localStorage.getItem(alertsKey);
 //     let alerts;
-    
+
 //     if(alertItems){
 //         alerts = JSON.parse(alertItems);
 //     }
 //     else{
 //         localStorage.setItem(alertsKey,JSON.stringify([]));
 //     }
-    
+
 //     return alerts;
 // }
 
@@ -59,14 +59,14 @@ export function createAlert(id){
                 }
                 res.data[i].expect_date = year +　'-' + month + '-' + dt;
             }
-        } 
+        }
         return res.data;
     });
 
 }
 /*
 export function createAlert(name,money,date){
-    
+
     return new Promise((resolve,reject)=>{
         resolve(_createAlert(name,money,date));
     });
