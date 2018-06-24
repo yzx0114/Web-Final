@@ -27,7 +27,7 @@ class ArrearRecordItem extends React.Component {
             <div className='record-item row container'>
                 <div className='person-info col-sm-9 col-xl-9 row'>
                     <div className='picture col-sm-2 col-xl-2 align-self-center'>
-                        <img className="rounded-circle" src="./image/icon.png" width="50" height="50" />
+                        <img className="rounded-circle" src="../../image/icon.png" width="50" height="50" />
                     </div>
                     <div className='name col-sm-3 col-xl-3 align-self-center'>
                         {name}
@@ -55,8 +55,6 @@ class ArrearRecordItem extends React.Component {
         );
     }
     handleConfirm() {
-        //console.log(this.props.confirm);
-        console.log('hihi');
         this.props.dispatch(Confirm(this.props.record_id));
     }
 }

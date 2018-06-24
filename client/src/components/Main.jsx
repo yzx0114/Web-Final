@@ -40,9 +40,12 @@ class Main extends React.Component {
         super(props);
 
         this.handleNavbarToggle = this.handleNavbarToggle.bind(this);
+        this.link = React.createRef();;
     }
+    componentDidMount()
+    {
 
-
+    }
     render() {
         return (
             <Router>
@@ -55,32 +58,32 @@ class Main extends React.Component {
                                 <Collapse isOpen={this.props.navbarToggle} navbar>
                                     <Nav navbar>
                                         <NavItem>
-                                            <NavLink tag={Link} to='/'>借款紀錄</NavLink>
+                                            <NavLink tag={Link} to='/main/' ref ={this.link}>借款紀錄</NavLink>
                                         </NavItem>
                                         <NavItem>
-                                            <NavLink tag={Link} to='/ArrearForm'>欠款紀錄</NavLink>
+                                            <NavLink tag={Link} to='/main/ArrearForm'>欠款紀錄</NavLink>
                                         </NavItem>
                                         <NavItem>
-                                            <NavLink tag={Link} to='/HistoryForm'>歷史紀錄</NavLink>
+                                            <NavLink tag={Link} to='/main/HistoryForm'>歷史紀錄</NavLink>
                                         </NavItem>
                                     </Nav>
                                     <div className='ml-auto'>
-                                        <NavLink tag={Link} to='/NewlendForm'>新增借款</NavLink>
+                                        <NavLink tag={Link} to='/main/NewlendForm'>新增借款</NavLink>
                                     </div>
                                 </Collapse>
                             </Navbar>
                         </div>
                     </div>
-                    <Route exact path="/" render={() => (
+                    <Route exact path="/main" render={() => (
                         <BorrowForm />
                     )} />
-                    <Route exact path="/ArrearForm" render={() => (
+                    <Route exact path="/main/ArrearForm" render={() => (
                         <ArrearForm />
                     )} />
-                    <Route exact path="/HistoryForm" render={() => (
+                    <Route exact path="/main/HistoryForm" render={() => (
                         <HistoryForm />
                     )} />
-                    <Route exact path="/NewlendForm" render={() => (
+                    <Route exact path="/main/NewlendForm" render={() => (
                         <NewlendForm />
                     )} />
                 </div>

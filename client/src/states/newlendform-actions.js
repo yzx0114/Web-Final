@@ -41,7 +41,12 @@ function endLoading() {
         type: '@NEWLENDFORM/END_LOADING'
     };
 }
-
+export function Clear()
+{
+  return{
+    type: `@NEWLENDFORM/CLEAR`
+  };
+}
 export function submit(name, money, date) {
     return (dispatch, getState) => {
         dispatch(startLoading());

@@ -34,7 +34,7 @@ class BorrowRecordItem extends React.Component {
             <div className='record-item row container'>
                 <div className='person-info col-sm-9 col-xl-9 row'>
                     <div className='picture col-sm-2 col-xl-2 align-self-center'>
-                        <img className="rounded-circle" src="./image/icon.png" width="50" height="50" />
+                        <img className="rounded-circle" src="../../image/icon.png" width="50" height="50" />
                     </div>
                     <div className='name col-sm-3 col-xl-3 align-self-center'>
                         {name}
@@ -54,12 +54,12 @@ class BorrowRecordItem extends React.Component {
                     </div>
                     <div className='row'>
                         <div className='mx-auto'>
-                            <Button type="button" className="btn btn-warning" onClick={this.handleRemind} disabled={!this.props.confirm}>提醒他</Button>
+                            <Button type="button" className="btn btn-danger" onClick={this.handledeletes}>刪除</Button>
                         </div>
-                        <div className='row'>
-                            <div className='mx-auto'>
-                                <Button type="button" className={(this.props.read || !this.props.confirm) ? "confirm" : "btn btn-warning"} onClick={this.handleRemind}>提醒他</Button>
-                            </div>
+                    </div>
+                    <div className= 'row'>
+                        <div className='mx-auto'>
+                            <Button type="button" className={(this.props.read || !this.props.confirm) ? "confirm" : "btn btn-warning"} onClick={this.handleRemind}>提醒他</Button>
                         </div>
                     </div>
                 </div>

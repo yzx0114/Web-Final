@@ -24,7 +24,7 @@ class ArrearForm extends React.Component {
 
     render() {
         const {recordLoading} = this.props;
-        let children=(<div className='image0'><img className='image0' src="./image/no-record1.png" /></div>);
+        let children=(<div className='image0'><img className='image0' src="../../image/no-record1.png" /></div>);
         if(this.props.arrearRecords.length)
         {
           children = (

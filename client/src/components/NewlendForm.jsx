@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button, Form, FormGroup, Label, Input, Alert } from 'reactstrap';
 import { connect } from 'react-redux';
 import './NewlendForm.css';
-import { inputAccount, inputValue, inputDate, inputDanger, submit } from 'states/newlendform-actions.js';
+import { inputAccount, inputValue, inputDate, inputDanger, submit, Clear } from 'states/newlendform-actions.js';
 
 class NewlendForm extends React.Component {
     static propTypes = {
@@ -14,7 +14,10 @@ class NewlendForm extends React.Component {
         inputDangre: PropTypes.bool,
         dispatch: PropTypes.func
     };
-
+    componentWillUnmount()
+    {
+      this.props.dispatch(Clear());
+    }
     constructor(props) {
         super(props);
 
@@ -22,8 +25,9 @@ class NewlendForm extends React.Component {
         this.handleAccountChange = this.handleAccountChange.bind(this);
         this.handleValueChange = this.handleValueChange.bind(this);
         this.handleDateChange = this.handleDateChange.bind(this);
+        let d = new Date();
+        this.date0 =  d.toISOString().slice(0,10);
     }
-
     render() {
         const { inputAccount, inputValue, inputDate } = this.props;
         const inputDanger = this.props.inputDanger ? 'has-danger' : '';
@@ -41,7 +45,7 @@ class NewlendForm extends React.Component {
                     </FormGroup>
                     <FormGroup>
                         <Label for="exampleDate">預計還款日</Label>
-                        <Input type="date" name="date" id="exampleDate" value={inputDate} onChange={this.handleDateChange} placeholder="date placeholder" />
+                        <Input min={this.date0} type="date" name="date" id="exampleDate" value={inputDate} onChange={this.handleDateChange}  placeholder="date placeholder" />
                     </FormGroup>
                     <Button className='btn-submit align-self-end' color="info" onClick={this.handleSummit}>Submit</Button>
                 </Alert>

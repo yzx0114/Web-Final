@@ -23,7 +23,7 @@ class HistoryForm extends React.Component {
 
     render() {
         const { recordLoading } = this.props;
-        let children = (<div className='image0'><img className='image0' src="./image/no-record1.png" /></div>);
+        let children = (<div className='image0'><img className='image0' src="../../image/no-record1.png" /></div>);
         if (this.props.historyRecords.length) {
             children = (
                 <div className='person-info col-sm-12 col-xl-12 row' >

@@ -31,9 +31,6 @@ export default class AlertItem extends React.Component {
                     <div>
                         日期: {expect_date}
                     </div>
-                    <div>
-                        日期: {date}
-                    </div>
                 </div>
             </TabPane>
         );
