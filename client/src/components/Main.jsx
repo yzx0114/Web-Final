@@ -27,6 +27,7 @@ import { toggleNavbar } from 'states/main-actions.js';
 import NewlendForm from './NewlendForm.jsx';
 import BorrowForm from './BorrowForm.jsx';
 import ArrearForm from './ArrearForm.jsx';
+import FriendForm from './FriendForm.jsx';
 import HistoryForm from './HistoryForm.jsx';
 import './Main.css';
 
@@ -74,8 +75,12 @@ class Main extends React.Component {
                             </Navbar>
                         </div>
                     </div>
+                    <div>
+
+                    </div>
                     <Route exact path="/main" render={() => (
                         <BorrowForm />
+
                     )} />
                     <Route exact path="/main/ArrearForm" render={() => (
                         <ArrearForm />

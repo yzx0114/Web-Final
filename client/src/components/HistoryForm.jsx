@@ -19,6 +19,7 @@ class HistoryForm extends React.Component {
 
     componentDidMount() {
         this.props.dispatch(listHistoryRecords());
+        localStorge.setItem('mode','history');
     }
 
     render() {

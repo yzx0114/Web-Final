@@ -14,6 +14,9 @@ class NewlendForm extends React.Component {
         inputDangre: PropTypes.bool,
         dispatch: PropTypes.func
     };
+    componentDidMount(){
+      localStorge.setItem('mode','newLend');
+    }
     componentWillUnmount()
     {
       this.props.dispatch(Clear());

@@ -19,6 +19,7 @@ class ArrearForm extends React.Component {
 
     componentDidMount() {
         console.log(localStorage.getItem('Account'));
+        localStorge.setItem('mode','arrear');
         this.props.dispatch(listArrearRecords(localStorage.getItem('Account')));
     }
 
