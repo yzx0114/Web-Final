@@ -15,10 +15,11 @@ class FriendForm extends React.Component {
 
     constructor(props) {
         super(props);
+
     }
 
     componentDidMount() {
-      console.log('friendform');
+        localStorage.setItem('friend_account','');
         this.props.dispatch(listFriend(localStorage.getItem('Account')));
     }
 
@@ -26,6 +27,7 @@ class FriendForm extends React.Component {
         const {recordLoading} = this.props;
         return (
             <div className='arrear-form'>
+
                 <div className='list'>
                 <FriendList />{
                     recordLoading &&
@@ -35,6 +37,7 @@ class FriendForm extends React.Component {
             </div>
         )
     }
+
 }
 
 export default connect(state => ({

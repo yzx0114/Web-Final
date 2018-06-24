@@ -6,6 +6,7 @@ import {
 } from 'reactstrap';
 import { connect } from 'react-redux';
 import FriendItem from './FriendItem.jsx';
+import {showDetail} from 'states/friend-action.js';
 import './RecordList.css';
 
 class ArrearRecordList extends React.Component {
@@ -15,6 +16,7 @@ class ArrearRecordList extends React.Component {
 
     constructor(props) {
         super(props);
+          this.handleClick = this.handleClick.bind(this);
     }
 
     render() {
@@ -26,7 +28,7 @@ class ArrearRecordList extends React.Component {
 
         if (friendRecords.length) {
             children = friendRecords.map(p => (
-                <ListGroupItem key={p.account} action>
+                <ListGroupItem key={p.account} color={(localStorage.getItem('friend_account') == p.account)?'info':''}action>
                     <FriendItem {...p} />
                 </ListGroupItem>
             ));
@@ -35,10 +37,19 @@ class ArrearRecordList extends React.Component {
         return (
             <div className='record-list'>
                 <ListGroup>
+                  <ListGroupItem key='all' onClick={this.handleClick} action>
+                    顯示全部
+                  </ListGroupItem>
+                </ListGroup>
+                <ListGroup>
                     {children}
                 </ListGroup>
             </div>
         );
+    }
+    handleClick()
+    {
+        this.props.dispatch(showDetail(''));
     }
 }
 

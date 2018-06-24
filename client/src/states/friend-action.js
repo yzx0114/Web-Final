@@ -40,6 +40,7 @@ export function showDetail(user_account){
           break;
           default:
         }
+        dispatch(listFriend(localStorage.getItem('Account')));
     }
 
 

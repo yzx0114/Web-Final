@@ -17,7 +17,6 @@ class FriendItem extends React.Component {
         super(props);
         this.handleClick=this.handleClick.bind(this);
     }
-
     render() {
         const { name, amount } = this.props;
         return (
@@ -39,9 +38,10 @@ class FriendItem extends React.Component {
     }
     handleClick(){
         this.props.dispatch(showDetail(this.props.account));
+
     }
 }
 
 export default connect(state => ({
-
+        click:state.friend.click
 }))(FriendItem);

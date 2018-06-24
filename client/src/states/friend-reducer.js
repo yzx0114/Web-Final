@@ -1,5 +1,6 @@
 const initFriendState={
     recordLoading:false,
+    click:false,
     friendRecords:[]
 };
 
