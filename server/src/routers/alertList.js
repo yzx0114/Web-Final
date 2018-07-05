@@ -16,6 +16,7 @@ router.post('/listAlert', function(req, res, next) {
     
     alertModel.list(myUserName).then(alerts => {
         res.json(alerts);
+        console.log('router' + alerts);
     }).catch(next);
 });
 router.use(accessController);
